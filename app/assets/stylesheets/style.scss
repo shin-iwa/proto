@@ -1,0 +1,153 @@
+
+
+.header-row {
+  width: calc(100vw - 40px);
+  height: 50px;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+
+// .search-form {
+//   position:absolute;
+//   top: 0px;
+//   display: flex;
+// }
+
+.more {
+  height:200px;
+  width:60vw;
+  background-color: lightgreen;
+  position: relative;
+}
+
+.more_list {
+  width: 50px;
+  list-style: none;
+  background-color: white;
+  position: absolute;
+  right: 0px;
+}
+
+h1  {
+  font-size:15px;
+  font-style:italic;
+}
+
+.post {
+  padding:10px;
+  border: 1px solid rgb(194, 31, 31);
+  background-color: white;
+  color: rgb(194, 31, 31);
+  font-weight: bold;
+  font-size: 14px;
+  border-radius: 5px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+
+}
+
+.post:hover{
+  opacity: 0.8;
+}
+
+.user_nav {
+  display:flex;
+}
+
+.nickname {
+  display: flex;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  background-color: yellow;
+  text-align: center;
+  margin: 0 auto;
+
+}
+
+.contents{
+  height: calc(100% - 100px);
+  background-color: lightgray;
+  // display: flex;
+  justify-content: center;
+
+}
+
+.content_post {
+  height: 300px;
+  width: 60vw;
+  background-color: pink;
+  margin: 0 auto;
+}
+
+.second-line {
+  display: flex;
+  justify-content: space-between;
+  padding:0 20px;
+}
+
+.fa-home {
+  margin-right:20px;
+}
+.post-profile-icon{
+  height: 400p
+
+}
+
+// form {
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   flex-direction: column;
+//   // background-color: white;
+//   width: 600px;
+// }
+
+// header.header .user_nav span:after {
+//   content: '▼';
+//   font-size: .7em;
+//   margin-left: -4px;
+// }
+
+// form input[type="submit"] {
+//   background-color: #57C3E9;
+//   border-radius: 20px;
+//   color: #fff;
+//   border: 0;
+//   font-size: 18px;
+// }
+
+form input[type="submit"]:hover {
+  background-color: #84d3ef;
+}
+
+.container {
+  width:100%;
+  height: 400px;
+  background-color: skyblue;
+  align-items: center;
+}
+
+.footer {
+  width: 100%;
+}
+
+// .grid-6 {
+//   display: flex;
+// }
+
+.card {
+  width:500px;
+  height: 400px;
+  border: 1px solid lightgray;
+}
