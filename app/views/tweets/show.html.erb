@@ -1,10 +1,11 @@
 <div class="more-box">
   <div class="more-parts-one">
-    <span class="name">
-        <a href="/users/<%= @tweet.user.id %>">
-          <%= @tweet.user.nickname %><span>さん</span>
-        </a>
-    </span>
+    <div class="name">
+      <div class="circle"></div>
+      <a class="name-name" href="/users/<%= @tweet.user.id %>">
+        <%= @tweet.user.nickname %>
+      </a>
+    </div>
     <ul class="more_list">
       <% if user_signed_in? && current_user.id == @tweet.user_id %>
       <li class="more_list__details">
@@ -25,20 +26,18 @@
     <p><%= @tweet.text %></p>
   </div>
 </div>
-
-</div>
-    <div class="container">
-      <div class="container-in">
+<div class="container">
+  <div class="container-in">
     <% if current_user %>
       <%= form_with(model: [@tweet, @comment], local: true, class:"input-form") do |form| %>
-        <%= form.text_area :text, placeholder: "コメントする", rows: "2" %>
-        <%= form.submit "SEND" , class:"bt"%>
+        <%= form.text_area :text, placeholder: "コメント欄", rows: "1" , class:"yah" %>
+        <%= form.submit "投稿する" , class:"bt"%>
       <% end %>
     <% else %>
       <strong><p>※※※ コメントの投稿には新規登録/ログインが必要です ※※※</p></strong>
     <% end %>
     <div class="comments">
-      <h4>＜コメント一覧＞</h4>
+      <h4 class="line">＜コメント一覧＞</h4>
       <% if @comments %>
         <% @comments.each do |comment| %>
           <p class="comment">
@@ -48,6 +47,5 @@
         <% end %>
       <% end %>
     </div>
-  </div>
   </div>
 </div>

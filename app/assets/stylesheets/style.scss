@@ -1,7 +1,14 @@
 body {
-  background-color: rgb(253, 249, 236);
   text-align: center;
   // margin: 0 auto;
+  position: relative;
+}
+
+.base {
+  position: absolute;
+  top: 70px;
+  width: 100%;
+  background-color: rgb(253, 249, 236);
 }
 
 h1  {
@@ -9,6 +16,13 @@ h1  {
   font-style: italic;
 }
 
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 5;
+}
 .header-row {
   width: calc(100vw - 40px);
   height: 50px;
@@ -18,8 +32,14 @@ h1  {
   align-items: center;
   justify-content: space-between;
   position: relative;
+  border-bottom: 1px solid rgb(240, 206, 157);
+
+
 }
 
+#keyword {
+  text-align: center;
+}
 
 .search-form {
   display: flex;
@@ -60,13 +80,14 @@ h1  {
   right: 0px;
 }
 
+
+
 .more_list__details {
   margin:5px;
   padding: 5px;
   background-color: whitesmoke;
   border:1px solid lightgray;
   border-radius: 4px;
-  color: white;
 }
 
 .more {
@@ -91,18 +112,22 @@ h1  {
 }
 
 .post {
-  padding:10px;
-  margin-right:5px;
-  border: 1px solid rgb(194, 31, 31);
-  background-color: white;
-  color: rgb(194, 31, 31);
-  font-weight: bold;
-  font-size: 14px;
-  border-radius: 5px;
-  text-align: center;
-  display: flex;
-  align-items: center;
-
+  // padding:10px;
+  // margin-right:5px;
+  // border: 1px solid rgb(194, 31, 31);
+  // background-color: white;
+  // color: rgb(194, 31, 31);
+  // font-weight: bold;
+  // font-size: 14px;
+  // border-radius: 5px;
+  // text-align: center;
+  // display: flex;
+  // align-items: center;
+  margin:5px;
+  padding: 5px;
+  background-color: whitesmoke;
+  border:1px solid lightgray;
+  border-radius: 4px;
 }
 
 .post:hover{
@@ -126,20 +151,35 @@ h1  {
   padding: 2px 5px;
 }
 
-.nickname {
-  margin-left:8px;
+.name {
+  display: flex;
+  align-items: center;
+}
+
+.name-name {
+  height:20px;
+}
+.circle {
+  width:30px;
+  height:30px;
+  border-radius: 20px;
+  border: 2px solid gray;
+  margin:0 10px;
 }
 
 a {
   text-decoration: none;
+  color: #333;
 }
+
 
 .contents{
   height: 100%;
   // background-color: lightgray;
   // display: flex;
-  justify-content: center;
-
+  // justify-content: center;
+  // position: absolute;
+  // top: 70px;
 }
 
 .container {
@@ -150,21 +190,18 @@ a {
 
 .container-in {
   width: 600px;
-  margin: 0 auto;
+  margin: 0 auto 30px;
   background-color: white;
-  border: 1px solid gray;
+  border:1px solid darkgray;
   padding-top: 20px;
+
 }
 
 .container-main {
   // margin: 0 auto;
   text-align: center;
-
+  height: 78vh;
 }
-
-// .commnets {
-//   border-top: 2px dashed red;
-// }
 
 .comment {
   text-align: left;
@@ -179,12 +216,41 @@ a {
   align-items: center;
 }
 
+.upper {
+  margin-top:50px;
+}
+
 .bt {
-  width: 80px;
-  margin-bottom: 20px;
+  width: 70px;
+  height: 20px;
+
   position:absolute;
-  top: 10px;
-  right: 70px;
+  top: 2px;
+  right: 60px;
+  border-style: none;
+  background-color: white;
+  color:  gray;
+}
+
+.btb {
+  width: 70px;
+  // margin-bottom: 20px;
+  // position:absolute;
+  // top: 2px;
+  // right: 60px;
+  border-style: none;
+  background-color: white;
+  color:  gray;
+}
+
+.btc {
+  width: 500px;
+  margin: 20px 0;
+}
+
+.image {
+  margin: 0 0 10px 0;
+  width: 500px;
 }
 
 .content_post {
@@ -196,10 +262,14 @@ a {
 
 .second-line {
   background-color:rgb(253, 230, 191);
-  border-top: 1px solid rgb(240, 206, 157);
   display: flex;
   justify-content: space-between;
   padding:0 20px;
+  position: fixed;
+  top: 50px;
+  left: 0;
+  right: 0;
+  z-index: 4;
 }
 
 .fa-home {
@@ -210,16 +280,34 @@ a {
 
 }
 
+.line {
+  border-top: 1px dashed gray;
+}
+
+.yah {
+  height:25px;
+}
+
 .input-form {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  border-bottom: 1px dashed gray;
+  // border-bottom: 1px dashed gray;
   margin-bottom: 10px;
   position: relative;
-  // background-color: white;
+}
 
+.success {
+  height:52vh;
+  padding: 200px 0 0px;
+  font-size: 20px;
+
+}
+
+.btn {
+  margin-top: 40px;
+  font-size: 16px;
 }
 
 // header.header .user_nav span:after {
@@ -237,12 +325,9 @@ a {
 // }
 
 form input[type="submit"]:hover {
-  background-color: #84d3ef;
+  opacity: 0.8;
+  // background-color: #fff8d0;
 }
-
-// .grid-6 {
-//   display: flex;
-// }
 
 .card {
   width:500px;
@@ -251,7 +336,23 @@ form input[type="submit"]:hover {
 }
 
 #tweet_text {
-  width:500px;
+  width:480px;
+  padding: 10px;
+}
+
+textarea {
+  white-space: pre-wrap;
+}
+
+.head {
+  margin:20px 0;
+  font-size: 20px;
+}
+
+.foot {
+  height: 100px;
+  padding-top: 70px;
+  box-sizing: border-box;
 }
 
 .footer {

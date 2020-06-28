@@ -1,12 +1,11 @@
-
-<%# <%= image_tag @tweet.image.url(:medium), class: "card" %> 
 <div class="more-box">
   <div class="more-parts-one">
-    <span class="name">
-      <a href="/users/<%= tweet.user.id %>">
-        <%= tweet.user.nickname %><span class="post-user">さん</span>
+    <div class="name">
+      <div class="circle"></div>
+      <a class="name-name" href="/users/<%= tweet.user.id %>">
+        <%= tweet.user.nickname %>
       </a>
-    </span>
+    </div>
     <ul class="more_list">
       <li class="more_list__details">
         <%= link_to '詳細', tweet_path(tweet.id), method: :get %>
