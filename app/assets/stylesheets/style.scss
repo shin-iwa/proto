@@ -38,6 +38,7 @@ h1  {
 
 .post {
   padding:10px;
+  margin-right:5px;
   border: 1px solid rgb(194, 31, 31);
   background-color: white;
   color: rgb(194, 31, 31);
@@ -56,6 +57,10 @@ h1  {
 
 .user_nav {
   display:flex;
+}
+
+.new-action {
+  display: flex;
 }
 
 .name-box {
