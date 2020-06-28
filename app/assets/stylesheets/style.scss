@@ -6,7 +6,8 @@ body {
 
 .base {
   position: absolute;
-  top: 70px;
+  top: 50px;
+  padding-top: 50px;
   width: 100%;
   background-color: rgb(253, 249, 236);
 }
@@ -341,7 +342,7 @@ form input[type="submit"]:hover {
 }
 
 textarea {
-  white-space: pre-wrap;
+  white-space: pre-line;
 }
 
 .head {
@@ -357,4 +358,39 @@ textarea {
 
 .footer {
   width: 100%;
+}
+
+.h2{
+  font-size: 20px;
+  padding-bottom: 30px;
+}
+#user_nickname {
+  width:300px;
+  height:25px;
+  margin-bottom: 20px;
+}
+
+#user_email {
+  width:300px;
+  height:25px;
+  margin-bottom: 20px;
+}
+
+#user_password {
+  width:300px;
+  height:25px;
+  margin-bottom: 20px;
+}
+
+#user_password_confirmation {
+  width:300px;
+  height:25px;
+  margin-bottom: 20px;
+}
+
+.ign{
+  width:100px;
+  height:40px;
+  margin-bottom: 20px;
+  padding: 5px;
 }
