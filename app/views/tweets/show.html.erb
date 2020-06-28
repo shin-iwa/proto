@@ -1,32 +1,38 @@
-<div class ="contents row">
-  <%= image_tag @tweet.image.url(:medium), class: "card" %>
-    <% if user_signed_in? && current_user.id == @tweet.user_id %>
-
-      <div class="more">
-      <span class="name">
+<div class="more-box">
+  <div class="more-parts-one">
+    <span class="name">
         <a href="/users/<%= @tweet.user.id %>">
-          <span>投稿者</span><%= @tweet.user.nickname %>
+          <%= @tweet.user.nickname %><span>さん</span>
         </a>
-
-        <p><%= @tweet.text %></p>
-      </span>
-        <ul class="more_list">
-          <li>
-            <%= link_to '編集', edit_tweet_path(@tweet.id), method: :get %>
-          </li>
-          <li>
-            <%= link_to '削除', tweet_path(@tweet.id), method: :delete %>
-          </li>
-        </ul>
-      </div>
-    <% end %>
-
+    </span>
+    <ul class="more_list">
+      <% if user_signed_in? && current_user.id == @tweet.user_id %>
+      <li class="more_list__details">
+          <%= link_to '編集', edit_tweet_path(@tweet.id), method: :get %>
+        </li>
+      <li class="more_list__details">
+          <%= link_to '削除', tweet_path(@tweet.id), method: :delete %>
+        </li>
+      <% end %>
+    </ul>
   </div>
+  <div class="more-pict">
+    <div class="more" style="background-image: url(<%= @tweet.image %>);">
+    </div>
+  </div>
+  <div class="text">
+    <p class="created"><%= @tweet.created_at %></p>
+    <p><%= @tweet.text %></p>
+  </div>
+</div>
+
+</div>
     <div class="container">
+      <div class="container-in">
     <% if current_user %>
-      <%= form_with(model: [@tweet, @comment], local: true) do |form| %>
+      <%= form_with(model: [@tweet, @comment], local: true, class:"input-form") do |form| %>
         <%= form.text_area :text, placeholder: "コメントする", rows: "2" %>
-        <%= form.submit "SEND" %>
+        <%= form.submit "SEND" , class:"bt"%>
       <% end %>
     <% else %>
       <strong><p>※※※ コメントの投稿には新規登録/ログインが必要です ※※※</p></strong>
@@ -35,13 +41,13 @@
       <h4>＜コメント一覧＞</h4>
       <% if @comments %>
         <% @comments.each do |comment| %>
-          <p>
+          <p class="comment">
             <strong><%= link_to comment.user.nickname, "/users/#{comment.user_id}" %>：</strong>
             <%= comment.text %>
           </p>
         <% end %>
       <% end %>
     </div>
-
+  </div>
   </div>
 </div>

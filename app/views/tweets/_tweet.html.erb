@@ -4,7 +4,7 @@
   <div class="more-parts-one">
     <span class="name">
       <a href="/users/<%= tweet.user.id %>">
-        <span>投稿者: </span><%= tweet.user.nickname %>
+        <%= tweet.user.nickname %><span class="post-user">さん</span>
       </a>
     </span>
     <ul class="more_list">
@@ -26,7 +26,7 @@
     </div>
   </div>
   <div class="text">
-    <p><%= tweet.created_at %></p>
+    <p class="created"><%= tweet.created_at %></p>
     <p><%= tweet.text %></p>
   </div>
 </div>
