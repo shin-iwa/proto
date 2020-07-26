@@ -1,6 +1,5 @@
 body {
   text-align: center;
-  // margin: 0 auto;
   position: relative;
 }
 
@@ -47,8 +46,6 @@ header {
 }
 
 .more-box {
-  // width:100%;
-  // height:500px;
   width:600px;
   margin: 20px auto;
   background-color: rgba(255, 255, 255, 0.8);
@@ -75,7 +72,6 @@ header {
 .more_list {
   padding: 0 10px;
   list-style: none;
-  // background-color: white;
   display: flex;
   position: absolute;
   right: 0px;
@@ -105,7 +101,6 @@ header {
 }
 
 .text {
-  // border-top: 1px solid rgb(247, 247, 247);
   margin-top:5px;
   padding:10px 0 10px 10px;
   text-align: left;
@@ -113,17 +108,6 @@ header {
 }
 
 .post {
-  // padding:10px;
-  // margin-right:5px;
-  // border: 1px solid rgb(194, 31, 31);
-  // background-color: white;
-  // color: rgb(194, 31, 31);
-  // font-weight: bold;
-  // font-size: 14px;
-  // border-radius: 5px;
-  // text-align: center;
-  // display: flex;
-  // align-items: center;
   margin:5px;
   padding: 5px;
   background-color: whitesmoke;
@@ -147,7 +131,6 @@ header {
   display: flex;
   display: flex;
   align-items: center;
-  // border:1px solid blue;
   border-radius: 2px;
   padding: 2px 5px;
 }
@@ -166,6 +149,7 @@ header {
   border-radius: 20px;
   border: 2px solid gray;
   margin:0 10px;
+  display: none;
 }
 
 a {
@@ -176,17 +160,10 @@ a {
 
 .contents{
   height: 100%;
-  // background-color: lightgray;
-  // display: flex;
-  // justify-content: center;
-  // position: absolute;
-  // top: 70px;
 }
 
 .container {
   width:100%;
-
-
 }
 
 .container-in {
@@ -199,7 +176,6 @@ a {
 }
 
 .container-main {
-  // margin: 0 auto;
   text-align: center;
   height: 78vh;
 }
@@ -235,10 +211,6 @@ a {
 
 .btb {
   width: 70px;
-  // margin-bottom: 20px;
-  // position:absolute;
-  // top: 2px;
-  // right: 60px;
   border-style: none;
   background-color: white;
   color:  gray;
@@ -258,7 +230,6 @@ a {
   height: 300px;
   width: 60vw;
   background-color: pink;
-  // margin: 0 auto;
 }
 
 .second-line {
@@ -294,7 +265,6 @@ a {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  // border-bottom: 1px dashed gray;
   margin-bottom: 10px;
   position: relative;
 }
@@ -311,23 +281,8 @@ a {
   font-size: 16px;
 }
 
-// header.header .user_nav span:after {
-//   content: '▼';
-//   font-size: .7em;
-//   margin-left: -4px;
-// }
-
-// form input[type="submit"] {
-//   background-color: #57C3E9;
-//   border-radius: 20px;
-//   color: #fff;
-//   border: 0;
-//   font-size: 18px;
-// }
-
 form input[type="submit"]:hover {
   opacity: 0.8;
-  // background-color: #fff8d0;
 }
 
 .card {
