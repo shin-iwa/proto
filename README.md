@@ -56,5 +56,5 @@ This application uses the following open source packages:
 |tweet_id|references| null :false, foreign_key: true|
 
 ### Association
-  belongs_to :tweet
-  belongs_to :user 
+- belongs_to :tweet
+- belongs_to :user 
