@@ -1,24 +1,60 @@
-# README
+[![GitHub issues](https://img.shields.io/github/issues/akioyokota/mercari)](https://github.com/akioyokota/mercari/issues)
+[![GitHub forks](https://img.shields.io/github/forks/akioyokota/mercari)](https://github.com/akioyokota/mercari/network)
+[![GitHub stars](https://img.shields.io/github/stars/akioyokota/mercari)](https://github.com/akioyokota/mercari/stargazers)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+# What
+We are making clone of Free Market site.
 
-* Ruby version
+# FURIMA
+You can check this app on <a href="http://52.192.240.140/">AWS</a>!
+Please search for it on the internet.
 
-* System dependencies
+<img width="1406" alt="screen1" src="https://user-images.githubusercontent.com/66178755/88137414-73180900-cc26-11ea-9ee4-4f55b4b7e51d.png">
 
-* Configuration
+# About
+This app is clone site. You cannot actually buy ptoducts. But the basic systems has been reproduced! So please make an index of our technical level with it.
 
-* Database creation
+# Technology used
+This application uses the following open source packages:
 
-* Database initialization
+<img width="531" src="https://user-images.githubusercontent.com/66307522/88165235-5a244d80-cc50-11ea-9012-f2c9222a056b.JPG">
 
-* How to run the test suite
+# Database
 
-* Services (job queues, cache servers, search engines, etc.)
+## users table
+|Column|Type|Options|
+|------|----|-------|
+|nickname|string|null: false|
+|birthday|date|null: false|
+|email|string|null: false, unique: true|
+|encrypted_password|string|null: false|
 
-* Deployment instructions
+### Association
+- has_many :tweets
+- has_many :comments
 
-* ...
+
+## tweets table
+|Column|Type|Options|
+|------|----|-------|
+|image|string|
+|text|string||
+|user_id|references| null :false, foreign_key: true|
+|nickname|references| null :false, foreign_key: true|
+
+### Association
+- belongs_to :user
+- has_many :comments
+
+
+## comments table
+|Column|Type|Options|
+|------|----|-------|
+|text|text|null: false|
+|user_id|references| null :false, foreign_key: true|
+|tweet_id|references| null :false, foreign_key: true|
+
+### Association
+- belongs_to :tweet
+- belongs_to :user 
