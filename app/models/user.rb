@@ -5,6 +5,8 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   validates :nickname, :email, :encrypted_password, presence: true
+  # validates :image, blank: true
   has_many :tweets
   has_many :comments
+  mount_uploader :image, ImageUploader
 end

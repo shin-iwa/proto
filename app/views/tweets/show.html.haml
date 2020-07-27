@@ -1,0 +1,47 @@
+.more-box
+  .more-parts-one
+    .name
+      .circle
+      %a.name-name{:href => "/users/#{@tweet.user.id}"}
+        = @tweet.user.nickname
+        -# %div
+        -#   %span 長辺を1024pxにしてリサイズされた画像を表示
+        -#   = image_tag @user.avatar.variant(resize:'1024x1024').processed
+        -# %div
+        -#   %span 長辺を800pxにしてリサイズされた画像を表示
+        -#   = image_tag @user.avatar.variant(resize:'800x800').processed
+        -# %div
+        -#   %span サムネイル画像(W:640 x H:640にクロップされた画像)を表示
+        -#   %span= image_tag @user.avatar.variant(combine_options:{resize:"640x640^",crop:"640x640+0+0",gravity: :center}).processed
+
+    %ul.more_list
+      - if user_signed_in? && current_user.id == @tweet.user_id
+        %li.more_list__details
+          = link_to '編集', edit_tweet_path(@tweet.id), method: :get
+        %li.more_list__details
+          = link_to '削除', tweet_path(@tweet.id), method: :delete
+  .more-pict
+    -# .more{:style => "background-image: url(#{@tweet.image});"}
+  .contents
+    .text
+      -# = @tweet.text
+      = @tweet.content
+      %p.created= @tweet.created_at
+.container
+  .container-in
+    - if current_user
+      = form_with(model: [@tweet, @comment], local: true, class:"input-form") do |form|
+        = form.text_area :text, placeholder: "コメント欄", rows: "1" , class:"yah"
+        = form.submit "投稿する" , class:"bt"
+    - else
+      %strong
+        %p ※※※ コメントの投稿には新規登録/ログインが必要です ※※※
+    .comments
+      %h4.line ＜コメント一覧＞
+      - if @comments
+        - @comments.each do |comment|
+          %p.comment
+            %strong
+              = link_to comment.user.nickname, "/users/#{comment.user_id}"
+              ：
+            = comment.text
