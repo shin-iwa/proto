@@ -13,16 +13,16 @@
 ActiveRecord::Schema.define(version: 2020_06_27_092304) do
 
   create_table "comments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "user_id"
-    t.integer "tweet_id"
+    t.integer "user_id", null: false
+    t.integer "tweet_id", null: false
     t.text "text", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "tweets", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "text"
-    t.text "image"
+    t.text "text", null: false
+    t.string "image"
     t.integer "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
