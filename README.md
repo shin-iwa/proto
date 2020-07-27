@@ -1,12 +1,7 @@
-[![GitHub issues](https://img.shields.io/github/issues/akioyokota/mercari)](https://github.com/akioyokota/mercari/issues)
-[![GitHub forks](https://img.shields.io/github/forks/akioyokota/mercari)](https://github.com/akioyokota/mercari/network)
-[![GitHub stars](https://img.shields.io/github/stars/akioyokota/mercari)](https://github.com/akioyokota/mercari/stargazers)
-
-
 # What
 We are making clone of Free Market site.
 
-# FURIMA
+# Proto
 You can check this app on <a href="http://52.192.240.140/">AWS</a>!
 Please search for it on the internet.
 
@@ -26,7 +21,6 @@ This application uses the following open source packages:
 |Column|Type|Options|
 |------|----|-------|
 |nickname|string|null: false|
-|birthday|date|null: false|
 |email|string|null: false, unique: true|
 |encrypted_password|string|null: false|
 
@@ -39,9 +33,8 @@ This application uses the following open source packages:
 |Column|Type|Options|
 |------|----|-------|
 |image|string|
-|text|string||
-|user_id|references| null :false, foreign_key: true|
-|nickname|references| null :false, foreign_key: true|
+|text|text|null: false|
+|user_id|integer| null: false|
 
 ### Association
 - belongs_to :user
@@ -52,8 +45,8 @@ This application uses the following open source packages:
 |Column|Type|Options|
 |------|----|-------|
 |text|text|null: false|
-|user_id|references| null :false, foreign_key: true|
-|tweet_id|references| null :false, foreign_key: true|
+|user_id|string| null :false|
+|tweet_id|string| null :false|
 
 ### Association
 - belongs_to :tweet
