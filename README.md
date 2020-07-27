@@ -1,8 +1,3 @@
-[![GitHub issues](https://img.shields.io/github/issues/akioyokota/mercari)](https://github.com/akioyokota/mercari/issues)
-[![GitHub forks](https://img.shields.io/github/forks/akioyokota/mercari)](https://github.com/akioyokota/mercari/network)
-[![GitHub stars](https://img.shields.io/github/stars/akioyokota/mercari)](https://github.com/akioyokota/mercari/stargazers)
-
-
 # What
 We are making clone of Free Market site.
 
@@ -39,9 +34,8 @@ This application uses the following open source packages:
 |Column|Type|Options|
 |------|----|-------|
 |image|string|
-|text|string||
-|user_id|references| null :false, foreign_key: true|
-|nickname|references| null :false, foreign_key: true|
+|text|string|null: false|
+|user_id|integer|null :false|
 
 ### Association
 - belongs_to :user
@@ -52,8 +46,8 @@ This application uses the following open source packages:
 |Column|Type|Options|
 |------|----|-------|
 |text|text|null: false|
-|user_id|references| null :false, foreign_key: true|
-|tweet_id|references| null :false, foreign_key: true|
+|user_id|integer|null :false|
+|tweet_id|integer|null :false|
 
 ### Association
 - belongs_to :tweet
