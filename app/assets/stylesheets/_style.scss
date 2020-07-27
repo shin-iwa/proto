@@ -5,15 +5,19 @@ body {
   .base {
     position: absolute;
     top: 50px;
-    padding-top: 50px;
+    padding-top: 30px;
     width: 100%;
     background-color: rgb(253, 249, 236);
   }
   h1  {
     font-weight: bold;
     font-style: italic;
+    .tytle {
+      font-size: 25px;
+    }
   }
-  header {
+  .header {
+    background-color: white;
     position: fixed;
     top: 0;
     left: 0;
@@ -21,21 +25,28 @@ body {
     z-index: 5;
   }
   .header-row {
-    width: calc(100vw - 40px);
+    width: 640px;
     height: 50px;
     padding: 0 20px;
+    margin: 0 auto;
     background-color: white;
     display: flex;
     align-items: center;
     justify-content: space-between;
     position: relative;
     border-bottom: 1px solid rgb(240, 206, 157);
+    .title__name {
+      font-size: 22px;
+    }
   }
   #keyword {
     text-align: center;
   }
   .search-form {
     display: flex;
+  }
+  .nav-blank {
+    width: 200px;
   }
   .more-box {
     width: 650px;
@@ -83,16 +94,14 @@ body {
     font-size: 13px;
     color: #333;
   }
-
   .text {
     // margin-top:5px;
     padding: 5px;
     text-align: left;
     color: #333;
   }
-
   .post {
-    margin:5px;
+    // margin:5px;
     padding: 5px;
     background-color: whitesmoke;
     border:1px solid lightgray;
@@ -108,7 +117,6 @@ body {
     display: flex;
   }
   .name-box {
-    display: flex;
     display: flex;
     align-items: center;
     border-radius: 2px;
@@ -185,7 +193,8 @@ body {
     color:  gray;
   }
   .btc {
-    width: 500px;
+    width: 620px;
+    padding: 10px;
     margin: 20px 0;
   }
   .image {
@@ -199,14 +208,28 @@ body {
   }
   .second-line {
     background-color:rgb(253, 230, 191);
-    display: flex;
-    justify-content: space-between;
-    padding:0 20px;
+    height: 20px;
+    width: 100%;
     position: fixed;
     top: 50px;
     left: 0;
     right: 0;
     z-index: 4;
+    &__sign {
+      width: 650px;
+      margin: 0 auto;
+      padding-left: 10px;
+      text-align: left;
+    }
+    &__box {
+      // width: 650px;
+      // margin: 0 auto;
+      .user__info {
+        // width: 650px;
+        // margin: 0 10px;
+        // text-align: left;
+      }
+    }
   }
   .fa-home {
     margin-right:20px;
