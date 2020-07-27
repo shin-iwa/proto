@@ -1,0 +1,36 @@
+.more-box
+  .more-parts-one
+    .name
+      .circle
+      %a.name-name{:href => "/users/#{@tweet.user.id}"}
+        = @tweet.user.nickname
+        %span さん
+    %ul.more_list
+      - if user_signed_in? && current_user.id == @tweet.user_id
+        %li.more_list__details
+          = link_to '編集', edit_tweet_path(@tweet.id), method: :get
+        %li.more_list__details
+          = link_to '削除', tweet_path(@tweet.id), method: :delete
+  .more-pict
+    .more{:style => "background-image: url(#{@tweet.image});"}
+  .text
+    %p.created= @tweet.created_at
+    %p= @tweet.text
+.container
+  .container-in
+    - if current_user
+      = form_with(model: [@tweet, @comment], local: true, class:"input-form") do |form|
+        = form.text_area :text, placeholder: "コメント欄", rows: "1" , class:"yah"
+        = form.submit "投稿する" , class:"bt"
+    - else
+      %strong
+        %p ※※※ コメントの投稿には新規登録/ログインが必要です ※※※
+    .comments
+      %h4.line ＜コメント一覧＞
+      - if @comments
+        - @comments.each do |comment|
+          %p.comment
+            %strong
+              = link_to comment.user.nickname, "/users/#{comment.user_id}"
+              ：
+            = comment.text
