@@ -4,7 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  # validates :text, presence: true
+  validates :nickname, presence: true
   has_many :tweets
   has_many :comments
 end

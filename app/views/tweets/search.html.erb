@@ -1,7 +1,6 @@
+
 <div class="contents row">
-  <div class="container-main__two">
-    <% @tweets.each do |tweet| %>
-      <%= render partial: "tweet", locals: { tweet: tweet } %>
-    <% end %>
-  </div>
+  <% @tweets.each do |tweet| %>
+    <%= render partial: "tweet", locals: { tweet: tweet } %>
+  <% end %>
 </div>
