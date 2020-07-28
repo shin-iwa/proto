@@ -1,19 +1,19 @@
 # What
-We are making clone of Free Market site.
+I am making Tweet app.
 
 # Proto
 You can check this app on <a href="http://52.192.240.140/">AWS</a>!
 Please search for it on the internet.
 
-<img width="1406" alt="screen1" src="https://user-images.githubusercontent.com/66307522/88576067-cb646600-d07f-11ea-8aec-0cef9be539c2.png">
+<img width="1406" alt="screen1" src="https://user-images.githubusercontent.com/66307522/88576471-75dc8900-d080-11ea-8321-12a239eb33a4.png">
 
 # About
-This app is clone site. You cannot actually buy ptoducts. But the basic systems has been reproduced! So please make an index of our technical level with it.
+This is a tweet app. You cannot actually buy ptoducts. But the basic systems has been reproduced! So please make an index of our technical level with it.
 
 # Technology used
 This application uses the following open source packages:
 
-<img width="531" src="https://user-images.githubusercontent.com/66307522/88165235-5a244d80-cc50-11ea-9012-f2c9222a056b.JPG">
+<img width="531" src="https://user-images.githubusercontent.com/66307522/88606810-97596700-d0b8-11ea-9ad1-b8abd6ec22de.jpg">
 
 # Database
 
