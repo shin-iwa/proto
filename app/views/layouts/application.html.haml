@@ -21,9 +21,6 @@
             = link_to  "投稿する", new_tweet_path, class: "post"
         - else
           %div
-            -# .new-action
-            -#   = link_to "ログイン", new_user_session_path, class: 'post'
-            -#   = link_to "新規登録", new_user_registration_path, class: 'post'
       .second-line
         - if user_signed_in?
           .second-line__sign
@@ -45,5 +42,4 @@
       = yield
       .foot
         %p Copyright Proto 2020.
-    %footer
 

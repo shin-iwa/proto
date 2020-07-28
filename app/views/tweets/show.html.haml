@@ -12,10 +12,12 @@
         %li.more_list__details
           = link_to '削除', tweet_path(@tweet.id), method: :delete
   .more-pict
-    .more{:style => "background-image: url(#{@tweet.image});"}
+    - if @tweet.image?
+      = image_tag @tweet.image.url
+    - else
   .text
     %p.created= @tweet.created_at
-    %p= @tweet.text
+    %p= simple_format(@tweet.text)
 .container
   .container-in
     - if current_user

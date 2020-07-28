@@ -1,13 +1,15 @@
 body {
   text-align: center;
   position: relative;
-  height: 100%;
+  // height: 100%;
+    background-color: rgb(253, 249, 236);
   .base {
     position: absolute;
     top: 50px;
     padding-top: 30px;
     width: 100%;
-    background-color: rgb(253, 249, 236);
+    // height: 100vh;
+    // background-color: rgb(253, 249, 236);
   }
   h1 {
     font-weight: bold;
@@ -84,11 +86,15 @@ body {
     } 
   }
   .more {
-    height: 400px;
     background-size:contain; 
     background-repeat: no-repeat;  
     background-position: center center; 
     position: relative;
+    &-pict {
+      img {
+        max-width: 650px;
+      }
+    }
   }
   .created {
     font-size: 13px;
@@ -96,7 +102,7 @@ body {
   }
   .text {
     // margin-top:5px;
-    padding: 5px;
+    padding: 10px 20px;
     text-align: left;
     color: #333;
   }
@@ -135,7 +141,7 @@ body {
     border-radius: 20px;
     border: 2px solid gray;
     margin:0 10px;
-    display: none;
+    // display: none;
   }
   a {
     text-decoration: none;
