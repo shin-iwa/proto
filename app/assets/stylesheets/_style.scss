@@ -1,15 +1,12 @@
 body {
   text-align: center;
   position: relative;
-  // height: 100%;
-    background-color: rgb(253, 249, 236);
+  background-color: rgb(253, 249, 236);
   .base {
     position: absolute;
     top: 50px;
     padding-top: 30px;
     width: 100%;
-    // height: 100vh;
-    // background-color: rgb(253, 249, 236);
   }
   h1 {
     font-weight: bold;
@@ -101,13 +98,11 @@ body {
     color: #333;
   }
   .text {
-    // margin-top:5px;
     padding: 10px 20px;
     text-align: left;
     color: #333;
   }
   .post {
-    // margin:5px;
     padding: 5px;
     background-color: whitesmoke;
     border:1px solid lightgray;
@@ -324,5 +319,51 @@ body {
     height:40px;
     margin-bottom: 20px;
     padding: 5px;
+  }
+}
+
+.contents__float {
+  display: flex;
+  width: 650px;
+  .more-box {
+    width: 200px;
+    margin: 20px auto;
+    background-color: rgba(255, 255, 255, 0.8);
+    border:1px solid darkgray;
+    border-radius: 3px;
+    background-size:contain; 
+    background-repeat: no-repeat;  
+    background-position: center center; 
+    position: relative;
+    .more-parts-one {
+      display: flex;
+      align-items: center;
+      padding: 5px;
+      height:35px;
+      border-bottom: 1px solid rgb(223, 222, 222);
+    }
+    .post-user {
+      padding-left: 3px;
+    }
+    .more_list {
+      padding: 0 10px;
+      list-style: none;
+      display: flex;
+      position: absolute;
+      right: 0px;
+      &__details {
+        margin:5px;
+        padding: 5px;
+        background-color: whitesmoke;
+        border:1px solid lightgray;
+        border-radius: 4px;
+      }
+    } 
+    .more-pict {
+      .image {
+        margin: 0 0 10px 0;
+        width: 200px;
+      }
+    }
   }
 }
