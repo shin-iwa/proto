@@ -24,9 +24,5 @@
           = f.label :password_confirmation
           %br/
           = f.password_field :password_confirmation, autocomplete: "off"
-
-        .field
-          = f.label :"アイコン(省略可)"
-          = f.file_field :icon  
         .actions
           = f.submit "Sign up", class: "ign"
