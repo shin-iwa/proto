@@ -1,10 +1,12 @@
 .more-box
   .more-parts-one
     .name
-      .circle
+      .triangle 
+        .triangle__inner
+          %i.fas.fa-angle-double-right
       %a.name-name{:href => "/users/#{tweet.user.id}"}
         = tweet.user.nickname
-        %span さん
+      %span.sir
     %ul.more_list
       %li.more_list__details
         = link_to '詳細', tweet_path(tweet.id), method: :get

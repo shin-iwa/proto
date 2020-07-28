@@ -131,10 +131,28 @@ body {
   .name {
     display: flex;
     align-items: center;
+    .triangle {
+      width: 24px;
+      height: 24px;
+      color: #333;
+      margin: 0 4px 0 10px;
+      border: 1px solid #333;
+      border-radius: 50%;
+      // background-color: rgb(253, 230, 191);
+      &__inner {
+        
+      }
+    }
+    .name-name {
+      height:20px;
+      margin: 0 0 5px 0;
+      font-weight: bold;
+    }
+    .sir {
+      margin: 0 0 0 3px;
+    }
   }
-  .name-name {
-    height:20px;
-  }
+ 
   .circle {
     width:30px;
     height:30px;
