@@ -1,3 +1,5 @@
 = form.file_field :image, class: "image"
 = form.text_area :text, placeholder: "text" , rows: "10"
 = form.submit "SEND", class: "btc"
+= form.label :tag_list
+= form.text_field :tag_list, value: @tweet.tag_list.join(","), class: "form-control", placeholder: 'テキストを入力してください'
