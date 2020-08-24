@@ -138,10 +138,6 @@ body {
       margin: 0 4px 0 10px;
       border: 1px solid #333;
       border-radius: 50%;
-      // background-color: rgb(253, 230, 191);
-      &__inner {
-        
-      }
     }
     .name-name {
       height:20px;
@@ -246,15 +242,6 @@ body {
       margin: 0 auto;
       padding-left: 10px;
       text-align: left;
-    }
-    &__box {
-      // width: 650px;
-      // margin: 0 auto;
-      .user__info {
-        // width: 650px;
-        // margin: 0 10px;
-        // text-align: left;
-      }
     }
   }
   .fa-home {

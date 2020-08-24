@@ -2,7 +2,8 @@
   .more-parts-one
     .name
       .triangle 
-        .triangle__inner ▶︎
+        %a.triangle__inner{:href => "/users/#{@tweet.user.id}"}
+          %i.fas.fa-angle-double-right
       %a.name-name{:href => "/users/#{@tweet.user.id}"}
         = @tweet.user.nickname
         %span さん
