@@ -62,7 +62,7 @@ header {
 }
 
 .more-box {
-  width:600px;
+  width:70vw;
   margin: 20px auto;
   background-color: rgba(255, 255, 255, 0.8);
   border:1px solid darkgray;
@@ -104,8 +104,8 @@ header {
 }
 
 .more {
-  width: 600px;
-  height: 400px;
+  // width: 600px;
+  // height: 400px;
   background-size:contain; 
   background-repeat: no-repeat;  
   background-position: center center; 
@@ -118,7 +118,7 @@ header {
 
 .text {
   margin-top:5px;
-  padding:10px 0 10px 10px;
+  padding:20px;
   text-align: left;
   color: #333;
 }
