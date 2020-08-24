@@ -31,8 +31,13 @@
             .new-action
               = link_to "ログイン", new_user_session_path, class: 'post'
               = link_to "新規登録", new_user_registration_path, class: 'post'
-    .base
-      = yield
-      .foot
+    .main
+      .base
+        .side
+          .side__top
+          .side__center
+          .side__bottom
+        = yield
+      .footer
         %p Copyright Proto 2020.
-    %footer
+
