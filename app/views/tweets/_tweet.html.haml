@@ -1,20 +1,23 @@
-.more-box
-  .more-parts-one
-    .name
-      .circle
-      %a.name-name{:href => "/users/#{tweet.user.id}"}
+%table.table
+  %thead
+    %tr
+      %th.title
+        タイトル
+      %th.author
+        作者：
         = tweet.user.nickname
-    %ul.more_list
-      %li.more_list__details
+  %tbody
+    %tr.secondRecord
+      %td.secondRecord__category
+        カテゴリ
+      %td.secondRecord__link
         = link_to '詳細', tweet_path(tweet.id), method: :get
-      -# - if user_signed_in? && current_user.id == tweet.user_id
-      -#   %li.more_list__details
-      -#     = link_to '編集', edit_tweet_path(tweet.id), method: :get
-      -#   %li.more_list__details
-      -#     = link_to '削除', tweet_path(tweet.id), method: :delete
+  %tfoot.lastRecord
+    %tr.lastRecord__base
+      %td.lastRecord__base--first
+        .text
+          %p= simple_format(tweet.text.truncate(24, omission: '~~~')) 
+      %td.lastRecord__base--second
+        %p.created= tweet.created_at
+.more-parts-one
 
-  .text
-    %p.created= tweet.created_at
-    %p= simple_format(tweet.text.truncate(24, omission: '~~~')) 
-  .more-pict
-    -# .more{:style => "background-image: url(#{tweet.image});"}
