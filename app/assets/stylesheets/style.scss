@@ -6,16 +6,12 @@ body {
 .base {
   // position: absolute;
   // top: 50px;
-  padding-top: 70px;
+  padding-top: 20px;
   width: 100%;
   background-color: rgb(253, 249, 236);
   display: flex;
 }
 
-h1  {
-  font-weight: bold;
-  font-style: italic;
-}
 
 // header {
 //   position: fixed;
@@ -34,8 +30,14 @@ h1  {
   justify-content: space-between;
   position: relative;
   border-bottom: 1px solid rgb(240, 206, 157);
-
-
+  .title-name {
+    font-size: 24px;
+    color:rgb(21, 187, 252);
+    .title-logo {
+      // font-size: 24px;
+      color:rgb(21, 187, 252);
+    }
+  }
 }
 
 .side {
@@ -170,9 +172,13 @@ h1  {
 
 a {
   text-decoration: none;
-  color: #333;
+
 }
 
+a:visited {
+  text-decoration: none;
+  // color: rgb(28, 168, 255);
+}
 
 .contents{
   height: 100%;
@@ -250,7 +256,7 @@ a {
 
 .second-line {
   height: 40px;
-  background-color:rgb(46, 190, 247);
+  background-color:rgb(21, 187, 252);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -268,6 +274,7 @@ a {
 }
 .toMypage {
   color: white;
+  font-size: 15px;
 }
 
 .fa-sign-out-alt {
@@ -275,6 +282,7 @@ a {
 }
 .toLogout {
   color: white;
+  font-size: 15px;
 }
 
 .post-profile-icon{
