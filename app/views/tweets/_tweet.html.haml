@@ -16,7 +16,7 @@
     %tr.lastRecord__base
       %td.lastRecord__base--first
         .text
-          %p= simple_format(tweet.text.truncate(24, omission: '~~~')) 
+          %p= simple_format(tweet.text.truncate(40, omission: '...')) 
       %td.lastRecord__base--second
         %p.created= tweet.created_at
 .more-parts-one

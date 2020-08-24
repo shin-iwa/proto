@@ -17,13 +17,13 @@ h1  {
   font-style: italic;
 }
 
-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 5;
-}
+// header {
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   right: 0;
+//   z-index: 5;
+// }
 .header-row {
   width: calc(100vw - 40px);
   height: 50px;
@@ -249,20 +249,34 @@ a {
 }
 
 .second-line {
-  background-color:rgb(253, 230, 191);
+  height: 40px;
+  background-color:rgb(46, 190, 247);
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding:0 20px;
-  position: fixed;
-  top: 50px;
-  left: 0;
-  right: 0;
-  z-index: 4;
+  // position: fixed;
+  // top: 50px;
+  // left: 0;
+  // right: 0;
+  // z-index: 4;
 }
 
 .fa-home {
   margin-right:20px;
+  color: white;
 }
+.toMypage {
+  color: white;
+}
+
+.fa-sign-out-alt {
+  color: white;
+}
+.toLogout {
+  color: white;
+}
+
 .post-profile-icon{
   height: 400px;
 
