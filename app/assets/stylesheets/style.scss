@@ -1,6 +1,7 @@
 body {
   text-align: center;
   // position: relative;
+  z-index: 4;
 }
 
 .base {
@@ -44,7 +45,7 @@ body {
   width: 100px;
   height: calc(100vh - 100px);
   background-color: coral;
-
+  margin-right: 20px;
 }
 
 #keyword {
@@ -421,4 +422,15 @@ textarea {
       }
     }
   }
+}
+
+.linkBottun {
+  z-index: 1;
+  height: 80px;
+  width: 80px;
+  background-color: pink;
+  bottom: 0px;
+  right: 0px;
+  position: absolute;
+  border-radius: 50%;
 }
