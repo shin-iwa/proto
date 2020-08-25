@@ -1,7 +1,7 @@
 class ArticlesController < ApplicationController
-  def show
+  def index
     article = Article.all
-    @nickname = user.nickname
-    @tweets = user.tweets.includes(:user).order("created_at DESC")
+    # @nickname = user.nickname
+    @tweets = Tweet.limit(10).includes(:user).order("created_at DESC")
   end
 end
