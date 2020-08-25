@@ -3,7 +3,7 @@ class TweetsController < ApplicationController
   before_action :move_to_index,except: [:index, :show, :search]
 
   def index
-    @tweets = Tweet.limit(10).includes(:user, :tags).order("created_at DESC")
+    @tweets = Tweet.limit(10).includes(:user).order("created_at DESC")
   end
 
   def new
