@@ -5,6 +5,7 @@ class TweetsController < ApplicationController
   def index
     @tweets = Tweet.limit(10).includes(:user).order("created_at DESC")
     # @tags = Tweet.tag_counts_on(:tags).order('count DESC')
+
   end
 
   def new
@@ -15,6 +16,7 @@ class TweetsController < ApplicationController
     # @tweet.tags # => [,,]
 
     # @tweet.tags_count # => [,,]
+
   end
 
   def create

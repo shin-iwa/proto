@@ -44,15 +44,7 @@ body {
   width: 100px;
   height: calc(100vh - 100px);
   background-color: coral;
-  &__top {
 
-  }
-  &__center {
-
-  }
-  &__bottom {
-
-  }
 }
 
 #keyword {
@@ -256,8 +248,7 @@ a:visited {
 
 .second-line {
   height: 40px;
-  // background-color:rgb(21, 187, 252);
-  background-color:#1b95e0;
+  background-color:rgb(21, 187, 252);
   display: flex;
   justify-content: space-between;
   align-items: center;
