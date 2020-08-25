@@ -1,2 +1,3 @@
-module TweetsHelper
+module Userhelper
+  include ActsAsTaggableOn::TagsHelper
 end

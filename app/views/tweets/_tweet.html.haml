@@ -1,0 +1,26 @@
+%table.table
+  %thead
+    %tr
+      %th.title
+        タイトル
+      %th.author
+        作者：
+        = tweet.user.nickname
+  %tbody
+    %tr.secondRecord
+      %td.secondRecord__category
+        カテゴリ
+      %td.secondRecord__link
+        = link_to '詳細', tweet_path(tweet.id), method: :get
+  %tfoot.lastRecord
+    %tr.lastRecord__base
+      %td.lastRecord__base--first
+        .text
+          %p= simple_format(tweet.text.truncate(40, omission: '...')) 
+      %td.lastRecord__base--second
+        %p.created= tweet.created_at
+      - tag_cloud(@tags, %w(css1 css2 css3 css4)) do |tag, css_class|
+        = link_to tag.name, { action: :tag, tag_name: tag.name }, class: css_class
+
+.more-parts-one
+

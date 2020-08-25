@@ -1,0 +1,6 @@
+= form.file_field :image, class: "image"
+= form.text_area :text, placeholder: "text" , rows: "10"
+= form.submit "SEND", class: "btc"
+= form_with model: @tweet, local:true do |f|
+= f.label :tag_list 
+= text_field_tag 'tweet[tag_list]', @tweet.tag_list, :class => "form-control" 

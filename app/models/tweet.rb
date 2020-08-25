@@ -3,6 +3,7 @@ class Tweet < ApplicationRecord
   belongs_to :user
   has_many :comments
   has_rich_text :content
+  acts_as_taggable
   
   def self.search(search)
     return Tweet.all unless search

@@ -3,11 +3,18 @@ class TweetsController < ApplicationController
   before_action :move_to_index,except: [:index, :show, :search]
 
   def index
-    @tweets = Tweet.limit(10).includes(:user).order("created_at DESC")
+    @tweets = Tweet.limit(10).includes(:user, :tags).order("created_at DESC")
+    @tags = Tweet.tag_counts_on(:tags).order('count DESC')
   end
 
   def new
     @tweet = Tweet.new
+    @tweet.tag_list = "awesome, slick, hefty" # this should be familiar
+    @tweet.save
+
+    @tweet.tags # => [,,]
+
+    @tweet.tags_count # => [,,]
   end
 
   def create
@@ -36,9 +43,14 @@ class TweetsController < ApplicationController
     @tweets = Tweet.search(params[:keyword])
   end
 
+  def tag_cloud
+    # order('count DESC')でカウントの多い順にタグを並べています
+    @tags = Review.tag_counts_on(:tags).order('count DESC')
+  end
+
   private
   def tweet_params
-    params.require(:tweet).permit(:image, :text).merge(user_id: current_user.id)
+    params.require(:tweet).permit(:image, :text ,:tag_list).merge(user_id: current_user.id)
   end
 
   def set_tweet
