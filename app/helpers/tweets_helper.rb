@@ -1,3 +1,2 @@
-module Userhelper
-
+module TweetsHelper
 end
