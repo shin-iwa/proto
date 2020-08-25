@@ -1,7 +1,7 @@
 .block
   こんにちは、ここは小説トップページです
   .main
-    - @tweets.each do |tweet|
+    - @articles.each do |article|
       %table.table
         %thead
           %tr
@@ -15,7 +15,7 @@
             %td.secondRecord__category
               カテゴリ
             %td.secondRecord__link
-              = link_to '詳細', tweet_path(tweet.id), method: :get
+              = link_to '詳細', user_articles_path(article.id), method: :get
         %tfoot.lastRecord
           %tr.lastRecord__base
             %td.lastRecord__base--first

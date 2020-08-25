@@ -42,7 +42,7 @@ class ArticlesController < ApplicationController
   end
 
   def set_article
-    @artilce = Article.find(params[:id])
+    @article = Article.find(params[:id])
   end
 
   # def move_to_index
