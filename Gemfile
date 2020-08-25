@@ -58,4 +58,3 @@ gem 'carrierwave', '~> 1.0'
 gem "mini_magick"
 gem 'devise'
 gem "haml-rails"
-gem 'acts-as-taggable-on', '~> 6.0'
