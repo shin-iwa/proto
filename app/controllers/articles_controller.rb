@@ -11,7 +11,8 @@ class ArticlesController < ApplicationController
   end
 
   def create
-    Article.create(article_params)
+    article = Article.create(article_params)
+    redirect_to "/tweets/#{article.tweet.id}" 
   end
 
   def destroy
@@ -38,7 +39,7 @@ class ArticlesController < ApplicationController
 
   private
   def article_params
-    params.require(:article).permit( :title, :body).merge(user_id: current_user.id)
+    params.require(:article).permit(:title, :body).merge((user_id: current_user.id).or(tweet_id: params[:tweet.id]))
   end
 
   def set_article

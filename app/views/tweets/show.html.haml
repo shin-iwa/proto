@@ -27,7 +27,7 @@
         %strong
           %p ※※※ コメントの投稿には新規登録/ログインが必要です ※※※
 
-      = link_to  "新規作成", new_tweet_article_path(@tweet.id), class: "post"
+      = link_to  "新規作成", new_article_path(@tweet.id), class: "post"
       .comments
         %h4.line ＜コメント一覧＞
         - if @comments
