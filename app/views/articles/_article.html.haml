@@ -1,0 +1,24 @@
+%table.table
+  %thead
+    %tr
+      %th.title
+        = article.title
+      %th.author
+        作者：
+        = article.user.nickname
+  %tbody
+    %tr.secondRecord
+      %td.secondRecord__category
+        カテゴリ
+      %td.secondRecord__link
+        = link_to '詳細', article_path(article.id), method: :get
+  %tfoot.lastRecord
+    %tr.lastRecord__base
+      %td.lastRecord__base--first
+        .text
+          %p= simple_format(article.body.truncate(40, omission: '...')) 
+      %td.lastRecord__base--second
+        %p.created= article.created_at
+
+.more-parts-one
+

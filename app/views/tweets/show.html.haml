@@ -18,7 +18,7 @@
   .more-pict
     -# .more{:style => "background-image: url(#{@tweet.image});"}
   .container
-    = link_to  "新規作成", new_tweet_article_path(@tweet.id), class: "post"
+    -# = link_to  "新規作成", new_tweet_article_path(@tweet.id), class: "post"
     .container-in
       - if current_user
         = form_with(model: [@tweet, @comment], local: true, class:"input-form") do |form|
