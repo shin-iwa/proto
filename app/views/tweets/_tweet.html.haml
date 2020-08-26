@@ -11,7 +11,8 @@
       %td.secondRecord__category
         カテゴリ
       %td.secondRecord__link
-        = link_to '詳細', tweet_path(tweet.id), method: :get
+        -# = link_to '詳細', tweet_path(tweet.id), method: :get
+        = link_to '詳細', articles_path, method: :get
   %tfoot.lastRecord
     %tr.lastRecord__base
       %td.lastRecord__base--first
