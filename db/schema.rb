@@ -13,10 +13,10 @@
 ActiveRecord::Schema.define(version: 2020_08_25_032552) do
 
   create_table "articles", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.integer "user_id", null: false
-    t.integer "tweet_id", null: false
     t.string "title", null: false
     t.text "body", null: false
+    t.integer "user_id", null: false
+    t.integer "tweet_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(version: 2020_08_25_032552) do
   end
 
   create_table "tweets", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "title", null: false
     t.text "text", null: false
     t.string "image"
     t.integer "user_id", null: false
