@@ -4,8 +4,10 @@
 
 .contents.row
   %p.upper
-    = @nickname
+    -# = @nickname
     さんの投稿一覧
+
+  ここに紹介文を載せられれば、OK!
 
   - @articles.each do |article|
     = render partial: "articles/article", locals: { article: article }
