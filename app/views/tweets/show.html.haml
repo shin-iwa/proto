@@ -18,6 +18,7 @@
   .more-pict
     .more{:style => "background-image: url(#{@tweet.image});"}
   .container
+    = link_to  "新規作成", new_article_path(@tweet.id), class: "post"
     .container-in
       - if current_user
         = form_with(model: [@tweet, @comment], local: true, class:"input-form") do |form|
@@ -27,7 +28,7 @@
         %strong
           %p ※※※ コメントの投稿には新規登録/ログインが必要です ※※※
 
-      = link_to  "新規作成", new_article_path(@tweet.id), class: "post"
+      
       .comments
         %h4.line ＜コメント一覧＞
         - if @comments

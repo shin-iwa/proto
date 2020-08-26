@@ -1,5 +1,5 @@
 class ArticlesController < ApplicationController
-  before_action :set_article, only: [:edit, :show,]
+  before_action :set_article, only: [:edit, :show]
   before_action :move_to_index,except: [:index, :show]
 
   def index
@@ -11,8 +11,9 @@ class ArticlesController < ApplicationController
   end
 
   def create
-    article = Article.create(article_params)
-    redirect_to "/tweets/#{article.tweet.id}" 
+    # binding.pry
+    Article.create(article_params)
+    redirect_to "/" 
   end
 
   def destroy
@@ -39,7 +40,7 @@ class ArticlesController < ApplicationController
 
   private
   def article_params
-    params.require(:article).permit(:title, :body).merge((user_id: current_user.id).or(tweet_id: params[:tweet.id]))
+    params.require(:article).permit(:title, :body).merge(tweet_id: params[:tweet_id])
   end
 
   def set_article
