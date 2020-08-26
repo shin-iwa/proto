@@ -1,6 +1,19 @@
 class ArticlesController < ApplicationController
+
+  # def create
+  #   article = Article.create(article_params)
+  #   redirect_to "/tweets/#{article.tweet.id}" 
+  # end
+
+  # private
+  # def article_params
+  #   params.require(:article).permit(:title, :body).merge(user_id: current_user.id, tweet_id: params[:tweet_id])
+  # end
+
+# end
   before_action :set_article, only: [:edit, :show]
   before_action :move_to_index,except: [:index, :show]
+  before_action :authenticate_user!
 
   def index
     @articles = Article.limit(10).includes(:user).order("created_at DESC")
@@ -11,9 +24,14 @@ class ArticlesController < ApplicationController
   end
 
   def create
-    # binding.pry
-    Article.create(article_params)
-    redirect_to "/" 
+    binding.pry
+    @article = Article.new(article_params)
+    @tweet = @article.tweet
+    
+    # article.save
+    # Article.create(article_params)
+
+    # redirect_to "/" 
   end
 
   def destroy
@@ -40,7 +58,7 @@ class ArticlesController < ApplicationController
 
   private
   def article_params
-    params.require(:article).permit(:title, :body).merge(tweet_id: params[:tweet_id])
+    params.required(:article).permit(:title, :body, :user_id, :tweet_id, :article)
   end
 
   def set_article

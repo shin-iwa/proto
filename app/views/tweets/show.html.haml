@@ -12,13 +12,13 @@
           = link_to '削除', tweet_path(@tweet.id), method: :delete
   .text
     %p.created= @tweet.created_at
-    %p.created= @tweet.title
     %br
+    %p.created= @tweet.title
     %p= safe_join(@tweet.text.split("\n"), tag(:br))
   .more-pict
-    .more{:style => "background-image: url(#{@tweet.image});"}
+    -# .more{:style => "background-image: url(#{@tweet.image});"}
   .container
-    = link_to  "新規作成", new_article_path(@tweet.id), class: "post"
+    = link_to  "新規作成", new_tweet_article_path(@tweet.id), class: "post"
     .container-in
       - if current_user
         = form_with(model: [@tweet, @comment], local: true, class:"input-form") do |form|
@@ -28,7 +28,6 @@
         %strong
           %p ※※※ コメントの投稿には新規登録/ログインが必要です ※※※
 
-      
       .comments
         %h4.line ＜コメント一覧＞
         - if @comments
