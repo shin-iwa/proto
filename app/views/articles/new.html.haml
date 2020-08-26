@@ -1,8 +1,0 @@
-.contents.row
-  .container
-    .container-main
-      = form_with model: article_path,  class: "w-100" do |f| 
-        = f.hidden_field :user_id, value: current_user.id
-        = f.hidden_field :tweet_id, value: @tweet.id
-        = f.text_field :title, class: "form-control comment-input border-0", placeholder: "タイトル ...", autocomplete: :off
-        = f.text_area :body, row:3, class: "form-control comment-input border-0", placeholder: "本文 ...", autocomplete: :off
