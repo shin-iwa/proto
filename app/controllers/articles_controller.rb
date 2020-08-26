@@ -11,7 +11,7 @@ class ArticlesController < ApplicationController
   end
 
   def create
-    Article.create(artrcle_params)
+    Article.create(article_params)
   end
 
   def destroy
