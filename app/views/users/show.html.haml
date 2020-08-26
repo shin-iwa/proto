@@ -1,8 +1,8 @@
 .contents.row
-  = link_to  "新規作成", new_user_article_path, class: "post"
+  -# = link_to  "新規作成", new_tweet_article_path, class: "post"
   %p.upper
     = @nickname
     さんの投稿一覧
 
-  - @articles.each do |article|
-    = render partial: "articles/article", locals: { article: article }
+  -# - @articles.each do |article|
+  -#   = render partial: "articles/article", locals: { article: article }

@@ -7,4 +7,5 @@ class User < ApplicationRecord
   validates :nickname, :email, :encrypted_password, presence: true
   has_many :tweets
   has_many :comments
+  has_many :articles
 end
