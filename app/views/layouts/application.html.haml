@@ -18,6 +18,7 @@
           = form.submit "検索", class: "search-btn"
         .user_nav.grid-6
       .second-line
+        = link_to "記事へ", "/articles" ,class: "toMypage"
         - if user_signed_in?
           %ul.user__info
             %li

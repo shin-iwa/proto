@@ -1,3 +1,11 @@
+-# .contents.row
+-#   - @articles.each do |article|
+-#     = render partial: "article", locals: { article: article }
+
 .contents.row
+  %p.upper
+    = @nickname
+    さんの投稿一覧
+
   - @articles.each do |article|
-    = render partial: "article", locals: { article: article }
+    = render partial: "articles/article", locals: { article: article }
