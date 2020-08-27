@@ -293,6 +293,8 @@ a:visited {
   // left: 0;
   // right: 0;
   // z-index: 4;
+  .user__info {
+  display: flex;
   &__first {
     padding: 6px 20px;
     margin: 0 10px;
@@ -304,6 +306,7 @@ a:visited {
   &__second {
     padding: 10px;
     margin: 0 10px;
+  }
   }
 }
 

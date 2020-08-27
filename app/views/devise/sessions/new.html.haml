@@ -2,6 +2,11 @@
   .container
     .container-main
       %h2.h2 ログイン
+
+      ※アカウント作成される方は、
+      = link_to "新規登録へ", new_user_registration_path
+      %br
+      %br
       = form_with model: @user, url: user_session_path, id: 'new_user', class: 'new_user', local: true do |f|
         .field
           = f.label :email
