@@ -30,6 +30,8 @@ class ArticlesController < ApplicationController
   end
 
   def show
+    @novel = Novel.new
+    @novels = @article.novels.includes(:user)
   end
 
   private
