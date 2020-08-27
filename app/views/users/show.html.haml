@@ -1,10 +1,13 @@
 .contents.row
   %p.upper
     = @nickname
-    さんの近況報告一覧
+    さんの作品一覧
 
   - @articles.each do |article|
     = render partial: "articles/article", locals: { article: article }
 
+  %p.upper
+    = @nickname
+    さんの近況報告一覧
   - @tweets.each do |tweet|
     = render partial: "tweets/tweet", locals: { tweet: tweet }

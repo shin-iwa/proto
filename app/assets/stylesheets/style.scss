@@ -2,35 +2,60 @@ body {
   text-align: center;
   // position: relative;
   z-index: 4;
+  // max-width: 980px;
+  
+  background-color: #f9f9f9;
+  // border-right: 1px solid #3f3f3f;
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+  // margin: 0 auto;
 }
-
+.main {
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+  border-left: 1px solid #3f3f3f;
+  border-right: 1px solid #3f3f3f;
+  background-color: white;
+  max-width: 980px;
+  margin: 0 auto;
+}
 .base {
+  // margin: 0 auto;
   // position: absolute;
   // top: 50px;
   padding-top: 20px;
   width: 100%;
-  background-color: rgb(253, 249, 236);
+  // background-color: rgb(253, 249, 236);
   display: flex;
+  // margin: 0 auto;
 }
 
 
-// header {
-//   position: fixed;
-//   top: 0;
-//   left: 0;
-//   right: 0;
-//   z-index: 5;
-// }
+header {
+  margin: 0 auto;
+  border-left: 1px solid #3f3f3f;
+  border-right: 1px solid #3f3f3f;
+  max-width: 980px;
+  // position: fixed;
+  // top: 0;
+  // left: 0;
+  // right: 0;
+  // z-index: 5;
+}
 .header-row {
-  width: calc(100vw - 40px);
+
   height: 50px;
-  padding: 0 20px;
+  padding: 0 30px;
+  box-sizing: border-box;
   background-color: white;
   display: flex;
   align-items: center;
   justify-content: space-between;
   position: relative;
-  border-bottom: 1px solid rgb(240, 206, 157);
+  margin: 0 auto;
+  // border-bottom: 1px solid rgb(240, 206, 157);
   .title-name {
     font-size: 24px;
     color:rgb(21, 187, 252);
@@ -42,10 +67,11 @@ body {
 }
 
 .side {
-  width: 100px;
-  height: calc(100vh - 100px);
-  background-color: coral;
-  margin-right: 20px;
+  width: 150px;
+  height: calc(100vh - 50px);
+  background-color: #f9f9f9;
+  border: 1px solid silver;
+  margin: 0 20px 20px;
 }
 
 #keyword {
@@ -248,11 +274,17 @@ a:visited {
 
 .second-line {
   height: 40px;
+  max-width: 980px;
+  box-sizing: border-box;
   background-color:rgb(21, 187, 252);
+  border-top: 1px solid rgb(1, 112, 216);
+  border-bottom: 2px solid rgb(1, 75, 145);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding:0 20px;
+  padding:0 40px;
+  // margin: 0 20px;
+  
   // position: fixed;
   // top: 50px;
   // left: 0;
@@ -336,8 +368,9 @@ textarea {
 }
 
 .footer {
-  height: 50px;
+  // height: 50px;
   box-sizing: border-box;
+  background-color: gray;
 }
 
 
@@ -378,7 +411,7 @@ textarea {
 }
 
 .table {
-  width: 600px;
+  width: 700px;
   height: 120px;
   // background-color: white;
   border: 1px solid gray;
@@ -392,9 +425,10 @@ textarea {
         color: orange;
         font-size: 18px;
         font-weight: bold;
+        padding: 5px 5px 5px 20px;
       }
       .author {
-        background-color: pink;
+        background-color: #f9f9f9;
         padding: 5px;
       }
     }
@@ -402,12 +436,12 @@ textarea {
   tbody {
     .secondRecord {
       height: 20px;
-      &__category {
-        background-color: yellow;
-      }
-      &__link {
-        background-color: green;
-      }
+      // &__category {
+      //   background-color: yellow;
+      // }
+      // &__link {
+      //   background-color: green;
+      // }
     }
   }
   .lastRecord {
@@ -432,7 +466,8 @@ textarea {
   left: 10px;
   position: fixed;
   border-radius: 50%;
-  display: flex;
+  // display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
 }

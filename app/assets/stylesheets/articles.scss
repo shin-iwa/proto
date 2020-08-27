@@ -1,3 +1,51 @@
 // Place all the styles related to the articles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+// .table {
+//   width: 600px;
+//   height: 120px;
+//   // background-color: white;
+//   border: 1px solid gray;
+//   // margin-top: 150px;
+//   thead {
+//     background-color: #f9f9f9;
+//     tr{
+//       // background-color: #f9f9f9;
+//       .title {
+//         width: 70%;
+//         color: orange;
+//         font-size: 18px;
+//         font-weight: bold;
+//         padding: 5px 5px 5px 20px;
+//       }
+//       .author {
+//         background-color: pink;
+//         padding: 5px;
+//       }
+//     }
+//   }
+//   tbody {
+//     .secondRecord {
+//       height: 20px;
+//       &__category {
+//         background-color: yellow;
+//       }
+//       &__link {
+//         background-color: green;
+//       }
+//     }
+//   }
+//   .lastRecord {
+//     &__base {
+//       &--first {
+//         background-color: yellowgreen;
+//       }
+//       &--second {
+//         background-color: gray;
+
+//       }
+//     }
+//   }
+// }
