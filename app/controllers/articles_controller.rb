@@ -35,6 +35,10 @@ class ArticlesController < ApplicationController
     @novels = @article.novels.includes(:user)
   end
 
+  def search
+    @articles = Article.search(params[:keyword])
+  end
+
   private
   def article_params
     params.require(:article).permit(:title, :body).merge(user_id: current_user.id)
