@@ -286,27 +286,37 @@ a:visited {
   display: flex;
   // justify-content: space-between;
   align-items: center;
-  padding:0 40px;
+  padding:0 13px;
   // margin: 0 20px;
   // position: fixed;
   // top: 50px;
   // left: 0;
   // right: 0;
   // z-index: 4;
-  .user__info {
-  display: flex;
-  &__first {
-    padding: 6px 20px;
-    margin: 0 10px;
-    box-sizing: border-box;
-    background-color: rgb(86, 207, 255);
-    border: 1px solid rgb(1, 112, 216);
-    border-bottom: 1px solid rgb(1, 75, 145);
-  }
-  &__second {
-    padding: 10px;
-    margin: 0 10px;
-  }
+  &__info {
+    display: flex;
+    padding: 0 10px;
+    &--box {
+      padding: 10px;
+      width: 165px;
+      border-left: 1px solid gray;
+      border-right: 1px solid gray;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  // &__first {
+  //   padding: 6px 20px;
+  //   margin: 0 10px;
+  //   box-sizing: border-box;
+  //   background-color: rgb(86, 207, 255);
+  //   border: 1px solid rgb(1, 112, 216);
+  //   border-bottom: 1px solid rgb(1, 75, 145);
+  // }
+  // &__second {
+  //   padding: 10px;
+  //   margin: 0 10px;
+  // }
   }
 }
 

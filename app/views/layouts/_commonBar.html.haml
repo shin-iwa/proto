@@ -1,21 +1,27 @@
-%ul.user__info
-  %i.fas.fa-home
-    - if user_signed_in?
-      = link_to "マイページ", "/users/#{current_user.id}" ,class: "toMypage"
-    - else
-      = link_to "マイページ", new_user_session_path ,class: "toMypage"
-  %i.fas.fa-sign-out-alt
-    - if user_signed_in?
-      = link_to "ログアウト", destroy_user_session_path, method: :delete, class: "toLogout"
-    - else
-      = link_to "ログイン", new_user_session_path
-  %i.fas.fa-home
-    = link_to  "記事を投稿する", new_article_path
-  %i.fas.fa-home
-    = link_to  "活動報告を投稿する", new_tweet_path
+%ul.second-line__info
+  .second-line__info--box
+    %li.fas.fa-home
+      - if user_signed_in?
+        = link_to "マイページ", "/users/#{current_user.id}" ,class: "toMypage"
+      - else
+        = link_to "マイページ", new_user_session_path ,class: "toMypage"
+  .second-line__info--box
+    %li.fas.fa-sign-out-alt
+      - if user_signed_in?
+        = link_to "ログアウト", destroy_user_session_path, method: :delete, class: "toLogout"
+      - else
+        = link_to "ログイン", new_user_session_path
+  .second-line__info--box
+    %li.fas.fa-home
+      = link_to  "小説", new_article_path
+  .second-line__info--box
+    %li.fas.fa-home
+      = link_to  "活動報告", new_tweet_path
+  .second-line__info--box
+    %li.fas.fa-home
+      = link_to "ユーザー登録", new_user_registration_path
 
   .second-line__first
     
   .second-line__second
-    = link_to "新規登録", new_user_registration_path
   -# = link_to "新規登録", new_user_registration_path, class: 'post'
