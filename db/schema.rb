@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_25_032552) do
+ActiveRecord::Schema.define(version: 2020_08_27_042455) do
 
   create_table "articles", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "title", null: false
@@ -27,6 +27,17 @@ ActiveRecord::Schema.define(version: 2020_08_25_032552) do
     t.text "text", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "novels", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "title", null: false
+    t.text "body", null: false
+    t.bigint "user_id", null: false
+    t.bigint "article_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["article_id"], name: "index_novels_on_article_id"
+    t.index ["user_id"], name: "index_novels_on_user_id"
   end
 
   create_table "tweets", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -52,4 +63,6 @@ ActiveRecord::Schema.define(version: 2020_08_25_032552) do
   end
 
   add_foreign_key "articles", "users"
+  add_foreign_key "novels", "articles"
+  add_foreign_key "novels", "users"
 end
