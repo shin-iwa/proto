@@ -1,7 +1,7 @@
 .contents.row
   .container
     .container-main
-      = form_with(model: @article, local: true, class: "input-form") do |form|
+      = form_with(model: @novel, local: true, class: "input-form") do |form|
         %h3.head
           編集する
         = render partial: "form", locals: { form: form }

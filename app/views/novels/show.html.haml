@@ -6,10 +6,10 @@
         = @novel.user.nickname
     %ul.more_list
       -# - if user_signed_in? && current_user.id == @novel.user_id
-        %li.more_list__details
-          = link_to '編集', edit_tweet_path(@novel.id), method: :get
-        %li.more_list__details
-          = link_to '削除', tweet_path(@novel.id), method: :delete
+      -#   %li.more_list__details
+      -#     = link_to '編集', edit_novel_path(@novel.id), method: :get
+      -#   %li.more_list__details
+      -#     = link_to '削除', novel_path(@novel.id), method: :delete
   .text
     %p.created= @novel.created_at
     %br

@@ -14,6 +14,16 @@ class NovelsController < ApplicationController
     # @novels = @article.novels.includes(:user)
   end
 
+  def edit
+
+  end
+
+  def update
+    novel = Novel.find(params[:id])
+    novel.update(novel_params)
+    redirect_to '/'
+  end
+
   private
   def novel_params
     params.require(:novel).permit(:title, :body).merge(user_id: current_user.id, article_id: params[:article_id])

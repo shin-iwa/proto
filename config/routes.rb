@@ -10,6 +10,6 @@ Rails.application.routes.draw do
   resources :users, only: [:show] do
   end
   resources :articles do
-    resources :novels, only: [:new, :create, :show]
+    resources :novels, only: [:new, :create, :show, :edit, :update]
   end
 end
