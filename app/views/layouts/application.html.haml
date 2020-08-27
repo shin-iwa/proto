@@ -22,8 +22,21 @@
     .main
       .base
         .side
-          .side__top
-            ここはサイドバーです
+          %p.latest-novel 最新小説
+          - @articles.each do |article|
+            .side__top
+              %table.sideBord
+                %thead
+                  %tr
+                    作者：
+                    %a.name-name{:href => "/users/#{article.user.id}"}
+                      = article.user.nickname
+                %tbody
+                  -# %tr.author
+                  %th.title
+                    -# タイトル：
+                    %a.name-name{:href => article_path(article.id)}
+                      = article.title  
           .side__center
           .side__bottom
         = yield
