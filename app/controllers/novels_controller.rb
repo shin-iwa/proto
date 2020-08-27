@@ -24,6 +24,10 @@ class NovelsController < ApplicationController
     redirect_to '/'
   end
 
+  def count
+    @count = Novel.all.size
+  end
+
   private
   def novel_params
     params.require(:novel).permit(:title, :body).merge(user_id: current_user.id, article_id: params[:article_id])

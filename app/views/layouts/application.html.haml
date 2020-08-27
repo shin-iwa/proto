@@ -26,7 +26,8 @@
                 = link_to "マイページ", "/users/#{current_user.id}" ,class: "toMypage"
               %i.fas.fa-sign-out-alt
                 = link_to "ログアウト", destroy_user_session_path, method: :delete, class: "toLogout"
-          = link_to  "投稿する", new_tweet_path, class: "post"
+          = link_to  "記事を投稿する", new_article_path, class: "post"
+          = link_to  "活動報告を投稿する", new_tweet_path, class: "post"
         - else
           = link_to "ログイン", new_user_session_path, class: 'post'
           = link_to "新規登録", new_user_registration_path, class: 'post'

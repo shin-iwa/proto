@@ -2,24 +2,28 @@
   %thead
     %tr
       %th.title
-        = tweet.title
+        %a.name-name{:href => tweet_path(tweet.id)}
+          = tweet.title
       %th.author
         作者：
-        = tweet.user.nickname
+        %a.name-name{:href => "/users/#{tweet.user.id}"}
+          = tweet.user.nickname
   %tbody
     %tr.secondRecord
       %td.secondRecord__category
-        カテゴリ
-      %td.secondRecord__link
-        = link_to '詳細', tweet_path(tweet.id), method: :get
-        -# = link_to '詳細', articles_path, method: :get
-  %tfoot.lastRecord
-    %tr.lastRecord__base
-      %td.lastRecord__base--first
         .text
           %p= simple_format(tweet.text.truncate(40, omission: '...')) 
-      %td.lastRecord__base--second
+      %td.secondRecord__link
         %p.created= tweet.created_at
+        -# = link_to '詳細', tweet_path(tweet.id), method: :get
+        -# = link_to '詳細', articles_path, method: :get
+  -# %tfoot.lastRecord
+  -#   %tr.lastRecord__base
+  -#     %td.lastRecord__base--first
+        -# .text
+        -#   %p= simple_format(tweet.text.truncate(40, omission: '...')) 
+      -# %td.lastRecord__base--second
+      -#   %p.created= tweet.created_at
 
 .more-parts-one
 
