@@ -5,9 +5,7 @@
 .contents.row
   %p.upper
     -# = @nickname
-    さんの投稿一覧
-
-  ここに紹介文を載せられれば、OK!
+    最新投稿一覧
 
   - @articles.each do |article|
     = render partial: "articles/article", locals: { article: article }
