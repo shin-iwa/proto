@@ -6,6 +6,7 @@
   %p.upper
     -# = @nickname
     最新投稿一覧
+  %br
 
   - @articles.each do |article|
     = render partial: "articles/article", locals: { article: article }

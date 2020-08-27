@@ -57,7 +57,7 @@ header {
   margin: 0 auto;
   // border-bottom: 1px solid rgb(240, 206, 157);
   .title-name {
-    font-size: 24px;
+    font-size: 30px;
     color:rgb(21, 187, 252);
     .title-logo {
       // font-size: 24px;
@@ -71,7 +71,8 @@ header {
   height: calc(100vh - 50px);
   background-color: #f9f9f9;
   border: 1px solid silver;
-  margin: 0 20px 20px;
+  margin: 0 0 20px 20px;
+  padding: 10px;
 }
 
 #keyword {
@@ -84,9 +85,11 @@ header {
 
 .more-box {
   width:70vw;
-  margin: 20px auto;
+  margin: 0 auto;
   background-color: rgba(255, 255, 255, 0.8);
-  border:1px solid darkgray;
+  border-top:1px solid darkgray;
+  border-left:1px solid darkgray;
+  border-right:1px solid darkgray;
   border-radius: 3px;
   background-size:contain; 
   background-repeat: no-repeat;  
@@ -200,6 +203,7 @@ a:visited {
 
 .contents{
   height: 100%;
+  margin: 0 auto;
 }
 
 .container {
@@ -234,7 +238,7 @@ a:visited {
 }
 
 .upper {
-  margin-top:50px;
+  margin-top:20px;
 }
 
 .bt {
@@ -280,16 +284,27 @@ a:visited {
   border-top: 1px solid rgb(1, 112, 216);
   border-bottom: 2px solid rgb(1, 75, 145);
   display: flex;
-  justify-content: space-between;
+  // justify-content: space-between;
   align-items: center;
   padding:0 40px;
   // margin: 0 20px;
-  
   // position: fixed;
   // top: 50px;
   // left: 0;
   // right: 0;
   // z-index: 4;
+  &__first {
+    padding: 6px 20px;
+    margin: 0 10px;
+    box-sizing: border-box;
+    background-color: rgb(86, 207, 255);
+    border: 1px solid rgb(1, 112, 216);
+    border-bottom: 1px solid rgb(1, 75, 145);
+  }
+  &__second {
+    padding: 10px;
+    margin: 0 10px;
+  }
 }
 
 .fa-home {
@@ -353,6 +368,12 @@ form input[type="submit"]:hover {
   border: 1px solid lightgray;
 }
 
+#tweet_title {
+  width:480px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
 #tweet_text {
   width:480px;
   padding: 10px;
@@ -368,9 +389,8 @@ textarea {
 }
 
 .footer {
-  // height: 50px;
+  height: 70px;
   box-sizing: border-box;
-  background-color: gray;
 }
 
 

@@ -1,4 +1,3 @@
-= link_to "記事へ", "/articles" ,class: "toMypage"
 - if user_signed_in?
   %ul.user__info
     %li
@@ -9,5 +8,8 @@
   = link_to  "記事を投稿する", new_article_path, class: "post"
   = link_to  "活動報告を投稿する", new_tweet_path, class: "post"
 - else
-  = link_to "ログイン", new_user_session_path, class: 'post'
-  = link_to "新規登録", new_user_registration_path, class: 'post'
+  .second-line__first
+    = link_to "ログイン", new_user_session_path
+  .second-line__second
+    = link_to "新規登録", new_user_registration_path
+  -# = link_to "新規登録", new_user_registration_path, class: 'post'

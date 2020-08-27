@@ -1,20 +1,17 @@
 .more-box
   .more-parts-one
-    .name
-      .circle
-      %a.name-name{:href => "/users/#{@article.user.id}"}
-        = @article.user.nickname
     %ul.more_list
       - if user_signed_in? && current_user.id == @article.user_id
         %li.more_list__details
           = link_to '編集', edit_article_path(@article.id), method: :get
         %li.more_list__details
           = link_to '削除', article_path(@article.id), method: :delete
-          
   .text
+    %a.name-name{:href => "/users/#{@article.user.id}"}
+      = @article.user.nickname
     %p.created= @article.created_at
     %br
-    %p.created= @article.title
+    %p.title= @article.title
     %p= safe_join(@article.body.split("\n"), tag(:br))
   .more-pict
     -# .more{:style => "background-image: url(#{@tweet.image});"}
