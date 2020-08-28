@@ -11,6 +11,25 @@
   width:480px;
   padding: 10px;
 }
+
+.articleTitle {
+  font-size: 25px;
+  font-weight: bold;
+  padding: 20px;
+  text-align: center;
+  margin: 0 auto 20px;
+}
+
+.inputArticle-form {
+  width: 100%;
+  background-color: yellow;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 10px;
+  position: relative;
+}
 // .table {
 //   width: 600px;
 //   height: 120px;

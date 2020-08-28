@@ -1,39 +1,43 @@
 .more-box
   .more-parts-one
-    %ul.more_list
-      - if user_signed_in? && current_user.id == @article.user_id
-        %li.more_list__details
-          = link_to '編集', edit_article_path(@article.id), method: :get
-        %li.more_list__details
-          = link_to '削除', article_path(@article.id), method: :delete
+    - if current_user
+      ここは作者の投稿ページです。
+      = form_with(model: [@article, @novel], local: true, class:"inputArticle-form") do |form|
+        = form.text_field :title, placeholder: "タイトル", class:"yah"
+        = form.text_area :body, placeholder: "本文", rows: "10"
+        = form.submit "投稿する" , class:"bt"
+      %ul.more_list
+        - if user_signed_in? && current_user.id == @article.user_id
+          %li.more_list__details
+            = link_to '編集', edit_article_path(@article.id), method: :get
+          %li.more_list__details
+            = link_to '削除', article_path(@article.id), method: :delete
+      %hr
+    - else
+      
   .text
+    作者:
     %a.name-name{:href => "/users/#{@article.user.id}"}
       = @article.user.nickname
     %p.created= @article.created_at
+    %span 投稿
     %br
-    %p.title= @article.title
+    %br
+    %p.articleTitle= @article.title
     %p= safe_join(@article.body.split("\n"), tag(:br))
   .more-pict
     -# .more{:style => "background-image: url(#{@tweet.image});"}
   .container
-    .container-in
-      - if current_user
-        = form_with(model: [@article, @novel], local: true, class:"input-form") do |form|
-          = form.text_field :title, placeholder: "タイトル", class:"yah"
-          = form.text_area :body, placeholder: "本文", rows: "10"
-          = form.submit "投稿する" , class:"bt"
-      - else
-        %strong
-          %p ※※※ コメントの投稿には新規登録/ログインが必要です ※※※
 
-      .comments
-        %h4.line ＜コメント一覧＞
-        - if @novels
-          - @novels.each do |novel|
-            %p.comment
-              %strong
-                = link_to novel.user.nickname, "/users/#{novel.user_id}"
-                = link_to "小説へ", article_novel_path(novel.id), method: :get
-                ：
-              = novel.title
-            = novel.created_at
+    .comments
+      %h4.line
+      -# - if @novels
+      - @novels.each do |novel|
+        %p.comment
+          %strong
+            -# = link_to novel.user.nickname, "/users/#{novel.user_id}"
+            = link_to "小説へ", article_novel_path(novel.id), method: :get
+            ：
+          = novel.title
+          = novel.created_at 
+          %span 投稿
