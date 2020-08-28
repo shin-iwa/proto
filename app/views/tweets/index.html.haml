@@ -1,6 +1,6 @@
 = render "layouts/side"
 .contents.row
   %p.upper
-    近況報告
+    みんなの近況報告
   - @tweets.each do |tweet|
     = render partial: "tweet", locals: { tweet: tweet }
