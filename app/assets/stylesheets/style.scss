@@ -301,10 +301,10 @@ a:visited {
   // background: #204e99;
   // background: -moz-linear-gradient(top, #FFC778, #FFF);
   // background: -webkit-linear-gradient(top, #FFC778, #FFF);
-  background: linear-gradient(to bottom, #0791fa, rgb(1, 136, 208));
+  background: linear-gradient(to bottom, #1399ff, rgb(1, 136, 208));
   // background-color:rgb(21, 187, 252);
   border-top: 1px solid rgb(1, 112, 216);
-  border-bottom: 2px solid rgb(1, 75, 145);
+  border-bottom: 2px solid rgb(2, 98, 189);
   display: flex;
   // justify-content: space-between;
   align-items: center;
@@ -342,22 +342,18 @@ a:visited {
   }
 }
 
-.fa-home {
-  margin-right:20px;
+.fas{
+  // margin-right:20px;
   color: white;
 }
-.toMypage {
+
+.second-line__bt {
   color: white;
   font-size: 15px;
 }
 
-.fa-sign-out-alt {
-  color: white;
-}
-.toLogout {
-  color: white;
-  font-size: 15px;
-}
+
+
 
 .post-profile-icon{
   height: 400px;
