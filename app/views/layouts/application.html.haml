@@ -17,11 +17,14 @@
         = form_with(url: search_tweets_path, local: true, method: :get, class: "search-form") do |form|
           = form.text_field :keyword, placeholder: "投稿を検索する", class: "search-input"
           = form.submit "検索", class: "search-btn"
-        .user-nav
-          .user-nav__box
-            = link_to  "小説投稿", new_article_path
-          .user-nav__box
-            = link_to  "活動報告投稿", new_tweet_path
+        -if user_signed_in?
+          .user-nav
+            .user-nav__box
+              = link_to  "小説投稿", new_article_path
+            .user-nav__box
+              = link_to  "活動報告投稿", new_tweet_path
+        -else
+          .user-nav
       .second-line
         = render "layouts/commonBar"
     .main
