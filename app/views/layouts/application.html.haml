@@ -11,8 +11,9 @@
   %body
     %header.header
       .header-row
-        %h1.title-name
-          %a.tilte-logo{:href => "/"} Proto
+        .titleBox
+          %h1.title-name
+            %a.tilte-logo{:href => "/"} Proto
         = form_with(url: search_tweets_path, local: true, method: :get, class: "search-form") do |form|
           = form.text_field :keyword, placeholder: "投稿を検索する", class: "search-input"
           = form.submit "検索", class: "search-btn"
@@ -22,22 +23,30 @@
     .main
       .base
         .side
-          %p.latest-novel 最新小説
-          - @articles.each do |article|
-            .side__top
-              %table.sideBord
-                %thead
-                  %tr
-                    作者：
-                    %a.name-name{:href => "/users/#{article.user.id}"}
-                      = article.user.nickname
-                %tbody
-                  -# %tr.author
-                  %th.title
-                    -# タイトル：
-                    %a.name-name{:href => article_path(article.id)}
-                      = article.title  
+          .side__top
+            お知らせ
+
           .side__center
+            .side__center--box
+              ここには運営からのお知らせが入ります
+            .side__center--box
+              ここには運営からのお知らせが入ります
+            .side__center--box
+              ここには運営からのお知らせが入ります
+            -# - @articles.each do |article|
+            -# %p.latest-novel 最新小説
+            %table.sideBord
+              %thead
+                %tr
+                  -# 作者：
+                  -# %a.name-name{:href => "/users/#{article.user.id}"}
+                  -#   = article.user.nickname
+              %tbody
+                -# %tr.author
+                %th.title
+                  -# タイトル：
+                  -# %a.name-name{:href => article_path(article.id)}
+                  -#   = article.title  
           .side__bottom
         = yield
       .linkBottun

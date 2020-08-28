@@ -45,8 +45,7 @@ header {
   // z-index: 5;
 }
 .header-row {
-
-  height: 50px;
+  height: 70px;
   padding: 0 30px;
   box-sizing: border-box;
   background-color: white;
@@ -56,31 +55,60 @@ header {
   position: relative;
   margin: 0 auto;
   // border-bottom: 1px solid rgb(240, 206, 157);
-  .title-name {
-    font-size: 30px;
-    color:rgb(21, 187, 252);
-    .title-logo {
-      // font-size: 24px;
+  .titleBox  {
+    border-radius: 50%;
+    border: 1px solid rgb(97, 115, 250);
+    height:30px;
+    width: 30px;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    // background-color: rgb(129, 225, 255);
+    background: linear-gradient(to bottom, #1399ff, rgb(1, 136, 208));
+    .title-name {
+      font-size: 30px;
       color:rgb(21, 187, 252);
+      
+      .title-logo {
+        // font-size: 24px;
+        color:rgb(21, 187, 252);
+      }
     }
   }
 }
 
 .side {
-  width: 150px;
+  width: 180px;
   height: calc(100vh - 50px);
   background-color: #f9f9f9;
   border: 1px solid silver;
   margin: 0 0 20px 20px;
-  padding: 10px;
+  // padding: 10px;
   // text-align: left;
   &__top {
     text-align: left;
-    background-color: white;
-    padding: 5px;
+    // background-color: white;
+    background: linear-gradient(to bottom, #1399ff, rgb(1, 136, 208));
+    // background: linear-gradient(to bottom, #f7fbff, rgb(201, 205, 203));
+    padding: 2px 0;
     border: 1px solid silver;
+    color: white;
+    text-align: center;
+    border-top: 1px solid #838383;
+    border-bottom: 1px solid #333333;
     .latest-novel {
       text-align: center;
+    }
+  }
+  &__center {
+    padding: 8px;
+    text-align: left;
+    font-size: 14px;
+    &--box {
+      margin-bottom: 5px;
+      padding: 5px;
+      background-color: white;
+      border: 1px solid rgb(203, 203, 203);
     }
   }
   // .sideBord {
@@ -468,7 +496,8 @@ textarea {
   border: 1px solid gray;
   // margin-top: 150px;
   thead {
-    background-color: #f9f9f9;
+    // background: linear-gradient(to bottom, #f9f9f9, rgb(240, 240, 240));
+    // background: linear-gradient(to bottom, #f9f9f9, rgb(223, 223, 223));
     tr{
       // background-color: #f9f9f9;
       .title {
@@ -477,10 +506,11 @@ textarea {
         font-size: 18px;
         font-weight: bold;
         padding: 5px 5px 5px 20px;
+        background: linear-gradient(to bottom, #f9f9f9, rgb(223, 223, 223));
       }
       .author {
-        background-color: #f9f9f9;
-        padding: 5px;
+        background: linear-gradient(to bottom, #e8e8e8, rgb(191, 191, 191));
+        padding: 5px 5px 5px 10px;
       }
     }
   }
@@ -490,9 +520,9 @@ textarea {
       // &__category {
       //   background-color: yellow;
       // }
-      // &__link {
-      //   background-color: green;
-      // }
+      &__link {
+        background: linear-gradient(to bottom, #f7f7f7, rgb(225, 225, 225));
+      }
     }
   }
   .lastRecord {
