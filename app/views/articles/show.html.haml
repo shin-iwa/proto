@@ -32,13 +32,16 @@
 
     .comments
       %h4.line
-      -# - if @novels
+      - if @novels
       - @novels.each do |novel|
         %p.comment
           %strong
             -# = link_to novel.user.nickname, "/users/#{novel.user_id}"
-            = link_to "小説へ", article_novel_path(novel.id), method: :get
+            = link_to novel.user.nickname, "/novels/#{novel.id}"
+            -# = link_to "小説へ", article_novel_path(novel.id), method: :get
             ：
+            
+          = novel.id
           = novel.title
-          = novel.created_at 
-          %span 投稿
+          = novel.created_at
+            %span 投稿

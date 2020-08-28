@@ -30,9 +30,10 @@ class NovelsController < ApplicationController
 
   private
   def novel_params
-    params.require(:novel).permit(:title, :body).merge(user_id: current_user.id, article_id: params[:article_id])
+    # params.require(:novel).permit(:title, :body).merge(user_id: current_user.id, article_id: params[:article_id])
+    params.require(:novel).permit(:user_id, :article_id, :title, :body)
   end
-
+  
   def set_novel
     @novel = Novel.find(params[:id])
   end

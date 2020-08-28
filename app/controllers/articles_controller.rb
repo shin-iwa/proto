@@ -33,6 +33,9 @@ class ArticlesController < ApplicationController
   def show
     @novel = Novel.new
     @novels = @article.novels.includes(:user)
+    # @novels = @novels.find(id: params[:id])
+    # @comment = Novel.find_by(id: params[:id])
+    # @novels = @comment.article
   end
 
   def search
