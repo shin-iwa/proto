@@ -22,32 +22,33 @@
         = render "layouts/commonBar"
     .main
       .base
-        .side
-          .side__top
-            お知らせ
+        -# .side
+        -#   .side__top
+        -#     お知らせ
 
-          .side__center
-            .side__center--box
-              ここには運営からのお知らせが入ります
-            .side__center--box
-              ここには運営からのお知らせが入ります
-            .side__center--box
-              ここには運営からのお知らせが入ります
-            -# - @articles.each do |article|
-            -# %p.latest-novel 最新小説
-            %table.sideBord
-              %thead
-                %tr
-                  -# 作者：
-                  -# %a.name-name{:href => "/users/#{article.user.id}"}
-                  -#   = article.user.nickname
-              %tbody
-                -# %tr.author
-                %th.title
-                  -# タイトル：
-                  -# %a.name-name{:href => article_path(article.id)}
-                  -#   = article.title  
-          .side__bottom
+        -#   .side__center
+        -#     .side__center--box
+        -#       ここには運営からのお知らせが入ります
+        -#     .side__center--box
+        -#       ここには運営からのお知らせが入ります
+        -#     .side__center--box
+        -#       ここには運営からのお知らせが入ります
+        -#     -# - @articles.each do |article|
+        -#     -# %p.latest-novel 最新小説
+        -#     %table.sideBord
+        -#       %thead
+        -#         %tr
+        -#           -# 作者：
+        -#           -# %a.name-name{:href => "/users/#{article.user.id}"}
+        -#           -#   = article.user.nickname
+        -#       %tbody
+        -#         -# %tr.author
+        -#         %th.title
+        -#           -# タイトル：
+        -#           -# %a.name-name{:href => article_path(article.id)}
+        -#           -#   = article.title  
+        -#   .side__bottom
+        = render "layouts/side"
         = yield
       .linkBottun
         %a.tilte-logo{:href => "/"} TOP
