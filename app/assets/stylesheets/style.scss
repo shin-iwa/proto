@@ -296,7 +296,13 @@ a:visited {
   height: 40px;
   max-width: 980px;
   box-sizing: border-box;
-  background-color:rgb(21, 187, 252);
+  // background: linear-gradient(-45deg, rgba(246, 255, 0, .8), rgba(255, 0, 161, .8));
+  // background: linear-gradient(5deg, #bdc3c7,rgb(21, 187, 252));
+  // background: #204e99;
+  // background: -moz-linear-gradient(top, #FFC778, #FFF);
+  // background: -webkit-linear-gradient(top, #FFC778, #FFF);
+  background: linear-gradient(to bottom, #0791fa, rgb(1, 136, 208));
+  // background-color:rgb(21, 187, 252);
   border-top: 1px solid rgb(1, 112, 216);
   border-bottom: 2px solid rgb(1, 75, 145);
   display: flex;
@@ -315,8 +321,8 @@ a:visited {
     &--box {
       padding: 10px;
       width: 165px;
-      border-left: 1px solid gray;
-      border-right: 1px solid gray;
+      border-left: 1px solid #2f2f2f;
+      border-right: 1px solid #cecece;
       display: flex;
       justify-content: center;
       align-items: center;
