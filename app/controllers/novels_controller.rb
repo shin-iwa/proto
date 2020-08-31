@@ -24,9 +24,9 @@ class NovelsController < ApplicationController
     redirect_to '/'
   end
 
-  def count
-    @count = Novel.all.size
-  end
+  # def count
+  #   @count = Novel.all.size
+  # end
 
   private
   def novel_params

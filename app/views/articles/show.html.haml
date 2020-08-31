@@ -50,7 +50,6 @@
         = link_to article_path(@article.previous.id), class: 'link' do
           = @article.previous.title
       | TOP |
-      
       - if @article.next.present?
         = link_to article_path(@article.next.id), class: 'link' do
           = @article.next.title
