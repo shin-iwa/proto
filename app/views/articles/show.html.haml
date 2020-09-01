@@ -31,32 +31,10 @@
   .container
 
     .comments
-      %h4.line
-      - if @novels
+
+      %ul
       - @novels.each do |novel|
-        %p.comment
-          %strong
-            -# = link_to novel.user.nickname, "/users/#{novel.user_id}"
-
-
-            = link_to novel.user.nickname, "articles/novels/#{novel.id}"
-
-            
-            -# = link_to "小説へ", article_novel_path(novel.id), method: :get
-            ：
-            
-          = novel.id
+        %li 
           = novel.title
-          %br
-          = novel.created_at
-          %br
-        = safe_join(novel.body.split("\n"), tag(:br))
-          %br
-
-      -# - if @article.previous.present?
-      -#   = link_to article_path(@article.previous.id), class: 'link' do
-      -#     = @article.previous.title
-      -# | TOP |
-      -# - if @article.next.present?
-      -#   = link_to article_path(@article.next.id), class: 'link' do
-      -#     = @article.next.title
+          = safe_join(novel.body.split("\n"), tag(:br))
+      = paginate @novels
