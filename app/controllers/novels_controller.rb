@@ -10,7 +10,9 @@ class NovelsController < ApplicationController
   end
 
   def show
-    @novels = Novel.all
+    # @novels = Novel.all
+    @article = Article.find(params[:id])
+    @novels = @article.novels
     # @novel = Novel.new
     # @novels = @article.novels.includes(:user)
   end
