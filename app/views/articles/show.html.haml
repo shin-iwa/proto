@@ -47,9 +47,11 @@
             
           = novel.id
           = novel.title
+          %br
           = novel.created_at
+          %br
           = novel.body
-            %span 投稿
+            %span
 
       - if @article.previous.present?
         = link_to article_path(@article.previous.id), class: 'link' do
