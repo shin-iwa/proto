@@ -31,7 +31,7 @@ class ArticlesController < ApplicationController
   end
 
   def show
-    # @novel = Novel.new
+    @novel = Novel.new
     # @novels = @article.novels.includes(:user)
     @novels = @article.novels
     @article = Article.find(params[:id])
