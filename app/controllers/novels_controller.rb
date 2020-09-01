@@ -12,7 +12,9 @@ class NovelsController < ApplicationController
   def show
     # @novels = Novel.all
     @article = Article.find(params[:id])
-    @novels = @article.novels
+    @novels = @article.novels.includes(:user).page(params[:page]).per(1)
+
+    # @novels = @article.novels
     # @novel = Novel.new
     # @novels = @article.novels.includes(:user)
   end
