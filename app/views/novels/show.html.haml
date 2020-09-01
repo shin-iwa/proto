@@ -18,22 +18,18 @@
   .more-pict
     -# .more{:style => "background-image: url(#{@tweet.image});"}
   .container
-    -# = link_to  "新規作成", new_tweet_article_path(@tweet.id), class: "post"
-    -# .container-in
-    -#   - if current_user
-    -#     = form_with(model: [@tweet, @comment], local: true, class:"input-form") do |form|
-    -#       = form.text_area :text, placeholder: "コメント欄", rows: "1" , class:"yah"
-    -#       = form.submit "投稿する" , class:"bt"
-      -# - else
-      -#   %strong
-      -#     %p ※※※ コメントの投稿には新規登録/ログインが必要です ※※※
+    -# - if @article.previous.present?
+    -#   = link_to "PREV", article_path(@article.previous), class: "btn_arrow_back"
 
-      -# .comments
-      -#   %h4.line ＜コメント一覧＞
-      -#   - if @comments
-      -#     - @comments.each do |comment|
-      -#       %p.comment
-      -#         %strong
-      -#           = link_to comment.user.nickname, "/users/#{comment.user_id}"
-      -#           ：
-      -#         = comment.text
+    -# - if @article.next.present?
+    -#   = link_to "NEXT",article_path(@article.next), class: "btn_arrow"
+
+
+
+  -# - if @novel.previous.present?
+  -#   = link_to novel_path(@novel.previous.id), class: 'link' do
+  -#     = @novel.previous.title
+  -# | TOP |
+  -# - if @novel.next.present?
+  -#   = link_to novel_path(@novel.next.id), class: 'link' do
+  -#     = @novel.next.title

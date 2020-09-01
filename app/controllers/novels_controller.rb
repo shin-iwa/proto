@@ -10,6 +10,7 @@ class NovelsController < ApplicationController
   end
 
   def show
+    @novels = Novel.all
     # @novel = Novel.new
     # @novels = @article.novels.includes(:user)
   end

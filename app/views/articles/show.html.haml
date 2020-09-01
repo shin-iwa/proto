@@ -37,19 +37,26 @@
         %p.comment
           %strong
             -# = link_to novel.user.nickname, "/users/#{novel.user_id}"
+
+
             = link_to novel.user.nickname, "articles/novels/#{novel.id}"
+
+            
             -# = link_to "小説へ", article_novel_path(novel.id), method: :get
             ：
             
           = novel.id
+          %br
           = novel.title
+          %br
+          = novel.body
           = novel.created_at
             %span 投稿
 
-      - if @article.previous.present?
-        = link_to article_path(@article.previous.id), class: 'link' do
-          = @article.previous.title
-      | TOP |
-      - if @article.next.present?
-        = link_to article_path(@article.next.id), class: 'link' do
-          = @article.next.title
+      -# - if @article.previous.present?
+      -#   = link_to article_path(@article.previous.id), class: 'link' do
+      -#     = @article.previous.title
+      -# | TOP |
+      -# - if @article.next.present?
+      -#   = link_to article_path(@article.next.id), class: 'link' do
+      -#     = @article.next.title
