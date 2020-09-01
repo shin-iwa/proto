@@ -48,8 +48,15 @@
           = novel.created_at
             %span 投稿
 
-        = paginate @novels
+        -# = paginate @novels
 
+        -# - if @novel.previous.present?
+        -#   = link_to article_novel_path(@novel.previous.id), class: 'link' do
+        -#     = @novel.previous.title
+        -# | TOP |
+        -# - if @novel.next.present?
+        -#   = link_to article_novel_path(@novel.next.id), class: 'link' do
+        -#     = @novel.next.title
 
 
 

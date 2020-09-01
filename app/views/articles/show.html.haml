@@ -39,7 +39,7 @@
             -# = link_to novel.user.nickname, "/users/#{novel.user_id}"
 
 
-            = link_to novel.user.nickname, "articles/novels/#{novel.id}"
+            = link_to novel.user.nickname, "#{@article.id}/novels/#{novel.id}"
 
             
             -# = link_to "小説へ", article_novel_path(novel.id), method: :get

@@ -14,6 +14,7 @@ class NovelsController < ApplicationController
     @article = Article.find(params[:id])
     @novels = @article.novels.includes(:user).page(params[:page]).per(1)
 
+    # @novel = Novel.find(params[:id])
     # @novels = @article.novels
     # @novel = Novel.new
     # @novels = @article.novels.includes(:user)
