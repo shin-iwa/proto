@@ -38,17 +38,19 @@
           %strong
             -# = link_to novel.user.nickname, "/users/#{novel.user_id}"
 
-            = link_to novel.user.nickname, "/users/#{@novel.user.id}"
+            -# = link_to novel.user.nickname, "/users/#{@novel.user.id}"
 
             -# = link_to "小説へ", article_novel_path(novel.id), method: :get
             ：
             
           = novel.id
           = novel.title
-          = novel.created_at
-            %span 投稿
+          %br
+          = novel.body
+          -# = novel.created_at
+          -#   %span 投稿
 
-        -# = paginate @novels
+      = paginate @novels
 
         -# - if @novel.previous.present?
         -#   = link_to article_novel_path(@novel.previous.id), class: 'link' do
