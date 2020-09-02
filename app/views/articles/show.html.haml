@@ -33,7 +33,7 @@
     .comments
       %h4.line
       - if @novels
-        = sum = 0
+        - sum = 0
         - @novels.each do |novel|
           = sum +=1
           %p.comment
