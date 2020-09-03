@@ -14,6 +14,6 @@ Rails.application.routes.draw do
     collection do
       get 'detail'
     end
-    resources :novels, only: [:new, :create, :show, :edit, :update]
+    resources :novels, only: [:new, :create, :show, :edit]
   end
 end

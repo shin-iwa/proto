@@ -59,3 +59,4 @@ gem "mini_magick"
 gem 'devise'
 gem "haml-rails"
 gem 'kaminari'
+gem 'cocoon'
