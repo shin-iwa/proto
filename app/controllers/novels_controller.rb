@@ -4,6 +4,10 @@ class NovelsController < ApplicationController
   #   @tweet = Tweet.new
   # end
 
+  def index
+    @novels = Novel.limit(10).includes(:article).order("created_at DESC")
+  end
+
   def create
     Novel.create(novel_params)
     redirect_to '/'
@@ -15,7 +19,7 @@ class NovelsController < ApplicationController
     # @novels = @article.novels.includes(:user)
 
     # @article = Article.find(params[:id])
-    @novels = @article.novels.includes(:user).page(params[:page]).per(1)
+    @novels = @article.novels.preload(:user).page(params[:page]).per(1)
 
     # @novel = Novel.find(params[:id])
     # @novels = @article.novels

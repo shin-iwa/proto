@@ -41,7 +41,7 @@
               -# = link_to novel.user.nickname, "/users/#{novel.user_id}"
 
 
-              = link_to novel.user.nickname, "articles/novels/#{novel.id}"
+              = link_to novel.user.nickname, "/articles/#{@article.id}/novels/#{novel.id}"
 
               = novel.title
               
