@@ -1,5 +1,5 @@
 class ArticlesController < ApplicationController
-  before_action :set_article, only: [:edit, :show,]
+  before_action :set_article, only: [:edit, :show]
   before_action :move_to_index,except: [:index, :show, :search]
 
   def index
@@ -39,6 +39,13 @@ class ArticlesController < ApplicationController
     # @comment = Novel.find_by(id: params[:id])
     # @novels = @comment.article
   end
+
+  def detail
+    @novel = Novel.new
+    @article = Article.find(params[:id])
+    @novels = @article.novels.includes(:user).page(params[:page]).per(1)
+  end
+
 
   def search
     @articles = Article.search(params[:keyword])
