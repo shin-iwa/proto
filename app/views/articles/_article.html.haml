@@ -2,8 +2,11 @@
   %thead
     %tr
       %th.title
-        %a.name-name{:href => article_path(article.id)}
-          = article.title
+        = link_to article.user.nickname, "/articles/#{article.id}/novels"
+        -# %a.name-name{:href => article_novels_path(@article.id)}
+        -#   = novel.title
+        -# %a.name-name{:href => article_path(article.id)}
+        -#   = article.title
       %th.author
         作者：
         %a.name-name{:href => "/users/#{article.user.id}"}
