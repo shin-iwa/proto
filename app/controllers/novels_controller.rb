@@ -9,14 +9,13 @@ class NovelsController < ApplicationController
     # これはnovel index->novel show の連携をしたい時用
 
     # @novel = Novel.new
-    # @article = Article.find(params[:article_id])
+    @article = Article.find(params[:article_id])
     # @novels = Novel.includes(:article)
 
-    
     # これはarticle index->novel index の連携をしたい時用
-
-    @novel = Novel.new
-    @article = Article.find(params[:article_id])
+    
+    # @novel = Novel.new
+    # @article = Article.find(params[:article_id])
     @novels = @article.novels.includes(:user)
 
   end
@@ -27,13 +26,14 @@ class NovelsController < ApplicationController
   end
 
   def show
-    @novel = Novel.new
-    @article = Article.find(params[:id])
+    # @novel = Novel.new
+    # @article = Article.find(params[:id])
     # @novels = @article.novels.includes(:user)
+
     @novel = Novel.find(params[:id])
+
     # @article = Article.find(params[:id])
     # @novels = @article.novels.preload(:user).page(params[:page]).per(1)
-
     # @novel = Novel.find(params[:id])
     # @novels = @article.novels
     # @novel = Novel.new
