@@ -12,7 +12,7 @@ class NovelsController < ApplicationController
 
     @novel = Novel.new
     @article = Article.find(params[:article_id])
-    @novels = @article.novels.includes(:user)
+    @novels = Novel.includes(:article)
 
     # @novels = Novel.limit(10).includes(:article).order("created_at DESC")
     # # @article = Article.find(params[:id])
@@ -27,9 +27,9 @@ class NovelsController < ApplicationController
     @novel = Novel.new
     @article = Article.find(params[:id])
     # @novels = @article.novels.includes(:user)
-
+    @novel = Novel.find(params[:id])
     # @article = Article.find(params[:id])
-    @novels = @article.novels.preload(:user).page(params[:page]).per(1)
+    # @novels = @article.novels.preload(:user).page(params[:page]).per(1)
 
     # @novel = Novel.find(params[:id])
     # @novels = @article.novels

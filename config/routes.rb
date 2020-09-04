@@ -11,9 +11,6 @@ Rails.application.routes.draw do
   resources :users, only: [:show] do
   end
   resources :articles , only: [:index, :new, :create, :show, :edit, :update, :destroy] do
-    collection do
-      get 'detail'
-    end
     resources :novels, only: [:index, :new, :create, :show, :edit]
   end
 end
