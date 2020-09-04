@@ -5,7 +5,17 @@ class NovelsController < ApplicationController
   # end
 
   def index
-    @novels = Novel.limit(10).includes(:article).order("created_at DESC")
+    # novels = Novel.find(params[:id])
+    # @article = Article.find(params[:id])
+
+    # @novels = Novel.all
+
+    @novel = Novel.new
+    @article = Article.find(params[:article_id])
+    @novels = @article.novels.includes(:user)
+
+    # @novels = Novel.limit(10).includes(:article).order("created_at DESC")
+    # # @article = Article.find(params[:id])
   end
 
   def create
@@ -46,7 +56,7 @@ class NovelsController < ApplicationController
     params.require(:novel).permit(:title, :body).merge(user_id: current_user.id, article_id: params[:article_id])
     # params.require(:novel).permit(:user_id, :article_id, :title, :body)
   end
-  
+
   def set_novel
     @novel = Novel.find(params[:id])
   end
