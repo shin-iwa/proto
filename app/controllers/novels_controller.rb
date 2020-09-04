@@ -5,17 +5,20 @@ class NovelsController < ApplicationController
   # end
 
   def index
-    # novels = Novel.find(params[:id])
-    # @article = Article.find(params[:id])
 
-    # @novels = Novel.all
+    # これはnovel index->novel show の連携をしたい時用
+
+    # @novel = Novel.new
+    # @article = Article.find(params[:article_id])
+    # @novels = Novel.includes(:article)
+
+    
+    # これはarticle index->novel index の連携をしたい時用
 
     @novel = Novel.new
     @article = Article.find(params[:article_id])
-    @novels = Novel.includes(:article)
+    @novels = @article.novels.includes(:user)
 
-    # @novels = Novel.limit(10).includes(:article).order("created_at DESC")
-    # # @article = Article.find(params[:id])
   end
 
   def create
