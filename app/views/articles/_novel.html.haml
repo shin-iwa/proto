@@ -6,15 +6,15 @@
           = novel.title
       %th.author
         作者：
-        %a.name-name{:href => "/users/#{novel.user.id}"}
+        -# %a.name-name{:href => "/users/#{novel.user.id}"}
           = novel.user.nickname
   %tbody
     %tr.secondRecord
       %td.secondRecord__category
         .text
-          %p= simple_format(novel.body.truncate(40, omission: '...')) 
+          -# %p= simple_format(novel.body.truncate(40, omission: '...')) 
       %td.secondRecord__link
-        %p.created= novel.created_at
+        -# %p.created= novel.created_at
         -# = link_to '詳細', article_path(article.id), method: :get
   -# %tfoot.lastRecord
   -#   %tr.lastRecord__base

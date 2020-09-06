@@ -3,18 +3,18 @@
     - if current_user
       .more-parts__edit
         この部分は作者の編集用ツールです。
-        = form_with(model: [@article, @novel], local: true, class:"inputArticle-form") do |form|
-          = form.text_field :title, placeholder: "タイトル", class:"yah"
-          = form.text_area :body, placeholder: "本文", rows: "10"
-          = form.submit "投稿する" , class:"bt"
+        -# = form_with(model: [@article, @novel], local: true, class:"inputArticle-form") do |form|
+        -#   = form.text_field :title, placeholder: "タイトル", class:"yah"
+        -#   = form.text_area :body, placeholder: "本文", rows: "10"
+        -#   = form.submit "投稿する" , class:"bt"
         %ul.more_list
           - if user_signed_in? && current_user.id == @article.user_id
             %li.more_list__details
               = link_to '編集', edit_article_path(@article.id), method: :get
             %li.more_list__details
-              = link_to '削除', article_path(@article.id), method: :delete
+              = link_to '削除', article_novels_path(@article.id, @novels), method: :delete, remote: true, class: "delete-novel"
         %hr
-    - else
+    -# - else
         
   .text
     作者:

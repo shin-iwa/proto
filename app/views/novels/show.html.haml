@@ -37,3 +37,48 @@
         = @novel.id
         = @novel.title
         = @novel.body
+
+        -# = link_to article.title, "/articles/#{@article.id}/novels"
+
+        -# %a.name-name{:href => "/articles/articles/novels/#{@novel.id}"}
+          目次
+-# %table.table
+-#   %thead
+-#     %tr
+-#       %th.title
+-#         %a.name-name{:href => "/articles/articles/novels/#{@novel.id}"}
+-#           = @novel.title
+-#       %th.author
+-#         作者：
+-#         %a.name-name{:href => "/users/#{@novel.user.id}"}
+-#           = @novel.user.nickname
+-#   %tbody
+-#     %tr.secondRecord
+-#       %td.secondRecord__category
+-#         .text
+-#           %p= simple_format(@novel.body.truncate(40, omission: '...')) 
+-#       %td.secondRecord__link
+-#         %p.created= @novel.created_at
+
+-# .note__index
+-#   .note__index__before
+-#     - if @novel.previous.present?
+-#       = link_to article_novel_path(@novel.previous) do
+-#         = @novel.previous.title
+-#   .note__index__after
+-#     - if @novel.next.present?
+-#       = link_to article_novel_path(@novel.next) do
+-#         = @novel.next.title
+
+
+
+
+-# - if @article.novels.previous.present?
+-#   %div
+-#     = link_to article_novels_path(@article.previous.id), class: 'link' do
+-#       = @article.npvels.previous.title
+
+-# - if @article.next.present?
+-#   %div
+-#     = link_to article_path(@article.next), class: 'link' do
+-#       = @article.next.title

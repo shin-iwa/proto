@@ -1,0 +1,8 @@
+- article.novels.each do |novel|
+  .mb-2
+    - if novel.user == current_user
+      = link_to "", article_novel_path(article.id, novel), method: :delete, remote: true, class: "delete-novel"
+    %span
+      %strong
+        = link_to movel.user.name, user_path(novel.user), class: "no-text-decoration black-color"
+    %span= novel.novel

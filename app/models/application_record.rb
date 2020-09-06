@@ -2,11 +2,11 @@ class ApplicationRecord < ActiveRecord::Base
   self.abstract_class = true
 
   # def previous
-  #   Novel.where("id < ?", self.id).order("id DESC").first
+  #   Article.novel.where("id < ?", self.id).order("id DESC").first
   # end
 
   # def next
-  #   Novel.where("id > ?", self.id).order("id ASC").first
+  #   Article.novel.where("id > ?", self.id).order("id ASC").first
   # end
 
   # def previous

@@ -8,6 +8,7 @@ class ArticlesController < ApplicationController
   
   def new
     @article = Article.new
+    @article.novels.build
   end
 
   def create
@@ -22,12 +23,15 @@ class ArticlesController < ApplicationController
   end
 
   def edit
+    @novel = Novel.new
+    @article = Article.find(params[:id])
+    @novels = @article.novels.includes(:user)
   end
 
   def update
     article = Article.find(params[:id])
     article.update(article_params)
-    redirect_to '/'
+    # redirect_to '/'
   end
 
   def show
