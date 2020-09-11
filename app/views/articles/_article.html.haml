@@ -18,7 +18,9 @@
         .text
           %p= simple_format(article.body.truncate(40, omission: '...')) 
       %td.secondRecord__link
-        = article.created_at
+        = article.created_at.strftime('%Y/%m/%d')
+        = article.created_at.strftime('%-H:%-M')
+        %span 投稿
         - if user_signed_in? && current_user.id == article.user_id
           = link_to edit_article_path(article), method: :get do
             .more_list__details
