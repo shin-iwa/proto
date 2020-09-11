@@ -6,39 +6,39 @@
           編集する
         = render partial: "form", locals: { form: form }
 
-    .comments
-      %h4.line
-      - if @novels
-        -# - sum = 0
-        -# - @novels.each do |novel|
-        -#   = sum +=1
-          -# %p.comment
-          -#   %strong
-          -#     = link_to novel.user.nickname, "/articles/#{@article.id}/novels/#{novel.id}"
+      .comments
+        %h4.line
+        - if @novels
+          -# - sum = 0
+          -# - @novels.each do |novel|
+          -#   = sum +=1
+            -# %p.comment
+            -#   %strong
+            -#     = link_to novel.user.nickname, "/articles/#{@article.id}/novels/#{novel.id}"
 
-          -#     = novel.title
-          -#     ：            
-          -#   = novel.id
-          -#   = novel.title
-        -# - if user_signed_in? && current_user.id == @article.user_id
-        -#   %li.more_list__details
-        -#     = link_to '編集', edit_article_path(@article.id), method: :get
-        -#   %li.more_list__details
-        -#     = link_to '削除', article_path(@article.id), method: :delete
+            -#     = novel.title
+            -#     ：            
+            -#   = novel.id
+            -#   = novel.title
+          -# - if user_signed_in? && current_user.id == @article.user_id
+          -#   %li.more_list__details
+          -#     = link_to '編集', edit_article_path(@article.id), method: :get
+          -#   %li.more_list__details
+          -#     = link_to '削除', article_path(@article.id), method: :delete
 
-        = render partial: "novel_list", article: @article
-    - if current_user
-      .more-parts__edit
-        この部分は次話作成フォームです。
+          = render partial: "novel_list", article: @article
+      - if current_user
+        .more-parts__edit
+          この部分は次話作成フォームです。
 
-        %div{:id => "novel-article-#{@article.id.to_s}"}
+          %div{:id => "novel-article-#{@article.id.to_s}"}
 
-        .card-body
-        新しい話を追加する
-        .row.parts
-          = form_with model:[@article, Novel.new], class: "upload-images p-0 border-0" do |f|
-            = f.hidden_field :user_id, value: current_user.id
-            = f.hidden_field :article_id, value: @article.id
-            = f.text_field :title  ,class: "form-control", placeholder: "タイトル", autocomplete: :on
-            = f.text_area :body, placeholder: "本文" , rows: "10", class: "form-control", autocomplete: :on
-            = f.submit "投稿する", class: "btn btn-primary"
+          .card-body
+          新しい話を追加する
+          .row.parts
+            = form_with model:[@article, Novel.new], class: "upload-images p-0 border-0" do |f|
+              = f.hidden_field :user_id, value: current_user.id
+              = f.hidden_field :article_id, value: @article.id
+              = f.text_field :title  ,class: "form-control", placeholder: "タイトル", autocomplete: :on
+              = f.text_area :body, placeholder: "本文" , rows: "10", class: "form-control", autocomplete: :on
+              = f.submit "投稿する", class: "btn btn-primary"

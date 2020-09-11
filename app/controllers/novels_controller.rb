@@ -21,7 +21,7 @@ class NovelsController < ApplicationController
 
   def destroy
     # @novel = Novel.find_by(id: params[:id])
-    @article = @novel.post
+    @article = @novel.article
     if @novel.destroy
       redirect_to edit_post_path(@article)
       flash[:notice] = "投稿の削除がされました"
