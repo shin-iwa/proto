@@ -28,6 +28,10 @@
       .second-line
         = render "layouts/commonBar"
     .main
+      - if flash[:notice]
+        .alert.alert-info= flash[:notice]
+      - if flash[:alert]
+        .alert.alert-danger= flash[:alert]
       .base
         = yield
       .linkBottun

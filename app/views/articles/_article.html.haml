@@ -18,8 +18,14 @@
         .text
           %p= simple_format(article.body.truncate(40, omission: '...')) 
       %td.secondRecord__link
-        %p.created= article.created_at
-        = link_to '詳細', article_path(article.id), method: :get
+        = article.created_at
+        - if user_signed_in? && current_user.id == article.user_id
+          = link_to edit_article_path(article), method: :get do
+            .more_list__details
+              編集
+          = link_to article_path(article), method: :delete, remote: true, class: "delete-novel" do
+            .more_list__details
+              削除
   -# %tfoot.lastRecord
   -#   %tr.lastRecord__base
   -#     %td.lastRecord__base--first

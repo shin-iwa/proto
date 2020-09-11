@@ -1,6 +1,6 @@
 class ArticlesController < ApplicationController
-  before_action :set_article, only: [:edit, :show, :update]
-  before_action :move_to_index,except: [:index, :show, :search]
+  before_action :set_article, only: [:show, :edit, :update, :destroy]
+  # before_action :move_to_index,except: [:index, :show, :search]
 
   def index
     @articles = Article.limit(10).includes(:user).order("created_at DESC")
@@ -12,12 +12,18 @@ class ArticlesController < ApplicationController
   end
 
   def create
-    Article.create(article_params)
-    redirect_to '/'
+    @article = Article.new(article_params)
+    if @article.save
+      redirect_to root_path
+      flash[:notice] = "投稿が保存されました"
+    else
+      redirect_to root_path
+      flash[:alert] = "投稿に失敗しました"
+    end
   end
 
   def destroy
-    if @article_params.user == current_user
+    if @article.user == current_user
       flash[:notice] = "投稿が削除されました" if @article.destroy
     else
       flash[:alert] = "投稿の削除に失敗しました"
@@ -74,7 +80,7 @@ class ArticlesController < ApplicationController
   end
 
   def set_article
-    @article = Article.find(params[:id])
+    @article = Article.find_by(id: params[:id])
   end
 
   def move_to_index
