@@ -23,10 +23,10 @@ class NovelsController < ApplicationController
     # @novel = Novel.find_by(id: params[:id])
     @article = @novel.article
     if @novel.destroy
-      redirect_to edit_post_path(@article)
+      redirect_to edit_article_path(@article)
       flash[:notice] = "投稿の削除がされました"
     else
-      redirect_to edit_post_path(@article)
+      redirect_to edit_article_path(@article)
       flash[:alert] = "投稿の削除に失敗しました"
     end
   end
