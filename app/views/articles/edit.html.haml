@@ -13,13 +13,13 @@
         .more-parts__edit
           この部分は次話作成フォームです。
           %div{:id => "novel-article-#{@article.id.to_s}"}
-      .comments
-        .card-body
-        新しい話を追加する
-    
-      = form_with model:[@article, Novel.new], class: "input-form" do |f|
-        = f.hidden_field :user_id, value: current_user.id
-        = f.hidden_field :article_id, value: @article.id
-        = f.text_field :title  ,class: "form-control", placeholder: "タイトル", autocomplete: :on
-        = f.text_area :body, placeholder: "本文" , rows: "10", class: "form-control", autocomplete: :on
-        = f.submit "投稿する", class: "btc"
+          .comments
+            .card-body
+              新しい話を追加する
+        
+              = form_with model:[@article, Novel.new], class: "input-form" do |f|
+                = f.hidden_field :user_id, value: current_user.id
+                = f.hidden_field :article_id, value: @article.id
+                = f.text_field :title  ,class: "form-control", id:"article_title",placeholder: "タイトル", autocomplete: :on
+                = f.text_area :body, placeholder: "本文" , rows: "10", id:"article_body",autocomplete: :on
+                = f.submit "投稿する", class: "btc"
