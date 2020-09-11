@@ -2,11 +2,6 @@ class NovelsController < ApplicationController
   before_action :authenticate_user!
   before_action :set_novel, only: [:show, :edit, :update, :destroy]
 
-  # def index
-  #   @article = Article.find(params[:article_id])
-  #   @novels = @article.novels.includes(:user)
-  # end
-
   def create
     @novel = Novel.new(novel_params)
     @article = @novel.article
@@ -20,7 +15,6 @@ class NovelsController < ApplicationController
   end
 
   def destroy
-    # @novel = Novel.find_by(id: params[:id])
     @article = @novel.article
     if @novel.destroy
       redirect_to edit_article_path(@article)
@@ -32,7 +26,6 @@ class NovelsController < ApplicationController
   end
 
   def show
-    # @novel = Novel.find(params[:id])
   end
 
   def edit
@@ -47,9 +40,6 @@ class NovelsController < ApplicationController
       redirect_to article_page_path(@novel)
       flash[:alert] = "投稿の修正に失敗しました"
     end
-    # novel = Novel.find(params[:id])
-    # novel.update(novel_params)
-    # redirect_to '/'
   end
 
   private
