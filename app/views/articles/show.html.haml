@@ -20,13 +20,19 @@
               = novel.title
               = novel.body
       -# = render partial: "novel_list", article: @article
-      - @article.novels.each do |novel|
-        .mb-2
-          %span
-          = link_to "/articles/#{@article.id}/novels/#{novel.id}" do
-            %span.novelTitle= novel.title
-          %span= novel.created_at.strftime('%Y/%m/%d')
-          %span= novel.created_at.strftime('%-H:%-M')
-          %span 投稿
-          - if novel.user == current_user
-            = link_to "削除", article_novel_path(@article.id, novel), method: :delete, remote: true, class: "delete-novel"
+
+    - @article.novels.each do |novel|
+      %table.showTable
+        %thead.showTable__thead
+          %tr.showTable__thead--tr
+            %th.showTable__thead--tr__one
+              = link_to "/articles/#{@article.id}/novels/#{novel.id}" do
+                = novel.title
+            %th.showTable__thead--tr__two
+              %span= novel.created_at.strftime('%Y/%m/%d')
+              %span= novel.created_at.strftime('%H:%M')
+            %th.showTable__thead--tr__three
+              %span 投稿
+            %th.showTable__thead--tr__four
+              - if novel.user == current_user
+                = link_to "削除", article_novel_path(@article.id, novel), method: :delete, remote: true, class: "delete-novel"

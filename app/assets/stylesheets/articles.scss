@@ -6,6 +6,7 @@
   background-color: rgb(210, 210, 210);
   padding: 10px 20px;
   box-sizing: border-box;
+  margin-top: 20px;
 }
 #article_title {
   width:480px;
@@ -34,4 +35,30 @@
   flex-direction: column;
   margin-bottom: 10px;
   position: relative;
+}
+
+.showTable {
+  width: 760px;
+  margin: 10px auto;
+  &__thead {
+    &--tr {
+      &__one {
+        width: 390px;
+        padding-left:20px;
+      }
+      &__two {
+        width: 180px;
+        text-align: right;
+      }
+      &__three {
+        width: 60px;
+        text-align: left;
+      }
+      &__four {
+        width: 60px;
+        border: 1px solid silver;
+        text-align: center;
+      }
+    }
+  }
 }
