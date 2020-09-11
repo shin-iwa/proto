@@ -19,5 +19,14 @@
               = link_to novel.user.nickname, "/articles/#{@article.id}/novels/#{novel.id}"
               = novel.title
               = novel.body
-      = render partial: "novel_list", article: @article
-
+      -# = render partial: "novel_list", article: @article
+      - @article.novels.each do |novel|
+        .mb-2
+          %span
+          = link_to "/articles/#{@article.id}/novels/#{novel.id}" do
+            %span.novelTitle= novel.title
+          %span= novel.created_at.strftime('%Y/%m/%d')
+          %span= novel.created_at.strftime('%-H:%-M')
+          %span 投稿
+          - if novel.user == current_user
+            = link_to "削除", article_novel_path(@article.id, novel), method: :delete, remote: true, class: "delete-novel"
