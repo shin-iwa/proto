@@ -3,11 +3,6 @@
     %tr
       %th.title
         = link_to article.title, article_path(article.id), method: :get
-        -# = link_to article.title, "/articles/#{article.id}/novels"
-        -# %a.name-name{:href => article_novels_path(@article.id)}
-        -#   = novel.title
-        -# %a.name-name{:href => article_path(article.id)}
-        -#   = article.title
       %th.author
         作者：
         %a.name-name{:href => "/users/#{article.user.id}"}
@@ -28,10 +23,3 @@
           = link_to article_path(article), method: :delete, remote: true, class: "delete-novel" do
             .more_list__details
               削除
-  -# %tfoot.lastRecord
-  -#   %tr.lastRecord__base
-  -#     %td.lastRecord__base--first
-  -#     %td.lastRecord__base--second
-
-.more-parts-one
-

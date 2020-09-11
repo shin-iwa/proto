@@ -1,6 +1,6 @@
 class ArticlesController < ApplicationController
   before_action :set_article, only: [:show, :edit, :update, :destroy]
-  # before_action :move_to_index,except: [:index, :show, :search]
+  before_action :move_to_index,except: [:index, :show, :search]
 
   def index
     @articles = Article.limit(10).includes(:user).order("created_at DESC")
@@ -37,8 +37,8 @@ class ArticlesController < ApplicationController
   # end
 
   def edit
-    @novel = Novel.new
-    @article = Article.find(params[:id])
+    # @novel = Novel.new
+    # @article = Article.find(params[:id])
     @novels = @article.novels.includes(:user)
   end
 
@@ -61,13 +61,9 @@ class ArticlesController < ApplicationController
 
 
   def show
-    @novel = Novel.new
-    @article = Article.find(params[:id])
-    @novels = @article.novels.includes(:user)
-    # @novels = @article.novels
-    # @novels = @novels.find(id: params[:id])
-    # @comment = Novel.find_by(id: params[:id])
-    # @novels = @comment.article
+    # @novel = Novel.new
+    # @article = Article.find(params[:id])
+    # @novels = @article.novels.includes(:user)
   end
 
   def search
