@@ -18,7 +18,7 @@
           %p= simple_format(article.body.truncate(40, omission: '...')) 
       %td.secondRecord__link
         %p.created= article.created_at
-        -# = link_to '詳細', article_path(article.id), method: :get
+        = link_to '詳細', article_path(article.id), method: :get
   -# %tfoot.lastRecord
   -#   %tr.lastRecord__base
   -#     %td.lastRecord__base--first

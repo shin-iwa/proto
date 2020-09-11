@@ -17,10 +17,18 @@ class ArticlesController < ApplicationController
   end
 
   def destroy
-    article = Article.find(params[:id])
-    article.destroy
-    redirect_to '/'
+    if @article_params.user == current_user
+      flash[:notice] = "投稿が削除されました" if @article.destroy
+    else
+      flash[:alert] = "投稿の削除に失敗しました"
+    end
+    redirect_to root_path
   end
+  # def destroy
+  #   article = Article.find(params[:id])
+  #   article.destroy
+  #   redirect_to '/'
+  # end
 
   def edit
     @novel = Novel.new
