@@ -11,10 +11,10 @@ class NovelsController < ApplicationController
     @novel = Novel.new(novel_params)
     @article = @novel.article
     if @novel.save
-      redirect_to edit_post_path(@post)
+      redirect_to edit_article_path(@article)
       flash[:alert] = "投稿が保存されました"
     else
-      redirect_to edit_post_path(@post)
+      redirect_to edit_post_path(@article)
       flash[:alert] = "投稿に失敗しました"
     end
   end
@@ -23,10 +23,10 @@ class NovelsController < ApplicationController
     # @novel = Novel.find_by(id: params[:id])
     @article = @novel.post
     if @novel.destroy
-      redirect_to edit_post_path(@post)
+      redirect_to edit_post_path(@article)
       flash[:alert] = "投稿の削除がされました"
     else
-      redirect_to edit_post_path(@post)
+      redirect_to edit_post_path(@article)
       flash[:alert] = "投稿の削除に失敗しました"
     end
   end
