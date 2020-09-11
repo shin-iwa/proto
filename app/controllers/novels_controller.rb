@@ -12,7 +12,7 @@ class NovelsController < ApplicationController
     @article = @novel.article
     if @novel.save
       redirect_to edit_article_path(@article)
-      flash[:alert] = "投稿が保存されました"
+      flash[:notice] = "投稿が保存されました"
     else
       redirect_to edit_post_path(@article)
       flash[:alert] = "投稿に失敗しました"
@@ -24,7 +24,7 @@ class NovelsController < ApplicationController
     @article = @novel.post
     if @novel.destroy
       redirect_to edit_post_path(@article)
-      flash[:alert] = "投稿の削除がされました"
+      flash[:notice] = "投稿の削除がされました"
     else
       redirect_to edit_post_path(@article)
       flash[:alert] = "投稿の削除に失敗しました"
