@@ -9,7 +9,6 @@
     %p.articleTitle= @article.title
     %p= safe_join(@article.body.split("\n"), tag(:br))
   .container
-
     .comments
       %h4.line
       - if @novels
@@ -19,8 +18,6 @@
               = link_to novel.user.nickname, "/articles/#{@article.id}/novels/#{novel.id}"
               = novel.title
               = novel.body
-      -# = render partial: "novel_list", article: @article
-
     - @article.novels.each do |novel|
       %table.showTable
         %thead.showTable__thead

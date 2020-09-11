@@ -1,7 +1,9 @@
 .contents.row
   .container
     .container-main
-      = form_with(model: @novel, local: true, class: "input-form") do |form|
+      = form_with model: [@article, @novel], local: true, class: "input-form" do |form|
         %h3.head
           編集する
-        = render partial: "form", locals: { form: form }
+        = form.text_field :title, placeholder: "タイトル" , class: "title", id:"article_title"
+        = form.text_area :body, placeholder: "本文" , rows: "10", id:"article_body"
+        = form.submit "投稿", class: "btc"

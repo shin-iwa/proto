@@ -1,84 +1,11 @@
 .more-box
   .more-parts-one
-    - if current_user
-      .more-parts__edit
-        この部分は作者の編集用ツールです。
-    -#     = form_with(model: [@article, @novel], local: true, class:"inputArticle-form") do |form|
-    -#       = form.text_field :title, placeholder: "タイトル", class:"yah"
-    -#       = form.text_area :body, placeholder: "本文", rows: "10"
-    -#       = form.submit "投稿する" , class:"bt"
-    -#     %ul.more_list
-    -#       - if user_signed_in? && current_user.id == @article.user_id
-    -#         %li.more_list__details
-    -#           = link_to '編集', edit_article_path(@article.id), method: :get
-    -#         %li.more_list__details
-    -#           = link_to '削除', article_path(@article.id), method: :delete
-    -#     %hr
-    -# - else
-        
   .text
-    -# 作者:
-    -# %a.name-name{:href => "/users/#{@article.user.id}"}
-    -#   = @article.user.nickname
-    -# %p.created= @article.created_at
-    -# %span 投稿
-    -# %br
-    -# %br
-    -# %p.articleTitle= @article.title
-    -# %p= safe_join(@article.body.split("\n"), tag(:br))
-  .more-pict
-    -# .more{:style => "background-image: url(#{@tweet.image});"}
-  .container
-
-    .comments
-      %h4.line
-      - if @novel
-        -# - @novels.each do |novel|
-        = @novel.id
-        = @novel.title
-        = @novel.body
-
-        -# = link_to article.title, "/articles/#{@article.id}/novels"
-
-        -# %a.name-name{:href => "/articles/articles/novels/#{@novel.id}"}
-          目次
--# %table.table
--#   %thead
--#     %tr
--#       %th.title
--#         %a.name-name{:href => "/articles/articles/novels/#{@novel.id}"}
--#           = @novel.title
--#       %th.author
--#         作者：
--#         %a.name-name{:href => "/users/#{@novel.user.id}"}
--#           = @novel.user.nickname
--#   %tbody
--#     %tr.secondRecord
--#       %td.secondRecord__category
--#         .text
--#           %p= simple_format(@novel.body.truncate(40, omission: '...')) 
--#       %td.secondRecord__link
--#         %p.created= @novel.created_at
-
--# .note__index
--#   .note__index__before
--#     - if @novel.previous.present?
--#       = link_to article_novel_path(@novel.previous) do
--#         = @novel.previous.title
--#   .note__index__after
--#     - if @novel.next.present?
--#       = link_to article_novel_path(@novel.next) do
--#         = @novel.next.title
-
-
-
-
--# - if @article.novels.previous.present?
--#   %div
--#     = link_to article_novels_path(@article.previous.id), class: 'link' do
--#       = @article.npvels.previous.title
-
--# - if @article.next.present?
--#   %div
--#     = link_to article_path(@article.next), class: 'link' do
--#       = @article.next.title
+    作者:
+    %a.name-name{:href => "/users/#{@novel.user.id}"}
+      = @novel.user.nickname
+    %br
+    %br
+    %p.articleTitle= @novel.title
+    %p= safe_join(@novel.body.split("\n"), tag(:br))
+  

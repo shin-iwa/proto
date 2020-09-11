@@ -34,10 +34,10 @@ class NovelsController < ApplicationController
 
   def update
     if @novel.update(update_novel_params)
-      redirect_to article_page_path(@novel)
+      redirect_to article_novel_path(@novel)
       flash[:notice] = "投稿が修正されました"
     else
-      redirect_to article_page_path(@novel)
+      redirect_to article_novel_path(@novel)
       flash[:alert] = "投稿の修正に失敗しました"
     end
   end
