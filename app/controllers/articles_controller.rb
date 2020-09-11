@@ -1,5 +1,5 @@
 class ArticlesController < ApplicationController
-  before_action :set_article, only: [:edit, :show]
+  before_action :set_article, only: [:edit, :show, :update]
   before_action :move_to_index,except: [:index, :show, :search]
 
   def index
@@ -36,11 +36,23 @@ class ArticlesController < ApplicationController
     @novels = @article.novels.includes(:user)
   end
 
+  # def update
+  #   article = Article.find(params[:id])
+  #   article.update(article_params)
+  #   # redirect_to '/'
+  # end
+
+
   def update
-    article = Article.find(params[:id])
-    article.update(article_params)
-    # redirect_to '/'
+    if @article.update(article_params)
+      redirect_to '/'
+      flash[:notice] = "投稿が修正されました"
+    else
+      redirect_to '/'
+      flash[:alert] = "投稿の修正に失敗しました"
+    end
   end
+
 
   def show
     @novel = Novel.new
