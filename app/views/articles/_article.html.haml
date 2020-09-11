@@ -2,7 +2,8 @@
   %thead
     %tr
       %th.title
-        = link_to article.title, "/articles/#{article.id}/novels"
+        = link_to article.title, article_path(article.id), method: :get
+        -# = link_to article.title, "/articles/#{article.id}/novels"
         -# %a.name-name{:href => article_novels_path(@article.id)}
         -#   = novel.title
         -# %a.name-name{:href => article_path(article.id)}
