@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: 'articles#index'
-  resources :users, only: [:show] 
+  resources :users, only: :show do
+    collection do
+      get 'search'
+    end
+  end
   resources :tweets do
     resources :comments, only: :create
     collection do
