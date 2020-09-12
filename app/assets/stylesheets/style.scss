@@ -1,20 +1,9 @@
 body {
   text-align: center;
-  // position: relative;
   z-index: 4;
-  // max-width: 980px;
-  
   background-color: #f9f9f9;
-  // border-right: 1px solid #3f3f3f;
-  // display: flex;
-  // justify-content: center;
-  // align-items: center;
-  // margin: 0 auto;
 }
 .main {
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
   border-left: 1px solid #3f3f3f;
   border-right: 1px solid #3f3f3f;
   background-color: white;
@@ -22,15 +11,10 @@ body {
   margin: 0 auto;
 }
 .base {
-  // margin: 0 auto;
-  // position: absolute;
-  // top: 50px;
   padding-top: 20px;
   width: 100%;
   min-height: 90vh;
-  // background-color: rgb(253, 249, 236);
   display: flex;
-  // margin: 0 auto;
 }
 
 
@@ -39,11 +23,6 @@ header {
   border-left: 1px solid #3f3f3f;
   border-right: 1px solid #3f3f3f;
   max-width: 980px;
-  // position: fixed;
-  // top: 0;
-  // left: 0;
-  // right: 0;
-  // z-index: 5;
 }
 .header-row {
   height: 70px;
@@ -55,23 +34,16 @@ header {
   justify-content: space-between;
   position: relative;
   margin: 0 auto;
-  // border-bottom: 1px solid rgb(240, 206, 157);
   .titleBox  {
     border-radius: 50%;
     border: 1px solid rgb(97, 115, 250);
     height:30px;
     width: 30px;
-    // display: flex;
-    // justify-content: center;
-    // align-items: center;
-    // background-color: rgb(129, 225, 255);
     background: linear-gradient(to bottom, #1399ff, rgb(1, 136, 208));
     .title-name {
       font-size: 30px;
       color:rgb(21, 187, 252);
-      
       .title-logo {
-        // font-size: 24px;
         color:rgb(21, 187, 252);
       }
     }
@@ -84,14 +56,10 @@ header {
   background-color: #f9f9f9;
   border: 1px solid silver;
   margin: 0 0 20px 20px;
-  // padding: 10px;
-  // text-align: left;
   &__top {
     text-align: left;
-    // background-color: white;
     background: linear-gradient(to bottom, #1399ff, rgb(1, 136, 208));
     opacity: 0.9;
-    // background: linear-gradient(to bottom, #f7fbff, rgb(201, 205, 203));
     padding: 2px 0;
     border: 1px solid silver;
     color: white;
@@ -113,12 +81,6 @@ header {
       border: 1px solid rgb(203, 203, 203);
     }
   }
-  // .sideBord {
-  //   border: 1px solid #333333;
-  // }
-  // .wall {
-  //   border-bottom: 1px solid #c2c2c2;
-  // }
 }
 
 #keyword {
@@ -134,22 +96,11 @@ header {
   width:70vw;
   margin: 0 auto 100px;
   background-color: rgba(255, 255, 255, 0.8);
-  // border-top:1px solid darkgray;
-  // border-left:1px solid darkgray;
-  // border-right:1px solid darkgray;
-  // border-radius: 3px;
   background-size:contain; 
   background-repeat: no-repeat;  
   background-position: center center; 
   position: relative;
 }
-
-// .more-parts-one {
-//   display: flex;
-//   align-items: center;
-//   padding: 5px;
-//   height:35px;
-// }
 
 .post-user {
   padding-left: 3px;
@@ -163,8 +114,6 @@ header {
   right: 0px;
 }
 
-
-
 .more_list__details {
   margin:5px;
   padding: 5px;
@@ -174,8 +123,6 @@ header {
 }
 
 .more {
-  // width: 600px;
-  // height: 400px;
   background-size:contain; 
   background-repeat: no-repeat;  
   background-position: center center; 
@@ -214,6 +161,11 @@ header {
   display: flex;
 }
 
+.name {
+  display: flex;
+  align-items: center;
+}
+
 .name-box {
   display: flex;
   display: flex;
@@ -222,14 +174,10 @@ header {
   padding: 2px 5px;
 }
 
-.name {
-  display: flex;
-  align-items: center;
-}
-
 .name-name {
   height:20px;
 }
+
 .circle {
   width:30px;
   height:30px;
@@ -241,7 +189,6 @@ header {
 
 a {
   text-decoration: none;
-
 }
 
 a:visited {
@@ -292,7 +239,6 @@ a:visited {
 .bt {
   width: 70px;
   height: 20px;
-
   position:absolute;
   top: 2px;
   right: 60px;
@@ -328,25 +274,12 @@ a:visited {
   height: 40px;
   max-width: 980px;
   box-sizing: border-box;
-  // background: linear-gradient(-45deg, rgba(246, 255, 0, .8), rgba(255, 0, 161, .8));
-  // background: linear-gradient(5deg, #bdc3c7,rgb(21, 187, 252));
-  // background: #204e99;
-  // background: -moz-linear-gradient(top, #FFC778, #FFF);
-  // background: -webkit-linear-gradient(top, #FFC778, #FFF);
   background: linear-gradient(to bottom, #1399ff, rgb(1, 136, 208));
-  // background-color:rgb(21, 187, 252);
   border-top: 1px solid rgb(1, 112, 216);
   border-bottom: 2px solid rgb(2, 98, 189);
   display: flex;
-  // justify-content: space-between;
   align-items: center;
   padding:0 13px;
-  // margin: 0 20px;
-  // position: fixed;
-  // top: 50px;
-  // left: 0;
-  // right: 0;
-  // z-index: 4;
   &__info {
     display: flex;
     padding: 0 10px;
@@ -359,23 +292,10 @@ a:visited {
       justify-content: center;
       align-items: center;
     }
-  // &__first {
-  //   padding: 6px 20px;
-  //   margin: 0 10px;
-  //   box-sizing: border-box;
-  //   background-color: rgb(86, 207, 255);
-  //   border: 1px solid rgb(1, 112, 216);
-  //   border-bottom: 1px solid rgb(1, 75, 145);
-  // }
-  // &__second {
-  //   padding: 10px;
-  //   margin: 0 10px;
-  // }
   }
 }
 
 .fas{
-  // margin-right:20px;
   color: white;
 }
 
@@ -384,12 +304,8 @@ a:visited {
   font-size: 15px;
 }
 
-
-
-
 .post-profile-icon{
   height: 400px;
-
 }
 
 .line {
@@ -413,7 +329,6 @@ a:visited {
   height:52vh;
   padding: 200px 0 0px;
   font-size: 20px;
-
 }
 
 .btn {
@@ -455,8 +370,6 @@ textarea {
   box-sizing: border-box;
 }
 
-
-
 .h2{
   font-size: 20px;
   padding-bottom: 30px;
@@ -495,14 +408,9 @@ textarea {
 .table {
   width: 700px;
   height: 120px;
-  // background-color: white;
   border: 1px solid gray;
-  // margin-top: 150px;
   thead {
-    // background: linear-gradient(to bottom, #f9f9f9, rgb(240, 240, 240));
-    // background: linear-gradient(to bottom, #f9f9f9, rgb(223, 223, 223));
     tr{
-      // background-color: #f9f9f9;
       .title {
         width: 70%;
         color: orange;
@@ -520,9 +428,6 @@ textarea {
   tbody {
     .secondRecord {
       height: 20px;
-      // &__category {
-      //   background-color: yellow;
-      // }
       &__link {
         background: linear-gradient(to bottom, #f7f7f7, rgb(225, 225, 225));
       }
@@ -535,7 +440,6 @@ textarea {
       }
       &--second {
         background-color: gray;
-
       }
     }
   }
@@ -550,7 +454,6 @@ textarea {
   left: 10px;
   position: fixed;
   border-radius: 50%;
-  // display: flex;
   display: none;
   justify-content: center;
   align-items: center;

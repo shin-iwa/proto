@@ -1,7 +1,7 @@
 class ArticlesController < ApplicationController
   before_action :set_article, only: [:show, :edit, :update, :destroy]
   before_action :move_to_index,except: [:index, :show, :search]
-  before_action :move_to_root,except: [:index, :show, :create, :destroy, :update]
+  before_action :move_to_root,only: [:edit]
 
   def index
     @articles = Article.limit(10).includes(:user).order("created_at DESC")

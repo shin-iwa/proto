@@ -1,14 +1,12 @@
 = render "layouts/side"
 .contents.row
-  .contens__one
-    %p.upper
-      = @nickname
-      さんの作品一覧
-    - @articles.each do |article|
-      = render partial: "articles/article", locals: { article: article }
-  .contens__two
-    %p.upper
-      = @nickname
-      さんの近況報告一覧
-    - @tweets.each do |tweet|
-      = render partial: "tweets/tweet", locals: { tweet: tweet }
+  %p.upper
+    = @nickname
+    さんの作品一覧
+  - @articles.each do |article|
+    = render partial: "articles/article", locals: { article: article }
+  %p.upper
+    = @nickname
+    さんの近況報告一覧
+  - @tweets.each do |tweet|
+    = render partial: "tweets/tweet", locals: { tweet: tweet }
