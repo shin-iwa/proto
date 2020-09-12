@@ -1,8 +1,5 @@
 .more-box
   .more-parts-one
-  -# - if @novel.user == current_user
-  -#   = link_to edit_article_novel_path do
-  -#     編集
   .text
     作者:
     %a.name-name{:href => "/users/#{@novel.user.id}"}
