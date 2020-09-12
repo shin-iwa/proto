@@ -1,3 +1,7 @@
+= render "layouts/side"
 .contents.row
+  %br
+  %p 小説　検索結果
+  %br
   - @articles.each do |article|
     = render partial: "article", locals: { article: article }

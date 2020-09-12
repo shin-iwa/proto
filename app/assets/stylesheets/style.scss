@@ -72,13 +72,13 @@ header {
   }
   &__center {
     padding: 8px;
-    text-align: left;
     font-size: 14px;
     &--box {
       margin-bottom: 5px;
       padding: 5px;
       background-color: white;
       border: 1px solid rgb(203, 203, 203);
+      text-align: center;
     }
   }
 }
@@ -88,8 +88,14 @@ header {
 }
 
 .search-form {
-  display: flex;
-  padding: 0 0 0 70px;
+  text-align: center;
+  .search-input {
+    width:140px;
+    margin: 10px 0;
+  }
+  .search-btn {
+    padding: 0 10px;
+  }
 }
 
 .more-box {

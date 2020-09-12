@@ -1,26 +1,18 @@
 .side
   .side__top
-    お知らせ
+    検索フォーム
 
   .side__center
     .side__center--box
-      ここには運営からのお知らせが入ります
+      小説検索
+      = form_with(url: search_articles_path, local: true, method: :get, class: "search-form") do |form|
+        = form.text_field :keyword, placeholder: "小説を検索する", class: "search-input"
+        = form.submit "検索", class: "search-btn"
+    .side__center--box
+      活動報告検索
+      = form_with(url: search_tweets_path, local: true, method: :get, class: "search-form") do |form|
+        = form.text_field :keyword, placeholder: "活動報告を検索する", class: "search-input"
+        = form.submit "検索", class: "search-btn"
     .side__center--box
       ここには運営からのお知らせが入ります
-    .side__center--box
-      ここには運営からのお知らせが入ります
-    -# - @articles.each do |article|
-    -# %p.latest-novel 最新小説
-    %table.sideBord
-      %thead
-        %tr
-          -# 作者：
-          -# %a.name-name{:href => "/users/#{article.user.id}"}
-          -#   = article.user.nickname
-      %tbody
-        -# %tr.author
-        %th.title
-          -# タイトル：
-          -# %a.name-name{:href => article_path(article.id)}
-          -#   = article.title  
-  .side__bottom
+    
