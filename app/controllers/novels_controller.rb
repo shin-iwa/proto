@@ -1,6 +1,6 @@
 class NovelsController < ApplicationController
   before_action :set_novel, only: [:show, :edit, :update, :destroy]
-  before_action :move_to_root,except: [:show, :search]
+  before_action :move_to_root,except: [:show, :search, :create, :update]
 
   def create
     @novel = Novel.new(novel_params)

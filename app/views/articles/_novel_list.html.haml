@@ -4,7 +4,7 @@
       %tr.listTable__thead--tr
         %th.listTable__thead--tr__title
           = link_to "/articles/#{@article.id}/novels/#{novel.id}" do
-            %span.novelTitle= novel.title
+            %span.novelTitle= novel.title.truncate(20, omission: '...')
         %th.listTable__thead--tr__detail
           %span= novel.created_at.strftime('%Y/%m/%d')
           %span= novel.created_at.strftime('%H:%M')
