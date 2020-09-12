@@ -1,6 +1,6 @@
 class NovelsController < ApplicationController
-  before_action :authenticate_user!
   before_action :set_novel, only: [:show, :edit, :update, :destroy]
+  before_action :move_to_root,except: [:show, :search]
 
   def create
     @novel = Novel.new(novel_params)
@@ -53,6 +53,11 @@ class NovelsController < ApplicationController
 
   def set_novel
     @novel = Novel.find_by(id: params[:id])
+  end
+
+  def move_to_root
+    redirect_to "/" unless user_signed_in? && current_user.id == @novel.article.user_id
+    flash[:alert] = "該当のページは作成者のみアクセス可能です"
   end
 
 end

@@ -30,24 +30,10 @@ class ArticlesController < ApplicationController
     end
     redirect_to root_path
   end
-  # def destroy
-  #   article = Article.find(params[:id])
-  #   article.destroy
-  #   redirect_to '/'
-  # end
 
   def edit
-    # @novel = Novel.new
-    # @article = Article.find(params[:id])
     @novels = @article.novels.includes(:user)
   end
-
-  # def update
-  #   article = Article.find(params[:id])
-  #   article.update(article_params)
-  #   # redirect_to '/'
-  # end
-
 
   def update
     if @article.update(article_params)
@@ -59,11 +45,7 @@ class ArticlesController < ApplicationController
     end
   end
 
-
   def show
-    # @novel = Novel.new
-    # @article = Article.find(params[:id])
-    # @novels = @article.novels.includes(:user)
   end
 
   def search
@@ -80,7 +62,8 @@ class ArticlesController < ApplicationController
   end
 
   def move_to_index
-    redirect_to action: :index unless user_signed_in? 
+    redirect_to action: :index unless user_signed_in? && current_user.id == @article.user_id
+    flash[:alert] = "該当のページは作成者のみアクセス可能です"
   end
 
 end
