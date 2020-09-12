@@ -8,5 +8,4 @@ class Tweet < ApplicationRecord
     Tweet.where('title LIKE(?)', "%#{search}%")
   end
 
-  mount_uploader :image, ImageUploader
 end
