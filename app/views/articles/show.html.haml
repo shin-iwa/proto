@@ -6,7 +6,9 @@
       = @article.user.nickname
     %br
     %br
-    %p.articleTitle= @article.title
+    .articleTitle
+      %span.articleTitle__box
+        = @article.title
     %p= safe_join(@article.body.split("\n"), tag(:br))
   .container
     .comments
