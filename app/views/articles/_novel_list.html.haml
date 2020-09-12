@@ -7,6 +7,7 @@
     %span= novel.created_at.strftime('%-H:%-M')
     %span 投稿
     - if novel.user == current_user
-      = link_to "編集", edit_article_novel_path(@article.id, novel), method: :post, remote: true, class: "edit-novel"
+      = link_to edit_article_novel_path(@article.id, novel) do
+        編集
     - if novel.user == current_user
       = link_to "削除", article_novel_path(@article.id, novel), method: :delete, remote: true, class: "delete-novel"
