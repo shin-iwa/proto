@@ -11,6 +11,6 @@ Rails.application.routes.draw do
   resources :users, only: [:show] do
   end
   resources :articles do
-    resources :novels
+    resources :novels, only: [:show, :create, :destroy, :edit, :update]
   end
 end

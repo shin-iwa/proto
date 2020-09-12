@@ -1,6 +1,7 @@
 class ArticlesController < ApplicationController
   before_action :set_article, only: [:show, :edit, :update, :destroy]
   before_action :move_to_index,except: [:index, :show, :search]
+  before_action :move_to_root,except: [:index, :show, :create, :destroy, :update]
 
   def index
     @articles = Article.limit(10).includes(:user).order("created_at DESC")
@@ -62,8 +63,11 @@ class ArticlesController < ApplicationController
   end
 
   def move_to_index
-    redirect_to action: :index unless user_signed_in? && current_user.id == @article.user_id
-    flash[:alert] = "該当のページは作成者のみアクセス可能です"
+    redirect_to action: :index unless user_signed_in? 
+  end
+
+  def move_to_root
+    redirect_to "/" unless user_signed_in? && current_user.id == @article.user_id
   end
 
 end
