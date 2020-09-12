@@ -51,7 +51,50 @@
         text-align: left;
       }
       &__four {
-        width: 60px;        text-align: center;
+        width: 60px;
+        text-align: center;
+      }
+    }
+  }
+}
+
+.editTable {
+  width: 600px;
+  margin: 10px auto;
+  &__thead {
+    &--tr {
+      &__one {
+        width: 390px;
+        padding-left:20px;
+      }
+      &__two {
+        width: 180px;
+        text-align: right;
+      }
+      &__three {
+        width: 60px;
+        text-align: left;
+      }
+      &__four {
+        width: 60px;
+        text-align: center;
+      }
+    }
+  }
+}
+
+.listTable {
+  width: 100%;
+  &__thead {
+    &--tr {
+      &__title {
+        background: linear-gradient(to bottom, #f9f9f9, rgb(223, 223, 223));
+        padding: 5px 5px 5px 10px;
+      }
+      &__detail {
+        background: linear-gradient(to bottom, #e8e8e8, rgb(191, 191, 191));
+        padding: 5px 5px 5px 10px;
+        width: 190px;
       }
     }
   }
