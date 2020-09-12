@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
   devise_for :users
-  # root to: 'tweets#index'
   root to: 'articles#index'
   resources :tweets do
     resources :comments, only: :create
@@ -8,8 +7,7 @@ Rails.application.routes.draw do
       get 'search'
     end
   end
-  resources :users, only: [:show] do
-  end
+  resources :users, only: [:show] 
   resources :articles do
     resources :novels, only: [:show, :create, :destroy, :edit, :update]
   end
