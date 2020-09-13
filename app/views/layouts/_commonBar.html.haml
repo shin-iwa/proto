@@ -1,10 +1,12 @@
 %ul.second-line__info
   %li.second-line__info--box
-    %i.fas.fa-home
-      - if user_signed_in?
-        = link_to "マイページ", "/users/#{current_user.id}",class: "second-line__bt"
-      - else
-        = link_to "マイページ", new_user_session_path ,class: "second-line__bt"
+    - if user_signed_in?
+      = link_to "/users/#{current_user.id}",class: "second-line__bt" do
+        %div 
+          %i.fas.fa-home
+          マイページ
+    - else
+      = link_to "マイページ", new_user_session_path ,class: "second-line__bt"
   %li.second-line__info--box
     %i.fas.fa-sign-out-alt
       - if user_signed_in?
