@@ -39,10 +39,10 @@ class ArticlesController < ApplicationController
 
   def update
     if @article.update(article_params)
-      redirect_to '/'
+      redirect_to edit_article_path(@article)
       flash[:notice] = "投稿が修正されました"
     else
-      redirect_to '/'
+      redirect_to edit_article_path(@article)
       flash[:alert] = "投稿の修正に失敗しました"
     end
   end
