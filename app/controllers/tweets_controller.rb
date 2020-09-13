@@ -11,7 +11,15 @@ class TweetsController < ApplicationController
   end
 
   def create
-    Tweet.create(tweet_params)
+    # Tweet.create(tweet_params)
+    @tweet = Tweet.new(tweet_params)
+    if @tweet.save
+      redirect_to "/users/#{current_user.id}"
+      flash[:notice] = "投稿が完了しました"
+    else
+      redirect_to "/users/#{current_user.id}"
+      flash[:alert] = "投稿に失敗しました"
+    end
   end
 
   def destroy
