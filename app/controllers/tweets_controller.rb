@@ -3,7 +3,8 @@ class TweetsController < ApplicationController
   before_action :move_to_index,except: [:index, :show, :search]
 
   def index
-    @tweets = Tweet.limit(10).includes(:user).order("created_at DESC")
+    # @tweets = Tweet.limit(10).includes(:user).order("created_at DESC")
+    @tweets = Tweet.page(params[:page]).per(10).order("created_at DESC")
   end
 
   def new
@@ -11,7 +12,6 @@ class TweetsController < ApplicationController
   end
 
   def create
-    # Tweet.create(tweet_params)
     @tweet = Tweet.new(tweet_params)
     if @tweet.save
       redirect_to "/users/#{current_user.id}"

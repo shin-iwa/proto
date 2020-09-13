@@ -5,7 +5,7 @@ class ArticlesController < ApplicationController
 
   def index
     # @articles = Article.all.includes(:user).order("created_at DESC")
-    @articles = Article.page(params[:page]).per(10)
+    @articles = Article.page(params[:page]).per(10).order("created_at DESC")
   end
   
   def new
