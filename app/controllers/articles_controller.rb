@@ -15,7 +15,7 @@ class ArticlesController < ApplicationController
   def create
     @article = Article.new(article_params)
     if @article.save
-      redirect_to root_path
+      redirect_to edit_article_path(@article)
       flash[:notice] = "投稿が保存されました"
     else
       redirect_to root_path

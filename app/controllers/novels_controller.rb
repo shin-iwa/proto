@@ -9,7 +9,7 @@ class NovelsController < ApplicationController
       redirect_to edit_article_path(@article)
       flash[:notice] = "投稿が保存されました"
     else
-      redirect_to edit_post_path(@article)
+      redirect_to edit_article_path(@article)
       flash[:alert] = "投稿に失敗しました"
     end
   end
