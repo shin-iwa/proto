@@ -13,11 +13,10 @@
   width:480px;
   padding: 10px;
 }
-
 .articleTitle {
   font-size: 25px;
   font-weight: bold;
-  padding: 20px;
+  padding: 20px 0;
   display: flex;
   justify-content: center;
 }
@@ -46,12 +45,8 @@
         text-align: right;
       }
       &__three {
-        width: 60px;
+        width: 50px;
         text-align: left;
-      }
-      &__four {
-        width: 60px;
-        text-align: center;
       }
     }
   }
@@ -97,4 +92,12 @@
       }
     }
   }
+}
+
+.textArticle {
+  margin:5px auto 0;
+  padding:20px 0;
+  text-align: left;
+  color: #333;
+  width: 720px;
 }

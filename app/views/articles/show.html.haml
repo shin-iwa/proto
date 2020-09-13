@@ -1,6 +1,6 @@
 .more-box
   .more-parts-one
-  .text
+  .textArticle
     作者:
     %a.name-name{:href => "/users/#{@article.user.id}"}
       = @article.user.nickname
@@ -32,6 +32,3 @@
               %span= novel.created_at.strftime('%H:%M')
             %th.showTable__thead--tr__three
               %span 投稿
-            %th.showTable__thead--tr__four
-            -#   - if novel.user == current_user
-            -#     = link_to "削除", article_novel_path(@article.id, novel), method: :delete, remote: true, class: "delete-novel"

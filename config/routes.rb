@@ -13,7 +13,7 @@ Rails.application.routes.draw do
     end
   end
   resources :articles do
-    resources :novels, only: [:show, :create, :destroy, :edit, :update]
+    resources :novels, only: [:show, :create, :destroy, :edit, :update, :index]
     collection do
       get 'search'
     end
