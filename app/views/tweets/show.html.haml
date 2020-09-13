@@ -1,6 +1,7 @@
 = render "layouts/side"
 .contents.row
   %br
+  %p 活動報告
   %br
   .more-box__review
     .more-parts-one
@@ -15,7 +16,6 @@
         .circle
         %a.name-name{:href => "/users/#{@tweet.user.id}"}
           = @tweet.user.nickname
-        の活動報告
       %br
       .tweetTitle 
         = @tweet.title
