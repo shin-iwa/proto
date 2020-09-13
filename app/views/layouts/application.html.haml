@@ -14,13 +14,6 @@
         .titleBox
           %h1.title-name
             %a.tilte-logo{:href => "/"} Proto
-        -if user_signed_in?
-          .user-nav
-            .user-nav__box
-              = link_to  "小説投稿", new_article_path
-            .user-nav__box
-              = link_to  "活動報告投稿", new_tweet_path
-        -else
           .user-nav
       .second-line
         = render "layouts/commonBar"
