@@ -3,7 +3,7 @@
   %head
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
     %link{:href => "https://use.fontawesome.com/releases/v5.6.1/css/all.css", :rel => "stylesheet"}/
-    %title Proto
+    %title Novelist
     = csrf_meta_tags
     = csp_meta_tag
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
@@ -12,8 +12,8 @@
     %header.header
       .header-row
         .titleBox
-          %h1.title-name
-            %a.tilte-logo{:href => "/"} Proto
+          .titleName
+            %a.tilteLogo{:href => "/"} Novelist
         .nav
           初めてご利用される方は、
           = link_to "説明書", home_index_path, method: :get

@@ -35,15 +35,15 @@ header {
   margin: 0 auto;
   .titleBox  {
     border-radius: 50%;
-    border: 1px solid rgb(97, 115, 250);
-    height:30px;
-    width: 30px;
-    background: linear-gradient(to bottom, #1399ff, rgb(1, 136, 208));
-    .title-name {
-      font-size: 30px;
-      color:rgb(21, 187, 252);
+    // border: 1px solid rgb(97, 115, 250);
+    // height:30px;
+    // width: 30px;
+    // background: linear-gradient(to bottom, #1399ff, rgb(1, 136, 208));
+    .titleName {
+      font-size: 40px;
+      color:rgb(24, 147, 255);
       .title-logo {
-        color:rgb(21, 187, 252);
+        color:rgb(24, 147, 255);
       }
     }
   }
