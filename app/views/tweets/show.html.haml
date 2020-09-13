@@ -1,42 +1,45 @@
 = render "layouts/side"
-.more-box__review
-  .more-parts-one
-    %ul.more_list
-      - if user_signed_in? && current_user.id == @tweet.user_id
-        %li.more_list__details
-          = link_to '編集', edit_tweet_path(@tweet.id), method: :get
-        %li.more_list__details
-          = link_to '削除', tweet_path(@tweet.id), method: :delete
-  .text
-    .name
-      .circle
-      %a.name-name{:href => "/users/#{@tweet.user.id}"}
-        = @tweet.user.nickname
-      の活動報告
-    %br
-    %span= @tweet.created_at.strftime('%Y/%m/%d')
-    %span= @tweet.created_at.strftime('%H:%M')
-    %hr
-    .title 
-      = @tweet.title
-    %p= safe_join(@tweet.text.split("\n"), tag(:br))
-  .more-pict
-  .comments
-    %h4.line ＜コメント一覧＞
-    - if @comments
-      - @comments.each do |comment|
-        %p.comment
-          %strong
-            = link_to comment.user.nickname, "/users/#{comment.user_id}"
-            ：
-            = comment.text
+.more-box
+  .more-box__review
+    .more-parts-one
+      %ul.more_list
+        - if user_signed_in? && current_user.id == @tweet.user_id
+          %li.more_list__details
+            = link_to '編集', edit_tweet_path(@tweet.id), method: :get
+          %li.more_list__details
+            = link_to '削除', tweet_path(@tweet.id), method: :delete
+    .text
+      .name
+        .circle
+        %a.name-name{:href => "/users/#{@tweet.user.id}"}
+          = @tweet.user.nickname
+        の活動報告
+      %br
+      .tweetTitle 
+        = @tweet.title
+      .tweetDate 
+        %span= @tweet.created_at.strftime('%Y/%m/%d')
+        %span= @tweet.created_at.strftime('%H:%M')
+      .tweetBody
+        %p= safe_join(@tweet.text.split("\n"), tag(:br))
+  .more-box__review
+    .more-pict
+    .comments
+      %h4 ＜コメント一覧＞
+      - if @comments
+        - @comments.each do |comment|
+          %p.comment
+            %strong
+              = link_to comment.user.nickname, "/users/#{comment.user_id}"
+              ：
+              = comment.text
 
-  .more-parts-one
-    .createForm
-  - if current_user
-    = form_with(model: [@tweet, @comment], local: true, class:"input-form") do |form|
-      = form.text_area :text, placeholder: "コメント入力欄", rows: "4" , class:"form" ,id:"article_body"
-      = form.submit "投稿する" , class:"btc"
-  - else
-    %strong
-      %p ※※※ コメントの投稿には新規登録/ログインが必要です ※※※
+    .more-parts-one
+      .createForm
+    - if current_user
+      = form_with(model: [@tweet, @comment], local: true, class:"input-form") do |form|
+        = form.text_area :text, placeholder: "コメント入力欄", rows: "4" , class:"form" ,id:"article_body"
+        = form.submit "投稿する" , class:"btc"
+    - else
+      %strong
+        %p ※※※ コメントの投稿には新規登録/ログインが必要です ※※※
