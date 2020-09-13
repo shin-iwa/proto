@@ -5,3 +5,6 @@
 
   - @articles.each do |article|
     = render partial: "articles/article", locals: { article: article }
+
+  .contents__under
+    = paginate @articles

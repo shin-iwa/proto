@@ -14,7 +14,10 @@
         .titleBox
           %h1.title-name
             %a.tilte-logo{:href => "/"} Proto
-          .user-nav
+        .nav
+          初めてご利用される方は、
+          = link_to "説明書", home_index_path, method: :get
+          をお読み下さい。
       .second-line
         = render "layouts/commonBar"
     .main

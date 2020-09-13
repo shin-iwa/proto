@@ -18,4 +18,5 @@ Rails.application.routes.draw do
       get 'search'
     end
   end
+  resources :home, only: :index
 end
