@@ -3,12 +3,16 @@
     .container-main
       = form_with model: @article, local: true, class: "input-form" do |form|
         %h3.head
-          編集する
+          説明文の編集をする
+          %br
+          %h5 ※編集の必要がない方は、そのまま「ストーリー作成」進んで下さい。
         = render partial: "form", locals: { form: form }
       - if current_user
         .more-parts__edit
-          この部分は次話作成フォームです。
-          
+          %h3.head
+            説明文の編集をする
+            %br
+            %h5 ※この部分は「ストーリー作成」及び、「次話作成」フォームです。
           %div{:id => "novel-article-#{@article.id.to_s}"}
           .comments
             .card-body
