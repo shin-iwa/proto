@@ -6,6 +6,8 @@
       = @novel.user.nickname
     %br
     %br
-    %p.articleTitle= @novel.title
+    .articleTitle
+      %span.articleTitle__box
+      = @novel.title
     %p= safe_join(@novel.body.split("\n"), tag(:br))
   
