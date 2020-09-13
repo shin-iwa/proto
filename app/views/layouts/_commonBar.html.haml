@@ -6,7 +6,11 @@
           %i.fas.fa-home
           マイページ
     - else
-      = link_to "マイページ", new_user_session_path ,class: "second-line__bt"
+      = link_to new_user_session_path ,class: "second-line__bt" do
+        %div 
+          %i.fas.fa-home
+          マイページ
+
   %li.second-line__info--box
     %i.fas.fa-sign-out-alt
       - if user_signed_in?
