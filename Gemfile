@@ -60,3 +60,5 @@ gem 'devise'
 gem "haml-rails"
 gem 'kaminari'
 gem 'cocoon'
+
+gem 'pg', group: :production 
