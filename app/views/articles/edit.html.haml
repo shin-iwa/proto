@@ -1,0 +1,33 @@
+.contents.row
+  .container
+    .container-main
+      = form_with model: @article, local: true, class: "input-form" do |form|
+        %h3.head
+          「前書き」or「説明文」の編集をする
+          %br
+          %br
+          %h5 ※編集の必要がない方は、そのまま「ストーリー作成」に進んで下さい。
+        = render partial: "form", locals: { form: form }
+      - if current_user
+        .more-parts__edit
+          %h3.head
+            ストーリーの作成
+            %br
+            %br
+            %h5 ※この部分は「ストーリー作成」及び、「次話作成」フォームです。
+          %div{:id => "novel-article-#{@article.id.to_s}"}
+          .comments
+            .card-body
+              = form_with model:[@article, Novel.new], class: "input-form" do |f|
+                = f.hidden_field :user_id, value: current_user.id
+                = f.hidden_field :article_id, value: @article.id
+                = f.text_field :title  ,class: "form-control", id:"article_title",placeholder: "タイトル", autocomplete: :on
+                = f.text_area :body, placeholder: "本文" , rows: "10", id:"article_body",autocomplete: :on
+                = f.submit "投稿する", class: "btc"
+                .comments
+                %br
+                  作成済み一覧
+
+                  %h4.line
+                  - if @novels
+                    = render partial: "novel_list", article: @article

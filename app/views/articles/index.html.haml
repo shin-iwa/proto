@@ -1,0 +1,10 @@
+= render "layouts/side"
+.contents.row
+  %p.upper
+    最新投稿小説一覧
+
+  - @articles.each do |article|
+    = render partial: "articles/article", locals: { article: article }
+
+  .contents__under
+    = paginate @articles

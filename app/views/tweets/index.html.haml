@@ -1,3 +1,9 @@
+= render "layouts/side"
 .contents.row
+  %p.upper
+    みんなの活動報告一覧
   - @tweets.each do |tweet|
     = render partial: "tweet", locals: { tweet: tweet }
+
+  .contents__under
+    = paginate @tweets

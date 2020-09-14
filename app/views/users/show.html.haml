@@ -1,6 +1,18 @@
+= render "layouts/side"
 .contents.row
+  -if user_signed_in?
+    .user-nav
+      .user-nav__box
+        = link_to  "小説投稿", new_article_path
+      .user-nav__box
+        = link_to  "活動報告投稿", new_tweet_path
   %p.upper
     = @nickname
-    さんの投稿一覧
+    さんの作品一覧
+  - @articles.each do |article|
+    = render partial: "users/article", locals: { article: article }
+  %p.upper
+    = @nickname
+    さんの近況報告一覧
   - @tweets.each do |tweet|
     = render partial: "tweets/tweet", locals: { tweet: tweet }

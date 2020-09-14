@@ -1,0 +1,7 @@
+%table.table
+  %thead
+    %tr
+      %th.author
+        ユーザー名：
+        %a.name-name{:href => "/users/#{user.id}"}
+          = user.nickname

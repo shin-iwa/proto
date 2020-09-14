@@ -1,51 +1,81 @@
 body {
   text-align: center;
-  // position: relative;
   z-index: 4;
+  background-color: #f9f9f9;
 }
-
+.main {
+  border-left: 1px solid #3f3f3f;
+  border-right: 1px solid #3f3f3f;
+  background-color: white;
+  max-width: 980px;
+  margin: 0 auto;
+}
 .base {
-  // position: absolute;
-  // top: 50px;
   padding-top: 20px;
   width: 100%;
-  background-color: rgb(253, 249, 236);
+  min-height: 90vh;
   display: flex;
 }
 
-
-// header {
-//   position: fixed;
-//   top: 0;
-//   left: 0;
-//   right: 0;
-//   z-index: 5;
-// }
+header {
+  margin: 0 auto;
+  border-left: 1px solid #3f3f3f;
+  border-right: 1px solid #3f3f3f;
+  max-width: 980px;
+}
 .header-row {
-  width: calc(100vw - 40px);
-  height: 50px;
-  padding: 0 20px;
+  height: 70px;
+  padding: 0 30px;
+  box-sizing: border-box;
   background-color: white;
   display: flex;
   align-items: center;
   justify-content: space-between;
   position: relative;
-  border-bottom: 1px solid rgb(240, 206, 157);
-  .title-name {
-    font-size: 24px;
-    color:rgb(21, 187, 252);
-    .title-logo {
-      // font-size: 24px;
-      color:rgb(21, 187, 252);
+  margin: 0 auto;
+  .titleBox  {
+    border-radius: 50%;
+    .titleName {
+      font-size: 40px;
+      color:rgb(24, 147, 255);
+      .title-logo {
+        color:rgb(24, 147, 255);
+      }
     }
   }
 }
 
 .side {
-  width: 100px;
-  height: calc(100vh - 100px);
-  background-color: coral;
-  margin-right: 20px;
+  width: 180px;
+  height: calc(100vh - 50px);
+  background-color: #f9f9f9;
+  border: 1px solid silver;
+  margin: 0 0 20px 20px;
+  &__top {
+    text-align: left;
+    background: linear-gradient(to bottom, #1399ff, rgb(1, 136, 208));
+    opacity: 0.9;
+    padding: 2px 0;
+    border: 1px solid silver;
+    color: white;
+    text-align: center;
+    border-top: 1px solid #838383;
+    border-bottom: 1px solid #333333;
+    .latest-novel {
+      text-align: center;
+    }
+  }
+  &__center {
+    padding: 8px;
+    font-size: 14px;
+    &--box {
+      margin-bottom: 5px;
+      padding: 5px;
+      background-color: white;
+      border: 1px solid rgb(203, 203, 203);
+      text-align: center;
+    }
+  }
 }
 
 #keyword {
@@ -53,27 +83,24 @@ body {
 }
 
 .search-form {
-  display: flex;
+  text-align: center;
+  .search-input {
+    width:140px;
+    margin: 10px 0;
+  }
+  .search-btn {
+    padding: 0 10px;
+  }
 }
 
 .more-box {
   width:70vw;
-  margin: 20px auto;
+  margin: 0 auto 100px;
   background-color: rgba(255, 255, 255, 0.8);
-  border:1px solid darkgray;
-  border-radius: 3px;
   background-size:contain; 
   background-repeat: no-repeat;  
   background-position: center center; 
   position: relative;
-}
-
-.more-parts-one {
-  display: flex;
-  align-items: center;
-  padding: 5px;
-  height:35px;
-  border-bottom: 1px solid rgb(223, 222, 222);
 }
 
 .post-user {
@@ -88,8 +115,6 @@ body {
   right: 0px;
 }
 
-
-
 .more_list__details {
   margin:5px;
   padding: 5px;
@@ -99,8 +124,6 @@ body {
 }
 
 .more {
-  // width: 600px;
-  // height: 400px;
   background-size:contain; 
   background-repeat: no-repeat;  
   background-position: center center; 
@@ -130,12 +153,18 @@ body {
   opacity: 0.8;
 }
 
-.user_nav {
-  display:flex;
+.user-nav {
+  color: blue;
+  text-align: right;
 }
 
 .new-action {
   display: flex;
+}
+
+.name {
+  display: flex;
+  align-items: center;
 }
 
 .name-box {
@@ -146,14 +175,10 @@ body {
   padding: 2px 5px;
 }
 
-.name {
-  display: flex;
-  align-items: center;
-}
-
 .name-name {
   height:20px;
 }
+
 .circle {
   width:30px;
   height:30px;
@@ -165,16 +190,20 @@ body {
 
 a {
   text-decoration: none;
+}
 
+a:hover{
+	opacity:0.6;
 }
 
 a:visited {
   text-decoration: none;
-  // color: rgb(28, 168, 255);
 }
 
 .contents{
   height: 100%;
+  min-width:600px;
+  margin: 0 auto 40px;
 }
 
 .container {
@@ -192,7 +221,7 @@ a:visited {
 
 .container-main {
   text-align: center;
-  height: 78vh;
+  min-height: 78vh;
 }
 
 .comment {
@@ -209,13 +238,12 @@ a:visited {
 }
 
 .upper {
-  margin-top:50px;
+  margin:20px 0;
 }
 
 .bt {
   width: 70px;
   height: 20px;
-
   position:absolute;
   top: 2px;
   right: 60px;
@@ -249,46 +277,55 @@ a:visited {
 
 .second-line {
   height: 40px;
-  background-color:rgb(21, 187, 252);
+  max-width: 980px;
+  box-sizing: border-box;
+  background: linear-gradient(to bottom, #1399ff, rgb(1, 136, 208));
+  border-top: 1px solid rgb(1, 112, 216);
+  border-bottom: 2px solid rgb(2, 98, 189);
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding:0 20px;
-  // position: fixed;
-  // top: 50px;
-  // left: 0;
-  // right: 0;
-  // z-index: 4;
+  padding:0 13px;
+  &__info {
+    display: flex;
+    padding: 0 10px;
+    &--box {
+      padding: 5px 10px;
+      width: 165px;
+      border-left: 1px solid #2f2f2f;
+      border-right: 1px solid #cecece;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
 }
 
-.fa-home {
-  margin-right:20px;
+.fas{
   color: white;
-}
-.toMypage {
-  color: white;
-  font-size: 15px;
 }
 
-.fa-sign-out-alt {
-  color: white;
-}
-.toLogout {
+.second-line__bt {
   color: white;
   font-size: 15px;
 }
 
 .post-profile-icon{
   height: 400px;
-
 }
 
 .line {
   border-top: 1px dashed gray;
+  width: 720px;
+  margin: 0 auto;
 }
 
+.createForm {
+  width: 50px;
+}
 .yah {
-  height:25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .input-form {
@@ -304,7 +341,6 @@ a:visited {
   height:52vh;
   padding: 200px 0 0px;
   font-size: 20px;
-
 }
 
 .btn {
@@ -322,6 +358,11 @@ form input[type="submit"]:hover {
   border: 1px solid lightgray;
 }
 
+#tweet_title {
+  width:480px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
 #tweet_text {
   width:480px;
   padding: 10px;
@@ -337,11 +378,9 @@ textarea {
 }
 
 .footer {
-  height: 50px;
+  height: 70px;
   box-sizing: border-box;
 }
-
-
 
 .h2{
   font-size: 20px;
@@ -379,35 +418,30 @@ textarea {
 }
 
 .table {
-  width: 600px;
-  height: 200px;
-  // background-color: white;
+  width: 700px;
+  height: 120px;
   border: 1px solid gray;
-  // margin-top: 150px;
   thead {
-    background-color: #f9f9f9;
     tr{
-      // background-color: #f9f9f9;
       .title {
         width: 70%;
         color: orange;
         font-size: 18px;
         font-weight: bold;
+        padding: 5px 5px 5px 20px;
+        background: linear-gradient(to bottom, #f9f9f9, rgb(223, 223, 223));
       }
       .author {
-        background-color: pink;
-        padding: 5px;
+        background: linear-gradient(to bottom, #e8e8e8, rgb(191, 191, 191));
+        padding: 5px 5px 5px 10px;
       }
     }
   }
   tbody {
     .secondRecord {
       height: 20px;
-      &__category {
-        background-color: yellow;
-      }
       &__link {
-        background-color: green;
+        background: linear-gradient(to bottom, #f7f7f7, rgb(225, 225, 225));
       }
     }
   }
@@ -418,7 +452,6 @@ textarea {
       }
       &--second {
         background-color: gray;
-
       }
     }
   }
@@ -429,8 +462,15 @@ textarea {
   height: 80px;
   width: 80px;
   background-color: pink;
-  bottom: 0px;
-  right: 0px;
+  bottom: 10px;
+  left: 10px;
   position: fixed;
   border-radius: 50%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.contents__under {
+  margin: 20px 0 0;
 }

@@ -1,0 +1,10 @@
+.contents.row
+  .container
+    .container-main
+      = form_with(model: [@article, @novel], local: true, class: "input-form") do |form|
+        %h3.head
+          投稿する
+        -# = render partial: "form", locals: { form: form }
+        = form.text_field :title, placeholder: "title" , class: "title"
+        = form.text_area :body, placeholder: "text" , rows: "10"
+        = form.submit "SEND", class: "btc"

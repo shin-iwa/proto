@@ -1,0 +1,25 @@
+%table.table
+  %thead
+    %tr
+      %th.title
+        %a.name-name{:href => "/articles/articles/novels/#{novel.id}"}
+          = novel.title
+      %th.author
+        作者：
+        %a.name-name{:href => "/users/#{novel.user.id}"}
+          = novel.user.nickname
+  %tbody
+    %tr.secondRecord
+      %td.secondRecord__category
+        .text
+          %p= simple_format(novel.body.truncate(40, omission: '...')) 
+      %td.secondRecord__link
+        %p.created= novel.created_at
+        -# = link_to '詳細', article_path(article.id), method: :get
+  -# %tfoot.lastRecord
+  -#   %tr.lastRecord__base
+  -#     %td.lastRecord__base--first
+  -#     %td.lastRecord__base--second
+
+.more-parts-one
+

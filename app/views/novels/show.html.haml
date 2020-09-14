@@ -1,0 +1,12 @@
+.more-box
+  .more-parts-one
+  .textArticle
+    作者:
+    %a.name-name{:href => "/users/#{@novel.user.id}"}
+      = @novel.user.nickname
+    %br
+    %br
+    .articleTitle
+      %span.articleTitle__box
+      = @novel.title
+    %p= safe_join(@novel.body.split("\n"), tag(:br))

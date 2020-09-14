@@ -1,0 +1,47 @@
+%ul.second-line__info
+  %li.second-line__info--box
+    - if user_signed_in?
+      = link_to "/users/#{current_user.id}",class: "second-line__bt" do
+        %div 
+          %i.fas.fa-home
+          マイページ
+    - else
+      = link_to new_user_session_path ,class: "second-line__bt" do
+        %div 
+          %i.fas.fa-home
+          マイページ
+
+  %li.second-line__info--box
+    - if user_signed_in?
+      = link_to destroy_user_session_path, method: :delete, class: "second-line__bt" do
+        %div 
+          %i.fas.fa-sign-out-alt
+          ログアウト
+    - else
+      = link_to  new_user_session_path, class: "second-line__bt" do
+        %div
+          %i.fas.fa-sign-out-alt
+          ログイン
+  %li.second-line__info--box
+    %div
+      = link_to articles_path, class: "second-line__bt" do
+        %i.fas.fa-book-reader
+        小説
+  %li.second-line__info--box
+    %div
+      = link_to tweets_path, class: "second-line__bt" do
+        %i.fas.fa-user-edit
+        活動報告
+  %li.second-line__info--box
+    - if user_signed_in?
+      %i.fas
+        ユーザー登録済 ◎
+    - else
+      %div
+        = link_to new_user_registration_path, class: "second-line__bt" do
+          %i.fas.fa-sign-in-alt
+          ユーザー登録
+  .second-line__first
+    
+  .second-line__second
+  -# = link_to "新規登録", new_user_registration_path, class: 'post'

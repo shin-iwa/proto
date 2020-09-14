@@ -1,0 +1,34 @@
+.more-box
+  .more-parts-one
+  .textArticle
+    作者:
+    %a.name-name{:href => "/users/#{@article.user.id}"}
+      = @article.user.nickname
+    %br
+    %br
+    .articleTitle
+      %span.articleTitle__box
+        = @article.title
+    %p= safe_join(@article.body.split("\n"), tag(:br))
+  .container
+    .comments
+      %h4.line
+      - if @novels
+        - @novels.each do |novel|
+          %p.comment
+            %strong
+              = link_to novel.user.nickname, "/articles/#{@article.id}/novels/#{novel.id}"
+              = novel.title
+              = novel.body
+    - @article.novels.each do |novel|
+      %table.showTable
+        %thead.showTable__thead
+          %tr.showTable__thead--tr
+            %th.showTable__thead--tr__one
+              = link_to "/articles/#{@article.id}/novels/#{novel.id}" do
+                = novel.title
+            %th.showTable__thead--tr__two
+              %span= novel.created_at.strftime('%Y/%m/%d')
+              %span= novel.created_at.strftime('%H:%M')
+            %th.showTable__thead--tr__three
+              %span 投稿

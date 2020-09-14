@@ -1,0 +1,25 @@
+%table.table
+  %thead
+    %tr
+      %th.title
+        = link_to article.title.truncate(25, omission: '...'), article_path(article.id), method: :get
+      %th.author
+        作者：
+        %a.name-name{:href => "/users/#{article.user.id}"}
+          = article.user.nickname
+  %tbody
+    %tr.secondRecord
+      %td.secondRecord__category
+        .text
+          %p= simple_format(article.body.truncate(40, omission: '...')) 
+      %td.secondRecord__link
+        = article.created_at.strftime('%Y/%m/%d')
+        = article.created_at.strftime('%H:%M')
+        %span 投稿
+        - if user_signed_in? && current_user.id == article.user_id
+          = link_to edit_article_path(article), method: :get do
+            .more_list__details
+              編集
+          = link_to article_path(article), method: :delete, remote: true, class: "delete-novel" do
+            .more_list__details
+              削除

@@ -1,0 +1,37 @@
+-# = render "layouts/side"
+-# .contents.row
+-#   %p.upper
+-#     = @nickname
+-#     ここにはタイトルが入る予定です
+
+-#     - if @novels
+-#       - @novels.each do |novel|
+-#         %p.comment
+-#           %strong
+-#             = link_to novel.user.nickname, "/articles/#{@article.id}/novels/#{novel.id}"
+-#             = novel.title
+-#             = novel.body
+
+.more-box
+  .more-parts-one
+  .text
+    作者:
+    -# %a.name-name{:href => "/users/#{@article.user.id}"}
+    -# = @article.user.nickname
+    -# %br
+    -# %br
+    -# .articleTitle
+    -#   %span.articleTitle__box
+    -#     = @article.title
+    -# %p= safe_join(@article.body.split("\n"), tag(:br))
+  .container
+    .comments
+      %h4.line
+      - if @novels
+        - @novels.each do |novel|
+          %p.comment
+            %strong
+              = link_to novel.user.nickname, "/articles/#{@article.id}/novels/#{novel.id}"
+              = novel.title
+              = novel.body
+           

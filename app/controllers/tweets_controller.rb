@@ -3,7 +3,7 @@ class TweetsController < ApplicationController
   before_action :move_to_index,except: [:index, :show, :search]
 
   def index
-    @tweets = Tweet.limit(10).includes(:user).order("created_at DESC")
+    @tweets = Tweet.page(params[:page]).per(10).order("created_at DESC")
   end
 
   def new
@@ -11,7 +11,14 @@ class TweetsController < ApplicationController
   end
 
   def create
-    Tweet.create(tweet_params)
+    @tweet = Tweet.new(tweet_params)
+    if @tweet.save
+      redirect_to "/users/#{current_user.id}"
+      flash[:notice] = "投稿が完了しました"
+    else
+      redirect_to "/users/#{current_user.id}"
+      flash[:alert] = "投稿に失敗しました"
+    end
   end
 
   def destroy
@@ -38,7 +45,7 @@ class TweetsController < ApplicationController
 
   private
   def tweet_params
-    params.require(:tweet).permit(:image, :text).merge(user_id: current_user.id)
+    params.require(:tweet).permit(:title,  :text, :image).merge(user_id: current_user.id)
   end
 
   def set_tweet
