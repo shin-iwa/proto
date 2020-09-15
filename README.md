@@ -10,6 +10,8 @@ Please search for it on the internet.
 # About
 This app is Novel Posting site. You can use full systems! It's possible to read all novels. But if you write new novels, please make an account.
 
+<img width="1000" alt="screen1" src="https://user-images.githubusercontent.com/66307522/93207493-0177b980-f796-11ea-9fab-eefd48219ee6.png">
+
 # Technology used
 This application uses the following open source packages:
 
