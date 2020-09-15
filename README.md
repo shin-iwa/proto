@@ -1,5 +1,5 @@
 # What
-I am making novel posting site.
+We are making clone of Free Market site.
 
 # Proto
 You can check this app on <a href="http://52.192.240.140/">AWS</a>!
@@ -8,7 +8,7 @@ Please search for it on the internet.
 <img width="1406" alt="screen1" src="https://user-images.githubusercontent.com/66178755/88137414-73180900-cc26-11ea-9ee4-4f55b4b7e51d.png">
 
 # About
-This app is novel posting site. The basic systems has been reproduced! So please make an index of my technical level with it.
+This app is clone site. You cannot actually buy ptoducts. But the basic systems has been reproduced! So please make an index of our technical level with it.
 
 # Technology used
 This application uses the following open source packages:
@@ -25,17 +25,16 @@ This application uses the following open source packages:
 |encrypted_password|string|null: false|
 
 ### Association
-- has_many :articles
-- has_many :novels
 - has_many :tweets
 - has_many :comments
+
 
 ## tweets table
 |Column|Type|Options|
 |------|----|-------|
-|title|string|null: false|
+|image|string|
 |text|text|null: false|
-|user_id|references|foreign_key: true, null: false|
+|user_id|integer|null: false|
 
 ### Association
 - belongs_to :user
@@ -46,8 +45,8 @@ This application uses the following open source packages:
 |Column|Type|Options|
 |------|----|-------|
 |text|text|null: false|
-|user_id|references|null: false, foreign_key: true|
-|tweet_id|references|null: false, foreign_key: true|
+|user_id|integer|null: false|
+|tweet_id|integer|null: false|
 
 ### Association
 - belongs_to :tweet
