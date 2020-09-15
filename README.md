@@ -8,7 +8,7 @@ Please search for it on the internet.
 <img width="1000" alt="screen1" src="https://user-images.githubusercontent.com/66307522/93202826-531c4600-f78e-11ea-8531-d0a497e10911.png">
 
 # About
-This app is Novel Posting site. You can use full systems! It,s possible to read all novels. But if you write new novels, please make an account.
+This app is Novel Posting site. You can use full systems! It's possible to read all novels. But if you write new novels, please make an account.
 
 # Technology used
 This application uses the following open source packages:
