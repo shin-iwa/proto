@@ -5,7 +5,7 @@ We are making clone of Free Market site.
 You can check this app on <a href="">AWS</a>!
 Please search for it on the internet.
 
-<img width="1406" alt="screen1" src="https://user-images.githubusercontent.com/66307522/93202826-531c4600-f78e-11ea-8531-d0a497e10911.png">
+<img width="1000" alt="screen1" src="https://user-images.githubusercontent.com/66307522/93202826-531c4600-f78e-11ea-8531-d0a497e10911.png">
 
 # About
 This app is clone site. You cannot actually buy ptoducts. But the basic systems has been reproduced! So please make an index of our technical level with it.
