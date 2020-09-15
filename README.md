@@ -1,5 +1,5 @@
 # What
-I am making Nobel Posting site.
+I am making Novel Posting site.
 
 # Proto
 You can check this app on <a href="">AWS</a>!
