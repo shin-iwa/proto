@@ -15,7 +15,7 @@ This app is Novel Posting site. You can use full systems! It's possible to read 
 # Technology used
 This application uses the following open source packages:
 
-<img width="531" src="https://user-images.githubusercontent.com/66307522/88165235-5a244d80-cc50-11ea-9012-f2c9222a056b.JPG">
+<img width="531" src="https://user-images.githubusercontent.com/66307522/93208289-5405a580-f797-11ea-8658-927c8ef25858.jpg">
 
 # Database
 
