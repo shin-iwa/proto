@@ -35,7 +35,7 @@ This application uses the following open source packages:
 |------|----|-------|
 |title|string|null: false|
 |text|text|null: false|
-|user_id|integer| null: false|
+|user_id|references|foreign_key: true, null: false|
 
 ### Association
 - belongs_to :user
@@ -46,8 +46,8 @@ This application uses the following open source packages:
 |Column|Type|Options|
 |------|----|-------|
 |text|text|null: false|
-|user_id|string| null :false|
-|tweet_id|string| null :false|
+|user_id|references|null: false, foreign_key: true|
+|tweet_id|references|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :tweet
@@ -70,8 +70,8 @@ This application uses the following open source packages:
 |------|----|-------|
 |title|string|null: false|
 |body|text|null: false|
-|user_id|references| null :false|
-|article_id|references| null :false|
+|user_id|references|null: false, foreign_key: true|
+|article_id|references|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :article
