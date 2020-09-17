@@ -6,7 +6,20 @@
       = @novel.user.nickname
     %br
     %br
-    .articleTitle
-      %span.articleTitle__box
-      = @novel.title
-    %p= safe_join(@novel.body.split("\n"), tag(:br))
+  - @articles.each do |novel|
+    %table
+      %thead
+        %tr
+          %th
+            -# = link_to "/articles/#{@article.id}/novels/#{novel.id}/?page=2" do
+            -#   %span.novelTitle= novel.title.truncate(20, omission: '...')
+          -# %th.listTable__thead--tr__detail
+          -#   %span= novel.created_at.strftime('%Y/%m/%d')
+          -#   %span= novel.created_at.strftime('%H:%M')
+          -#   %span 投稿
+      %tbody
+        %tr
+          %td
+            = novel.body
+  .contents__under
+    = paginate @articles

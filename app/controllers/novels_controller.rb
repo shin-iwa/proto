@@ -1,6 +1,6 @@
 class NovelsController < ApplicationController
   before_action :set_novel, only: [:show, :edit, :update, :destroy]
-  before_action :move_to_root,except: [:show, :search, :create, :update]
+  before_action :move_to_root,except: [:search, :create, :update, :show]
 
   def create
     @novel = Novel.new(novel_params)
@@ -26,6 +26,8 @@ class NovelsController < ApplicationController
   end
 
   def show
+    # @article = @novel.article
+    @articles = Novel.page(params[:page]).per(1).order("created_at DESC")
   end
 
   def edit
