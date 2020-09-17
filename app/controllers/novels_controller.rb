@@ -27,7 +27,7 @@ class NovelsController < ApplicationController
 
   def show
     # @article = @novel.article
-    @articles = Novel.page(params[:page]).per(1).order("created_at DESC")
+    @articles = Novel.page(params[:page]).per(1).order("created_at ASC")
   end
 
   def edit
