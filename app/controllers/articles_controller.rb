@@ -4,7 +4,6 @@ class ArticlesController < ApplicationController
   before_action :move_to_root,only: [:edit]
 
   def index
-    # @articles = Article.all.includes(:user).order("created_at DESC")
     @articles = Article.page(params[:page]).per(10).order("created_at DESC")
   end
   

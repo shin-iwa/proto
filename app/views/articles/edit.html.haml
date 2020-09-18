@@ -10,7 +10,7 @@
         = render partial: "form", locals: { form: form }
       - if current_user
         .more-parts__edit
-          %h3.head
+          %h3.head#topic
             ストーリーの作成
             %br
             %br
@@ -27,7 +27,8 @@
                 .comments
                 %br
                   作成済み一覧
-
-                  %h4.line
                   - if @novels
                     = render partial: "novel_list", article: @article
+              - if user_signed_in?
+                = link_to ">>マイページへ戻る" ,"/users/#{current_user.id}"
+                
