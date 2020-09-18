@@ -14,18 +14,10 @@
       .articleTitle
         %span.articleTitle__box
           = novel.title
-      .container
-        .comments
-          -# = link_to "/articles/#{@article.id}/novels/#{novel.id}/?page=2" do
-          -#   %span.novelTitle= novel.title.truncate(20, omission: '...')
-            -# %th.listTable__thead--tr__detail
-            -#   %span= novel.created_at.strftime('%Y/%m/%d')
-            -#   %span= novel.created_at.strftime('%H:%M')
-            -#   %span 投稿
       %p= safe_join(novel.body.split("\n"), tag(:br))
   .contents__under
     = paginate @articles
-  .textArticle 
-    %strong
-      = link_to "/articles/#{@article.id}" do
-        目次
+  -# .textArticle 
+  %strong
+    = link_to "/articles/#{@article.id}" do
+      目次
