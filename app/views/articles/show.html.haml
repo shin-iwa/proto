@@ -9,7 +9,7 @@
     .articleTitle
       %span.articleTitle__box
         = @article.title
-    %p= safe_join(@article.body.split("\n"), tag(:br))
+    %p.body= safe_join(@article.body.split("\n"), tag(:br))
   .container
     .comments
       %h4.line

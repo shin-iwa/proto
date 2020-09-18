@@ -33,12 +33,12 @@
 }
 
 .showTable {
-  width: 760px;
+  width: 720px;
   margin: 10px auto;
   &__thead {
     &--tr {
       &__one {
-        width: 390px;
+        width: 500px;
         padding-left:20px;
       }
       &__two {
@@ -97,8 +97,13 @@
 
 .textArticle {
   margin:5px auto 0;
-  padding:20px 0;
+  padding:20px;
   text-align: left;
   color: #333;
   width: 720px;
+  box-sizing: border-box;
+}
+
+.body {
+  font-size: 1.1em;
 }
