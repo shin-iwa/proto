@@ -1,25 +1,20 @@
 .more-box
-  .more-parts-one
-  .textArticle
-    作者:
-    %a.name-name{:href => "/users/#{@novel.user.id}"}
-      = @novel.user.nickname
-    %br
-    %br
   - @articles.each do |novel|
-    %table
-      %thead
-        %tr
-          %th
-            -# = link_to "/articles/#{@article.id}/novels/#{novel.id}/?page=2" do
-            -#   %span.novelTitle= novel.title.truncate(20, omission: '...')
-          -# %th.listTable__thead--tr__detail
-          -#   %span= novel.created_at.strftime('%Y/%m/%d')
-          -#   %span= novel.created_at.strftime('%H:%M')
-          -#   %span 投稿
-      %tbody
-        %tr
-          %td
-            = novel.body
+    .more-parts-one
+    .textArticle
+      作者:
+      %a.name-name{:href => "/users/#{@novel.user.id}"}
+        = @novel.user.nickname
+      %br
+      %br
+      .container
+        .comments
+          -# = link_to "/articles/#{@article.id}/novels/#{novel.id}/?page=2" do
+          -#   %span.novelTitle= novel.title.truncate(20, omission: '...')
+            -# %th.listTable__thead--tr__detail
+            -#   %span= novel.created_at.strftime('%Y/%m/%d')
+            -#   %span= novel.created_at.strftime('%H:%M')
+            -#   %span 投稿
+      %p= safe_join(novel.body.split("\n"), tag(:br))
   .contents__under
     = paginate @articles
