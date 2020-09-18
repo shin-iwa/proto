@@ -1,8 +1,9 @@
 .more-box
   - @articles.each do |novel|
     .more-parts-one
-      %span.articleTitle__box
-        = @article.title
+      %strong
+        = link_to "/articles/#{@article.id}" do
+          = @article.title
     .textArticle
       作者:
       %a.name-name{:href => "/users/#{@novel.user.id}"}
