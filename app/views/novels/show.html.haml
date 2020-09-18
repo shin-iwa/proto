@@ -7,6 +7,9 @@
         = @novel.user.nickname
       %br
       %br
+      .articleTitle
+        %span.articleTitle__box
+          = @novel.title
       .container
         .comments
           -# = link_to "/articles/#{@article.id}/novels/#{novel.id}/?page=2" do
