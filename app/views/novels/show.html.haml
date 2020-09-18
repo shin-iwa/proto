@@ -1,6 +1,7 @@
 .more-box
   - @articles.each do |novel|
     .more-parts-one
+    .textArticle
       %strong
         = link_to "/articles/#{@article.id}" do
           = @article.title
