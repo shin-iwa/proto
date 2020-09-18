@@ -16,7 +16,7 @@
           = novel.title
       %p= safe_join(novel.body.split("\n"), tag(:br))
   .contents__under
-    -# = paginate @articles
+    = paginate @articles
   -# .textArticle 
   %strong
     = link_to "/articles/#{@article.id}" do
