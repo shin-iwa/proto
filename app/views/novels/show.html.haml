@@ -15,8 +15,10 @@
         %span.articleTitle__box
           = novel.title
       %p.body= safe_join(novel.body.split("\n"), tag(:br))
-  .contents__under
-    = paginate @articles
-
-    = link_to "/articles/#{@article.id}" do
-      目次
+    .novelMenu
+      .novelMenu__one
+        = paginate @articles
+      .novelMenu__two
+      .novelMenu__three
+        = link_to "/articles/#{@article.id}" do
+          目次
