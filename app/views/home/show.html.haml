@@ -1,0 +1,16 @@
+= render "layouts/side"
+.contents.row
+  -if user_signed_in?
+    .user-nav
+      .user-nav__box
+        %br
+        = link_to  ">>小説投稿", user_path
+  %p.upper
+    = @nickname
+    さんの活動報告一覧
+    %br
+    %span
+      = button_to  "活動報告を投稿する", new_tweet_path, class: "postBt", method: :get
+    %br
+  - @tweets.each do |tweet|
+    = render partial: "tweets/tweet", locals: { tweet: tweet }

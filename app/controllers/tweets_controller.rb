@@ -13,10 +13,10 @@ class TweetsController < ApplicationController
   def create
     @tweet = Tweet.new(tweet_params)
     if @tweet.save
-      redirect_to "/users/#{current_user.id}"
+      redirect_to "/home/#{current_user.id}"
       flash[:notice] = "投稿が完了しました"
     else
-      redirect_to "/users/#{current_user.id}"
+      redirect_to "/home/#{current_user.id}"
       flash[:alert] = "投稿に失敗しました"
     end
   end
