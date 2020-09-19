@@ -35,6 +35,7 @@ class NovelsController < ApplicationController
   end
 
   def update
+    @article = @novel.article
     if @novel.update(update_novel_params)
       redirect_to edit_article_path(@article)
       flash[:notice] = "投稿が修正されました"
