@@ -27,7 +27,7 @@
         %thead.showTable__thead
           %tr.showTable__thead--tr
             %th.showTable__thead--tr__one
-              = link_to "/articles/#{@article.id}/novels/1?page=#{i}" do
+              = link_to "/articles/#{@article.id}/novels/#{novel.id}?page=#{i}" do
                 = novel.title
             %th.showTable__thead--tr__two
               %span= novel.created_at.strftime('%Y/%m/%d')

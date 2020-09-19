@@ -3,8 +3,8 @@
     .more-parts-one
     .textArticle
       %strong
-        = link_to "/articles/#{@article.id}" do
-          = @article.title
+        = link_to "/articles/#{@articleNovel.id}" do
+          = @articleNovel.title
     .textArticle
       作者:
       %a.name-name{:href => "/users/#{@novel.user.id}"}
@@ -20,5 +20,5 @@
         = paginate @articles
       .novelMenu__two
       .novelMenu__three
-        = link_to "/articles/#{@article.id}" do
+        = link_to "/articles/#{@articleNovel.id}" do
           目次

@@ -4,43 +4,43 @@ class NovelsController < ApplicationController
 
   def create
     @novel = Novel.new(novel_params)
-    @article = @novel.article
+    @articleNovel = @novel.article
     if @novel.save
-      redirect_to edit_article_path(@article)
+      redirect_to edit_article_path(@articleNovel)
       flash[:notice] = "投稿が保存されました"
     else
-      redirect_to edit_article_path(@article)
+      redirect_to edit_article_path(@articleNovel)
       flash[:alert] = "投稿に失敗しました"
     end
   end
 
   def destroy
-    @article = @novel.article
+    @articleNovel = @novel.article
     if @novel.destroy
-      redirect_to edit_article_path(@article)
+      redirect_to edit_article_path(@articleNovel)
       flash[:notice] = "投稿の削除がされました"
     else
-      redirect_to edit_article_path(@article)
+      redirect_to edit_article_path(@articleNovel)
       flash[:alert] = "投稿の削除に失敗しました"
     end
   end
 
   def show
-    @article = @novel.article
-    @articles = @article.novels.page(params[:page]).per(1).order("created_at ASC")
+    @articleNovel = @novel.article
+    @articles = @articleNovel.novels.page(params[:page]).per(1).order("created_at ASC")
   end
 
   def edit
-    @article = @novel.article
+    @articleNovel = @novel.article
   end
 
   def update
-    @article = @novel.article
+    @articleNovel = @novel.article
     if @novel.update(update_novel_params)
-      redirect_to edit_article_path(@article)
+      redirect_to edit_article_path(@articleNovel)
       flash[:notice] = "投稿が修正されました"
     else
-      redirect_to edit_article_path(@article)
+      redirect_to edit_article_path(@articleNovel)
       flash[:alert] = "投稿の修正に失敗しました"
     end
   end
