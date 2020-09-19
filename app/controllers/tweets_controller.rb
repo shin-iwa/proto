@@ -23,7 +23,13 @@ class TweetsController < ApplicationController
 
   def destroy
     tweet = Tweet.find(params[:id])
-    tweet.destroy
+    if tweet.destroy
+      redirect_to "/home/#{current_user.id}"
+      flash[:notice] = "投稿の削除がされました"
+    else
+      redirect_to "/home/#{current_user.id}"
+      flash[:alert] = "投稿の削除に失敗しました"
+    end
   end
 
   def edit
@@ -31,7 +37,13 @@ class TweetsController < ApplicationController
 
   def update
     tweet = Tweet.find(params[:id])
-    tweet.update(tweet_params)
+    if tweet.update(tweet_params)
+      redirect_to tweet_path
+      flash[:notice] = "投稿が修正されました"
+    else
+      redirect_to tweet_path
+      flash[:alert] = "投稿の修正に失敗しました"
+    end
   end
 
   def show
