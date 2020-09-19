@@ -1,16 +1,15 @@
 .contents.row
   .container
     .container-main
+      前書きの編集は
+      = link_to "こちら", edit_article_path(anchor: "topic"), class: "visit"
+      %div{:id => "novel-article-#{@article.id.to_s}"}
       - if current_user
         .more-parts__edit
-          %h3.head
+          %h3.top
             ストーリーの作成
-            %br
-            %br
-            %h5 ※この部分は「ストーリー作成」及び、「次話作成」フォームです。
-            -# = link_to edit_article_path(@article), method: :get do
-            = link_to "編集", edit_article_path(anchor: "topic"), class: "visit"
-          %div{:id => "novel-article-#{@article.id.to_s}"}
+          %h5 ※この部分は「ストーリーの作成」及び、「次話作成」フォームです。
+          %br
           .comments
             .card-body
               = form_with model:[@article, Novel.new], class: "input-form" do |f|
@@ -26,11 +25,11 @@
                     = render partial: "novel_list", article: @article
               - if user_signed_in?
                 = link_to ">>マイページへ戻る" ,"/users/#{current_user.id}"
-                
-      = form_with model: @article, local: true, class: "input-form" do |form|
-        %h3.head
-          %br
-          %br
-          %p 前書きの編集をする
-        = render partial: "form", locals: { form: form }
-      %div#topic
+      %br
+      %br
+      .fixForm
+        = form_with model: @article, local: true, class: "input-form" do |form|
+          %h3.head
+            前書きの編集をする
+          = render partial: "form", locals: { form: form }
+        %div#topic

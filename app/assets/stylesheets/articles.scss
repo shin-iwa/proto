@@ -1,5 +1,6 @@
 .more-parts__edit {
   background-color: rgb(210, 210, 210);
+  border: 5px double silver;
   padding: 10px 20px;
   box-sizing: border-box;
   margin-top: 20px;
@@ -106,6 +107,21 @@
 
 .body {
   font-size: 1.1em;
+}
+
+.top {
+  margin: 10px 20px 20px;
+  font-size: 20px;
+}
+.head {
+  background-color: white;
+  margin: 20px 20px;
+  box-sizing: border-box;
+  width: 500px;
+}
+
+.fixForm {
+  border: 5px double silver;
 }
 
 #topic {
