@@ -3,14 +3,13 @@
     .container-main
       - if current_user
         .more-parts__edit
-          %h3.head#topic
+          %h3.head
             ストーリーの作成
             %br
             %br
             %h5 ※この部分は「ストーリー作成」及び、「次話作成」フォームです。
-            ※前書きの編集は
-            %span
-              = link_to"「前書きの編集」へ", edit_article_path(@article)
+            -# = link_to edit_article_path(@article), method: :get do
+            = link_to "編集", edit_article_path(anchor: "topic"), class: "visit"
           %div{:id => "novel-article-#{@article.id.to_s}"}
           .comments
             .card-body
@@ -32,6 +31,6 @@
         %h3.head
           %br
           %br
-          「前書き」or「説明文」の編集をする
-          %br
+          %p 前書きの編集をする
         = render partial: "form", locals: { form: form }
+      %div#topic
