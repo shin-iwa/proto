@@ -1,5 +1,4 @@
 .more-parts__edit {
-  background-color: rgb(210, 210, 210);
   border: 5px double silver;
   padding: 10px 20px;
   box-sizing: border-box;
@@ -81,6 +80,8 @@
 
 .listTable {
   width: 100%;
+  margin-top: -2px;
+  border: 2px solid rgb(160, 160, 160);
   &__thead {
     &--tr {
       &__title {
@@ -114,7 +115,6 @@
   font-size: 20px;
 }
 .head {
-  background-color: white;
   margin: 20px 20px;
   box-sizing: border-box;
   width: 500px;

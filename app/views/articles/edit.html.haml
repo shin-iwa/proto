@@ -1,6 +1,7 @@
 .contents.row
   .container
     .container-main
+      %br
       前書きの編集は
       = link_to "こちら", edit_article_path(anchor: "topic"), class: "visit"
       %div{:id => "novel-article-#{@article.id.to_s}"}
