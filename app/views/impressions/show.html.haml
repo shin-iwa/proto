@@ -7,8 +7,8 @@
         = @article.title
   .textArticle
     作者:
-    -# %a.name-name{:href => "/users/#{@article.user.id}"}
-    -#   = @article.user.nickname
+    %a.name-name{:href => "/users/#{@article.user.id}"}
+      = @article.user.nickname
     %br
     %br
     .articleTitle
