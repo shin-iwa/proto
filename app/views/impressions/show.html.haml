@@ -1,0 +1,19 @@
+.more-box
+  -# - @articles.each do |novel|
+  .more-parts-one
+  .textArticle
+    %strong
+      = link_to "/articles/#{@article.id}" do
+        = @article.title
+  .textArticle
+    作者:
+    -# %a.name-name{:href => "/users/#{@article.user.id}"}
+    -#   = @article.user.nickname
+    %br
+    %br
+    .articleTitle
+      コメント：
+      -# %span= @articleImpression.body
+    - @articles.each do |impression|
+      = impression.body
+ 
