@@ -47,13 +47,13 @@
               ：
               = comment.text
     .more-parts-one
-      .createForm
-        - if current_user
-          = form_with(model: [@article, Impression.new], local: true, class:"input-form") do |f|
-            = f.hidden_field :user_id, value: current_user.id
-            = f.hidden_field :article_id, value: @article.id
-            = f.text_area :body, placeholder: "コメント入力欄", rows: "4" , class:"form" ,id:"article_body"
-            = f.submit "投稿する" , class:"btc"
-        - else
-          %strong
-            %p ※※※ コメントの投稿には新規登録/ログインが必要です ※※※
+    -# .createForm
+    - if current_user
+      = form_with(model: [@article, Impression.new], local: true, class:"input-form") do |f|
+        = f.hidden_field :user_id, value: current_user.id
+        = f.hidden_field :article_id, value: @article.id
+        = f.text_area :body, placeholder: "コメント入力欄", rows: "4" , class:"form" ,id:"article_body"
+        = f.submit "投稿する" , class:"btc"
+    - else
+      %strong
+        %p ※※※ コメントの投稿には新規登録/ログインが必要です ※※※
