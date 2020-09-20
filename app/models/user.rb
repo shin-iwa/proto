@@ -7,6 +7,7 @@ class User < ApplicationRecord
   has_many :comments, dependent: :destroy
   has_many :articles, dependent: :destroy
   has_many :novels, dependent: :destroy
+  has_many :impressions, dependent: :destroy
 
   def self.search(search)
     return User.all unless search
