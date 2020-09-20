@@ -3,16 +3,14 @@
   -if user_signed_in?
     .user-nav
       .user-nav__box
-        = link_to  "小説投稿", new_article_path
-      .user-nav__box
-        = link_to  "活動報告投稿", new_tweet_path
+        %br
+        = link_to  ">>活動報告", home_path
   %p.upper
     = @nickname
     さんの作品一覧
+    %br
+    %span
+      = button_to  "小説を投稿する", new_article_path, class: "postBt", method: :get
+    %br
   - @articles.each do |article|
     = render partial: "users/article", locals: { article: article }
-  %p.upper
-    = @nickname
-    さんの近況報告一覧
-  - @tweets.each do |tweet|
-    = render partial: "tweets/tweet", locals: { tweet: tweet }

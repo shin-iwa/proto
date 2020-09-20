@@ -1,12 +1,24 @@
 .more-box
-  .more-parts-one
-  .textArticle
-    作者:
-    %a.name-name{:href => "/users/#{@novel.user.id}"}
-      = @novel.user.nickname
-    %br
-    %br
-    .articleTitle
-      %span.articleTitle__box
-      = @novel.title
-    %p= safe_join(@novel.body.split("\n"), tag(:br))
+  - @articles.each do |novel|
+    .more-parts-one
+    .textArticle
+      %strong
+        = link_to "/articles/#{@articleNovel.id}" do
+          = @articleNovel.title
+    .textArticle
+      作者:
+      %a.name-name{:href => "/users/#{@novel.user.id}"}
+        = @novel.user.nickname
+      %br
+      %br
+      .articleTitle
+        %span.articleTitle__box
+          = novel.title
+      %p.body= safe_join(novel.body.split("\n"), tag(:br))
+    .novelMenu
+      .novelMenu__one
+        = paginate @articles
+      .novelMenu__two
+      .novelMenu__three
+        = link_to "/articles/#{@articleNovel.id}" do
+          目次

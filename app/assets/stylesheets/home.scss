@@ -3,7 +3,7 @@
   border: 3px double silver;
   padding: 20px;
   margin: 0 auto 20px;
-  width: 400px;
+  width: 520px;
   &__one {
     text-align: left;
     &--title {
@@ -14,8 +14,15 @@
       margin: 0 auto;
       padding: 0 20px;
       box-sizing: border-box;
-      width: 300px;
+      width: 500px;
     }
   }
-
 }
+
+.upper {
+  font-size: 18px;
+}
+.postBt {
+  padding: 2px 8px;
+}
+
