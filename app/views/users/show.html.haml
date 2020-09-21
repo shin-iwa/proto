@@ -6,15 +6,13 @@
         %span
           = button_to  "小説を投稿する", new_article_path, class: "postBt", method: :get
       .user-nav__box
-        %br
-        = link_to  ">>活動報告", home_path
+      %hr
   %p.upper
     = @nickname
     さんの作品一覧
     %br
-    -if user_signed_in?
-      %span
-        = button_to  "小説を投稿する", new_article_path, class: "postBt", method: :get
-      %br
+  .switchingSpace
+    %span.switchingBt 投稿小説一覧
+    = button_to  "活動報告一覧", home_path,class: "switchingBlank", method: :get
   - @articles.each do |article|
     = render partial: "users/article", locals: { article: article }
