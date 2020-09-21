@@ -2,17 +2,17 @@
 .contents.row
   -if user_signed_in?
     .user-nav
+      %br
+        %span
+          = button_to  "小説を投稿する", new_article_path, class: "postBt", method: :get
       .user-nav__box
-        = link_to  "小説投稿", new_article_path
-      .user-nav__box
-        = link_to  "活動報告投稿", new_tweet_path
+      %hr
   %p.upper
     = @nickname
-    さんの作品一覧
+    さんの投稿小説一覧
+    %br
+  .switchingSpace
+    %span.switchingBt 投稿小説一覧
+    = button_to  "活動報告一覧", home_path,class: "switchingBlank", method: :get
   - @articles.each do |article|
     = render partial: "users/article", locals: { article: article }
-  %p.upper
-    = @nickname
-    さんの近況報告一覧
-  - @tweets.each do |tweet|
-    = render partial: "tweets/tweet", locals: { tweet: tweet }

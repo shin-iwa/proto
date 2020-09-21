@@ -3,7 +3,7 @@
   border: 3px double silver;
   padding: 20px;
   margin: 0 auto 20px;
-  width: 400px;
+  width: 520px;
   &__one {
     text-align: left;
     &--title {
@@ -14,8 +14,41 @@
       margin: 0 auto;
       padding: 0 20px;
       box-sizing: border-box;
-      width: 300px;
+      width: 500px;
     }
   }
+}
 
+.upper {
+  font-size: 18px;
+}
+
+.postBt {
+  padding: 2px 8px;
+}
+
+.switchingSpace {
+  display: flex;
+  justify-content: right;
+  .switchingBlank {
+    padding: 2px 8px;
+    border-style: none;
+    border-top:1px solid gray; 
+    border-left:1px solid gray; 
+    border-right:1px solid gray; 
+    border-bottom: 1px solid rgb(240, 240, 240);
+    display: flex;
+    justify-content: right;
+    background-color: white;
+  }
+  .switchingBt {
+    padding: 2px 8px;
+    border-style: none;
+    border-top:1px solid gray; 
+    border-left:1px solid gray; 
+    border-right:1px solid gray; 
+    display: flex;
+    justify-content: left;
+    background: linear-gradient(to bottom, #f9f9f9, #dfdfdf);
+  }
 }

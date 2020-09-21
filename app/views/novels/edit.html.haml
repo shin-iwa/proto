@@ -1,7 +1,7 @@
 .contents.row
   .container
     .container-main
-      = form_with model: [@article, @novel], local: true, class: "input-form" do |form|
+      = form_with model: [@articleNovel, @novel], local: true, class: "input-form" do |form|
         %h3.head
           編集する
         = form.text_field :title, placeholder: "タイトル" , class: "title", id:"article_title"
