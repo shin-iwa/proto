@@ -47,7 +47,6 @@
               ：
               = comment.text
     .more-parts-one
-    -# .createForm
     - if current_user
       = form_with(model: [@article, Impression.new], local: true, class:"input-form") do |f|
         = f.hidden_field :user_id, value: current_user.id

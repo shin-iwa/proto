@@ -5,7 +5,7 @@ class ImpressionsController < ApplicationController
   def show
     @article = Article.find_by(id: params[:id])
     @articleImpression = @impression.article
-    @articles = @articleImpression.impressions.page(params[:page]).per(1).order("created_at ASC")
+    @articles = @articleImpression.impressions.page(params[:page]).per(10).order("created_at ASC")
   end
 
   def create

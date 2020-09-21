@@ -1,4 +1,17 @@
-ハロー
 
-- @article.impressions.each do |impression|
-  = impression.body
+ .more-box
+  .more-parts-one
+  .textArticle
+    - @articles.each do |impression|
+      %strong
+        = link_to "/articles/#{@article.id}" do
+          = @article.title
+        %br
+        %br
+        作者:
+        %a.name-name{:href => "/users/#{@article.user.id}"}
+          = @article.user.nickname
+        .articleTitle
+          コメント：
+          = impression.body
+ 
