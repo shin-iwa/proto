@@ -7,11 +7,13 @@
         = button_to  "活動報告を投稿する", new_tweet_path, class: "postBt", method: :get
       .user-nav__box
       %br
+      %hr
+      %br
   %p.upper
     = @nickname
     さんの活動報告一覧
   .switchingSpace
-    %span.switchingBlank 活動報告一覧
-    = button_to  "投稿小説一覧", user_path,class: "switchingBt", method: :get
+    = button_to  "投稿小説一覧", user_path,class: "switchingBlank", method: :get
+    %span.switchingBt 活動報告一覧
   - @tweets.each do |tweet|
     = render partial: "tweets/tweet", locals: { tweet: tweet }

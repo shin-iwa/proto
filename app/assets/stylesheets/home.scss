@@ -37,6 +37,7 @@
   border-right:1px solid gray; 
   display: flex;
   justify-content: right;
+  background-color: white;
 }
 .switchingBt {
   padding: 2px 8px;
@@ -46,5 +47,6 @@
   border-right:1px solid gray; 
   display: flex;
   justify-content: right;
+  background: linear-gradient(to bottom, #f9f9f9, #dfdfdf);
 }
 
