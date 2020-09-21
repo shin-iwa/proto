@@ -22,31 +22,32 @@
 .upper {
   font-size: 18px;
 }
+
 .postBt {
   padding: 2px 8px;
 }
+
 .switchingSpace {
   display: flex;
   justify-content: right;
+  .switchingBlank {
+    padding: 2px 8px;
+    border-style: none;
+    border-top:1px solid gray; 
+    border-left:1px solid gray; 
+    border-right:1px solid gray; 
+    display: flex;
+    justify-content: right;
+    background-color: white;
+  }
+  .switchingBt {
+    padding: 2px 8px;
+    border-style: none;
+    border-top:1px solid gray; 
+    border-left:1px solid gray; 
+    border-right:1px solid gray; 
+    display: flex;
+    justify-content: left;
+    background: linear-gradient(to bottom, #f9f9f9, #dfdfdf);
+  }
 }
-.switchingBlank {
-  padding: 2px 8px;
-  border-style: none;
-  border-top:1px solid gray; 
-  border-left:1px solid gray; 
-  border-right:1px solid gray; 
-  display: flex;
-  justify-content: right;
-  background-color: white;
-}
-.switchingBt {
-  padding: 2px 8px;
-  border-style: none;
-  border-top:1px solid gray; 
-  border-left:1px solid gray; 
-  border-right:1px solid gray; 
-  display: flex;
-  justify-content: right;
-  background: linear-gradient(to bottom, #f9f9f9, #dfdfdf);
-}
-

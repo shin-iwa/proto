@@ -1,9 +1,13 @@
 = render "layouts/side"
 .contents.row
-  .user-nav
-    .user-nav__box
+  -if user_signed_in?
+    .user-nav
       %br
-      = link_to  ">>活動報告", home_path
+        %span
+          = button_to  "小説を投稿する", new_article_path, class: "postBt", method: :get
+      .user-nav__box
+        %br
+        = link_to  ">>活動報告", home_path
   %p.upper
     = @nickname
     さんの作品一覧
