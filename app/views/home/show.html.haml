@@ -6,12 +6,12 @@
       %span
         = button_to  "活動報告を投稿する", new_tweet_path, class: "postBt", method: :get
       .user-nav__box
+      %br
   %p.upper
     = @nickname
     さんの活動報告一覧
-    %div 
-      投稿小説一覧は
-      %span= link_to  ">>こちら", user_path
-    %br
+  .switchingSpace
+    %span.switchingBlank 活動報告一覧
+    = button_to  "投稿小説一覧", user_path,class: "switchingBt", method: :get
   - @tweets.each do |tweet|
     = render partial: "tweets/tweet", locals: { tweet: tweet }

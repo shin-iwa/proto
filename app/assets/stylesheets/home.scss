@@ -25,4 +25,26 @@
 .postBt {
   padding: 2px 8px;
 }
+.switchingSpace {
+  display: flex;
+  justify-content: right;
+}
+.switchingBlank {
+  padding: 2px 8px;
+  border-style: none;
+  border-top:1px solid gray; 
+  border-left:1px solid gray; 
+  border-right:1px solid gray; 
+  display: flex;
+  justify-content: right;
+}
+.switchingBt {
+  padding: 2px 8px;
+  border-style: none;
+  border-top:1px solid gray; 
+  border-left:1px solid gray; 
+  border-right:1px solid gray; 
+  display: flex;
+  justify-content: right;
+}
 
