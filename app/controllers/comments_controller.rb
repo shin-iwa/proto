@@ -1,7 +1,12 @@
 class CommentsController < ApplicationController
   def create
-    comment = Comment.create(comment_params)
-    redirect_to "/tweets/#{comment.tweet.id}" 
+    @comment = Comment.new(comment_params)
+    if @comment.save
+      redirect_to "/tweets/#{@comment.tweet.id}" 
+      flash[:notice] = "コメントが保存されました"
+    else
+      redirect_to "/tweets/#{@comment.tweet.id}" 
+      flash[:alert] = "コメントに失敗しました"
   end
 
   private

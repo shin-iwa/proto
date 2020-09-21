@@ -29,7 +29,7 @@ class ArticlesController < ApplicationController
     else
       flash[:alert] = "投稿の削除に失敗しました"
     end
-    redirect_to root_path
+    redirect_to "/users/#{current_user.id}"
   end
 
   def edit

@@ -61,5 +61,4 @@ class NovelsController < ApplicationController
   def move_to_root
     redirect_to "/" unless user_signed_in? && current_user.id == @novel.article.user_id
   end
-
 end

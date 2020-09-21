@@ -9,5 +9,4 @@ class Article < ApplicationRecord
     return Article.all unless search
     Article.where('title LIKE(?)', "%#{search}%")
   end
-
 end
