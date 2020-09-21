@@ -2,15 +2,16 @@
 .contents.row
   -if user_signed_in?
     .user-nav
+      %br
+      %span
+        = button_to  "活動報告を投稿する", new_tweet_path, class: "postBt", method: :get
       .user-nav__box
-        %br
-        = link_to  ">>小説投稿", user_path
   %p.upper
     = @nickname
     さんの活動報告一覧
-    %br
-    %span
-      = button_to  "活動報告を投稿する", new_tweet_path, class: "postBt", method: :get
+    %div 
+      投稿小説一覧は
+      %span= link_to  ">>こちら", user_path
     %br
   - @tweets.each do |tweet|
     = render partial: "tweets/tweet", locals: { tweet: tweet }

@@ -1,16 +1,16 @@
 = render "layouts/side"
 .contents.row
-  -if user_signed_in?
-    .user-nav
-      .user-nav__box
-        %br
-        = link_to  ">>活動報告", home_path
+  .user-nav
+    .user-nav__box
+      %br
+      = link_to  ">>活動報告", home_path
   %p.upper
     = @nickname
     さんの作品一覧
     %br
-    %span
-      = button_to  "小説を投稿する", new_article_path, class: "postBt", method: :get
-    %br
+    -if user_signed_in?
+      %span
+        = button_to  "小説を投稿する", new_article_path, class: "postBt", method: :get
+      %br
   - @articles.each do |article|
     = render partial: "users/article", locals: { article: article }
