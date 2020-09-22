@@ -12,7 +12,7 @@
     %tr.secondRecord
       %td.secondRecord__category
         .text
-          %p= simple_format(tweet.text.truncate(40, omission: '...')) 
+          %p= safe_join(tweet.text.truncate(50, omission: '...').split("\n"), tag(:nbsp))
       %td.secondRecord__link
         = tweet.created_at.strftime('%Y/%m/%d')
         = tweet.created_at.strftime('%H:%M')
