@@ -7,6 +7,7 @@ class CommentsController < ApplicationController
     else
       redirect_to "/tweets/#{@comment.tweet.id}" 
       flash[:alert] = "コメントに失敗しました"
+    end
   end
 
   private
