@@ -104,10 +104,12 @@
   color: #333;
   width: 720px;
   box-sizing: border-box;
+  word-break: break-word;
 }
 
 .body {
   font-size: 1.1em;
+  word-break: break-word;
 }
 
 .top {

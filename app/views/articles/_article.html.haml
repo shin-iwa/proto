@@ -11,7 +11,6 @@
     %tr.secondRecord
       %td.secondRecord__category
         .text
-          -# %p= simple_format(article.body.truncate(40, omission: '...')) 
           %p= safe_join(article.body.truncate(50, omission: '...').split("\n"), tag(:nbsp))
       %td.secondRecord__link
         = article.created_at.strftime('%Y/%m/%d')

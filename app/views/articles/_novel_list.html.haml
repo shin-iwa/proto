@@ -1,16 +1,19 @@
-- @article.novels.each do |novel|
-  %table.listTable
-    %thead.listTable__thead
-      %tr.listTable__thead--tr
-        %th.listTable__thead--tr__title
-          = link_to "/articles/#{@article.id}/novels/#{novel.id}" do
-            %span.novelTitle= novel.title.truncate(20, omission: '...')
-        %th.listTable__thead--tr__detail
-          %span= novel.created_at.strftime('%Y/%m/%d')
-          %span= novel.created_at.strftime('%H:%M')
-          %span 投稿
-          - if novel.user == current_user
-            = link_to edit_article_novel_path(@article.id, novel) do
-              編集
-          - if novel.user == current_user
-            = link_to "削除", article_novel_path(@article.id, novel), method: :delete, remote: true, class: "delete-novel"
+- i=0
+- if @novels
+  - @article.novels.each do |novel|
+    - i +=1
+    %table.listTable
+      %thead.listTable__thead
+        %tr.listTable__thead--tr
+          %th.listTable__thead--tr__title
+            = link_to "/articles/#{@article.id}/novels/#{novel.id}?page=#{i}" do
+              %span.novelTitle= novel.title.truncate(20, omission: '...')
+          %th.listTable__thead--tr__detail
+            %span= novel.created_at.strftime('%Y/%m/%d')
+            %span= novel.created_at.strftime('%H:%M')
+            %span 投稿
+            - if novel.user == current_user
+              = link_to edit_article_novel_path(@article.id, novel) do
+                編集
+            - if novel.user == current_user
+              = link_to "削除", article_novel_path(@article.id, novel), method: :delete, remote: true, class: "delete-novel"
