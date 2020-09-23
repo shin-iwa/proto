@@ -5,8 +5,9 @@
 ただし、小説を書く場合やコメントをする場合には、アカウントを作成してください。  
 
 # プロト
-このアプリは<a href="https://proto-novel.herokuapp.com/"> Heroku </a>にてご確認頂けます。
-
+このアプリは<a href="https://proto-novel.herokuapp.com/"> Heroku </a>にてご確認頂けます。  
+ID: admin  
+PASSWORD: 2323  
 
 <img width = "1000" alt = "screen1" src = "https://user-images.githubusercontent.com/66307522/93202826-531c4600-f78e-11ea-8531-d0a497e10911.png">
 
