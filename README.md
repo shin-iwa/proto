@@ -1,5 +1,5 @@
 ## "Proto"とは？
-#### アプリケーション[Proto]は、小説投稿サイトです。
+#### アプリケーション"Proto"は、小説投稿サイトです。
 
 ユーザー登録なしでも、すべての小説を読むことが可能です。  
 小説を書く場合やコメントをする場合には、アカウントを作成してください。
@@ -32,6 +32,8 @@
 ### Association
 - has_many :tweets
 - has_many :comments
+- has_many :articles
+- has_many :novels
 
 
 ## tweets table
