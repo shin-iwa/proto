@@ -1,21 +1,20 @@
-# What
-I am making Novel Posting site.
+＃ このアプリケーションについて
+アプリケーション[Proto]は、小説投稿サイトです。 
+ユーザー登録なしでも、すべての小説を読むことが可能です。 
+ただし、小説を書く場合やコメントをする場合には、アカウントを作成してください。
 
-# Proto
-You can check this app on <a href="">AWS</a>!
-Please search for it on the internet.
+＃プロト
+このアプリは<a href=""> Heroku </a>にてご確認頂けます。
 
-<img width="1000" alt="screen1" src="https://user-images.githubusercontent.com/66307522/93202826-531c4600-f78e-11ea-8531-d0a497e10911.png">
+<img width = "1000" alt = "screen1" src = "https://user-images.githubusercontent.com/66307522/93202826-531c4600-f78e-11ea-8531-d0a497e10911.png">
 
-# About
-This app is Novel Posting site. You can use full systems! It's possible to read all novels. But if you write new novels, please make an account.
+<img width = "1000" alt = "screen1" src = "https://user-images.githubusercontent.com/66307522/93207493-0177b980-f796-11ea-9fab-eefd48219ee6.png">
 
-<img width="1000" alt="screen1" src="https://user-images.githubusercontent.com/66307522/93207493-0177b980-f796-11ea-9fab-eefd48219ee6.png">
-
-# Technology used
-This application uses the following open source packages:
+＃使用技術
+このアプリケーションは、以下のオープンソースパッケージを使用しております。
 
 <img width="531" src="https://user-images.githubusercontent.com/66307522/93208289-5405a580-f797-11ea-8658-927c8ef25858.jpg">
+
 
 # Database
 
