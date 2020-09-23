@@ -3,11 +3,10 @@
 ユーザー登録なしでも、すべての小説を読むことが可能です。  
 ただし、小説を書く場合やコメントをする場合には、アカウントを作成してください。  
 
-
 ## このアプリケーションについて
 このアプリは<a href="https://proto-novel.herokuapp.com/"> Heroku </a>にてご確認頂けます。  
-ID: admin  
-PASSWORD: 2323  
+> ID: admin  
+> PASSWORD: 2323  
   
 ## トップページ  
 <img width = "1000" alt = "screen1" src = "https://user-images.githubusercontent.com/66307522/93202826-531c4600-f78e-11ea-8531-d0a497e10911.png">
