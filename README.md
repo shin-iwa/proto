@@ -1,20 +1,21 @@
-## このアプリケーションについて
-
+# このアプリケーションについて
 アプリケーション[Proto]は、小説投稿サイトです。  
 ユーザー登録なしでも、すべての小説を読むことが可能です。  
 ただし、小説を書く場合やコメントをする場合には、アカウントを作成してください。  
 
-# プロト
+# このアプリケーションについて
 このアプリは<a href="https://proto-novel.herokuapp.com/"> Heroku </a>にてご確認頂けます。  
 ID: admin  
 PASSWORD: 2323  
 
+# トップページ  
 <img width = "1000" alt = "screen1" src = "https://user-images.githubusercontent.com/66307522/93202826-531c4600-f78e-11ea-8531-d0a497e10911.png">
 
-<img width = "1000" alt = "screen1" src = "https://user-images.githubusercontent.com/66307522/93207493-0177b980-f796-11ea-9fab-eefd48219ee6.png">
+# 小説目次ページ  
+<img width = "1000" alt = "screen1" src = "https://user-images.githubusercontent.com/66307522/93207493-0177b980-f796-11ea-9fab-eefd48219ee6.png">  
 
-＃使用技術
-このアプリケーションは、以下のオープンソースパッケージを使用しております。
+# 使用技術
+このアプリケーションは、以下のオープンソースパッケージを使用しております。  
 
 <img width="531" src="https://user-images.githubusercontent.com/66307522/93208289-5405a580-f797-11ea-8658-927c8ef25858.jpg">
 
