@@ -28,6 +28,8 @@ Ruby及びRuby on Railsの学習の成果検証の為。
 小説の本文作成・編集及び削除を一箇所で行えるようにし、  
 ページ移動の煩雑さを抑えられるよう心掛けました。
 
+![sample](https://user-images.githubusercontent.com/66307522/94088748-3ba72200-fe4c-11ea-9d9a-531c9942a93a.gif)
+
 ## 今後の課題
 今後導入したい機能
 
