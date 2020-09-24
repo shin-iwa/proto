@@ -18,11 +18,16 @@ Ruby及びRuby on Railsの学習の成果検証の為。
 <img width = "1000" alt = "screen1" src = "https://user-images.githubusercontent.com/66307522/93202826-531c4600-f78e-11ea-8531-d0a497e10911.png">
 
 ## 小説目次ページ  
-<img width = "1000" alt = "screen1" src = "https://user-images.githubusercontent.com/66307522/93207493-0177b980-f796-11ea-9fab-eefd48219ee6.png">  
-  
+<img width = "1000" alt = "screen2" src = "https://user-images.githubusercontent.com/66307522/93207493-0177b980-f796-11ea-9fab-eefd48219ee6.png">
+
+## 小説詳細ページ  
+<img width="1000" alt="screen3" src="https://user-images.githubusercontent.com/66307522/94090202-03a1de00-fe50-11ea-9539-ac2e6e4d3a41.png">
+
 ## 使用技術
 このアプリケーションは、以下のオープンソースパッケージを使用しております。  
-<img width="531" src="https://user-images.githubusercontent.com/66307522/93208289-5405a580-f797-11ea-8658-927c8ef25858.jpg">
+<img width="1000" alt="screen4" src="https://user-images.githubusercontent.com/66307522/93208289-5405a580-f797-11ea-8658-927c8ef25858.jpg">
+
+
 
 ## 工夫したポイント
 小説の本文作成・編集及び削除を一箇所で行えるようにし、  
@@ -30,7 +35,7 @@ Ruby及びRuby on Railsの学習の成果検証の為。
 
 ![sample_movie](https://user-images.githubusercontent.com/66307522/94089645-a5283000-fe4e-11ea-884e-213deda8cd6c.gif)
 ※ストーリーを追加したことにより、  
-その編集・削除の項目が追加されました。
+その編集・削除の項目が追加されています。
 
 
 ## 今後の課題
