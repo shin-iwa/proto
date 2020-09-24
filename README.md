@@ -28,7 +28,10 @@ Ruby及びRuby on Railsの学習の成果検証の為。
 小説の本文作成・編集及び削除を一箇所で行えるようにし、  
 ページ移動の煩雑さを抑えられるよう心掛けました。
 
-![sample](https://user-images.githubusercontent.com/66307522/94088748-3ba72200-fe4c-11ea-9d9a-531c9942a93a.gif)
+![sample_movie](https://user-images.githubusercontent.com/66307522/94089645-a5283000-fe4e-11ea-884e-213deda8cd6c.gif)
+※ストーリーを追加したことにより、  
+その編集・削除の項目が追加されました。
+
 
 ## 今後の課題
 今後導入したい機能
